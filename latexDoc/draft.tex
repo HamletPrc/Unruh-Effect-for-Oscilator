@@ -4,13 +4,15 @@
 \usepackage{geometry}
 \geometry{left=2.0cm, right=2.0cm, top=2.5cm, bottom=2.5cm}
 
-\title{匀加速观者所看到的谐振子}
+\usepackage{braket}
+
+\title{匀加速参考系变换下的谐振子}
 \author{吴梦之}
 
 \begin{document}
     \maketitle
     \section{引言}
-        Unruh效应是弯曲时空场论的一个有趣的结论。考虑闵氏时空中处于真空态的一个标量场，在任何惯性系中，它都处于真空态。然而，如果我们以匀加速观者的视角来考察它，我们将会发现这个场处于热平衡态，并且温度正比于加速度。Unruh效应有趣之处在于，我们所考虑的背景时空闵氏时空是平直的，这暗示我们另一种平直时空——伽利略时空可能也会有类似的效应，即匀加速观者观测伽利略时空中的物理现象，可能存在不平凡的物理效应。
+        Unruh效应是弯曲时空场论的一个有趣的结论。考虑闵氏时空中处于真空态的一个标量场，在任何惯性系中，它都处于真空态。然而，如果我们以匀加速观者的视角(Rindler时空)来考察它，我们将会发现这个场处于热平衡态，并且温度正比于加速度。Unruh效应有趣之处在于，我们所考虑的背景时空闵氏时空是平直的，这暗示我们另一种平直时空——伽利略时空可能也会有类似的效应，即匀加速观者观测伽利略时空中的物理现象，可能存在不平凡的物理效应。
 
         仿照色动力学中的技巧，我们可以将时空格点化，这时我们所考虑的自由标量场就会退化为由无穷多个谐振子所构成的多体系统。最典型的由谐振子组成的多体系统是晶格振动系统(在正则量子化之后，可以称作声子系统)，这启发我们可以思考晶格中是否也存在Unruh效应，即考虑零温声子场，匀加速观者是否能够观察到一个热能谱。
 
@@ -29,29 +31,41 @@
 
     \section{参考系变换的一般性分析}
         关于量子力学中的参考系变换以及伽利略对称性，文献[1]做了很多讨论。不过由于[1]历史较为久远，在薛定谔绘景下研究问题，很多问题不能看得很透彻，甚至有一些错误。文献[2]对其则进行了更为深刻但较为简略的回顾。在此，本文将从他们的工作入手。
+
+        \subsection{态的变换}
         
-        考虑实验室参考系S中的一个态$|\Psi>$，设S’参考系与S的坐标变换为$x'=x+\zeta(t), t'=t$。则S’对这个态的观测的观测由一个幺正算符$\hat{U}_a$来刻画，即S’中观测到的态为$\hat{U}_a|\Psi>$。根据文献[2]，这个幺正算符的一般表达式为：
+        考虑实验室参考系S中的一个态$\ket{\Psi}$，设S’参考系与S的坐标变换为$x'=x+\zeta(t), t'=t$。则S’对这个态的观测的观测由一个幺正算符$\hat{U}_a$来刻画，即S’中观测到的态为$\hat{U}_a\ket{\Psi}$。根据文献[2]，这个幺正算符的一般表达式为：
         \begin{equation}
-            \hat{U}_a=\exp(-\frac{i}{\hbar} m \frac{d \zeta}{dt} \hat{x}) \exp({\frac{i}{\hbar}\zeta(t)\ \hat{p}}) \exp(-\frac{i}{\hbar}\int_0^t\frac{1}{2}m(\frac{d \zeta}{d\tau})^2 d\tau)
+            \hat{U}_a=\exp\bigg(-\frac{i}{\hbar} m \frac{d \zeta}{dt} \hat{x}\bigg) \exp\bigg({\frac{i}{\hbar}\zeta(t) \hat{p}}\bigg) \exp\bigg(-\frac{i}{\hbar}\int_0^t\frac{1}{2}m(\frac{d \zeta}{d\tau})^2 d\tau\bigg)
         \end{equation}
         
-        应注意，这三项中的前两项是算符，不能随意交换次序，第三项是数，因此可以随意摆放次序。$\hat{U}_a$ 的第三项的物理意义是，参考系变换所带来的额外动能所给出的态随时间演化的相位。为了更好地看清前两项的物理意义，我们分别考虑该算符作用在坐标算符和动量算符的本征态上，即考虑参考系变换对坐标本征态和动量本征态的影响。
+        应注意，这三项中的前两项是算符，不能随意交换次序，第三项是数，因此可以随意摆放次序。$\hat{U}_a$ 的第三项的物理意义是，参考系变换所带来的额外动能$E_k=\frac{1}{2}m(\frac{d \zeta}{d\tau})^2$所给出的态随时间演化的积分相位。为了更好地看清前两项的物理意义，我们分别考虑该算符作用在坐标算符和动量算符的本征态上，即考虑参考系变换对坐标本征态和动量本征态的影响。
         \begin{equation}
-            \hat{U}_a |x> =
+            \hat{U}_a \ket{x} = \exp\bigg(-\frac{i}{\hbar}m\frac{d \zeta}{dt}\ (x+\zeta)\bigg)\ \exp\bigg(-\frac{i}{\hbar}\int_0^t\frac{1}{2}m(\frac{d \zeta}{d\tau})^2 d\tau \bigg)\ \ket{x+\zeta}
         \end{equation}
         \begin{equation}
-            \hat{U}_a |p> = 
+            \hat{U}_a \ket{p} = \exp\bigg(\frac{i}{\hbar}\zeta p \bigg)\ \exp\bigg(-\frac{i}{\hbar}\int_0^t\frac{1}{2}m(\frac{d \zeta}{d\tau})^2 d\tau \bigg)\ \ket{p+m\frac{d \zeta}{dt}}
         \end{equation}
 
         这里应当注意，由于$\hat{x}$和$\hat{p}$不对易，因此$\hat{U}_a$的两部分要保持次序。
-        由以上两式可以知道，$\hat{U}_a$的作用是将坐标本征态平移一段距离，将动量本征态增加一定的动量。这也符合我们对伽利略变换的经典物理图像，参考系变换之后，物理系统动能、动量和坐标零点会发生变化，而这三方面变化分别由以上三个相位来刻画。
+        由以上两式可以知道，$\hat{U}_a$的作用是将坐标本征态平移一段距离$\zeta(t)$，将动量本征态增加动量$m\frac{d \zeta}{dt}$。这也符合我们对伽利略变换的经典物理图像，参考系变换之后，物理系统动能、动量和坐标零点会发生变化，而这三方面变化分别由以上三个相位来刻画。
 
-        注意到Baker-Hausdorff公式：$\exp(\hat{A}+\hat{B})=\exp\hat{A} \exp\hat{B} \exp(-\frac{[\hat{A}, \hat{B}]}{2})$, 当$[\hat{A}, [\hat{A}, \hat{B}]]=[\hat{B}, [\hat{A}, \hat{B}]]=0$时，我们可以将$\hat{U}_a$写成更紧凑的形式：
+        注意到当$[\hat{A}, [\hat{A}, \hat{B}]]=[\hat{B}, [\hat{A}, \hat{B}]]=0$时，$\hat{A}$和$\hat{B}$算符满足Baker-Hausdorff公式：$\exp(\hat{A}+\hat{B})=\exp\hat{A} \exp\hat{B} \exp(-\frac{[\hat{A}, \hat{B}]}{2})$, 因此我们可以将$\hat{U}_a$写成更紧凑的形式：
         \begin{equation}
-            \hat{U}_a=\exp() \exp()
+            \hat{U}_a=\exp\bigg(\frac{i}{\hbar}\bigg(\hat{p}\zeta(t)-m\frac{d\zeta}{dt}\hat{x} \bigg) \bigg)\ \exp\bigg(\frac{i}{\hbar}\frac{1}{2}m\zeta\frac{d\zeta}{dt} \bigg)\ \exp\bigg(-\frac{i}{\hbar}\int_0^t\frac{1}{2}m(\frac{d \zeta}{d\tau})^2 d\tau \bigg)
         \end{equation}
-        此时，第一项是一个Weyl平移算子，第二项是一个相位。
+        此时，第一项是一个Weyl平移算子，第二项来自于$\hat{p}\zeta(t)$和$m\frac{d\zeta}{dt}\hat{x}$的对易关系，它所贡献的相位可以理解为位力定理给出的相位。
         
+        特别地，对于匀速和匀加速两种类型的参考系变换，幺正算符的形式分别为$\hat{U}_a=\exp\big(-\frac{i}{h}(\hat{p}vt-mv\hat{x})\big)$和$\hat{U}_a=\exp\big(\frac{i}{\hbar}\big(\frac{1}{2}at^2\hat{p}-mat\hat{x} \big)\big)\ \exp\big(\frac{1}{12}\frac{i}{\hbar}ma^2t^3\big)$。文献[3]计算了引力弱场近似下自由粒子的传播子，与无引力情形相比，相差了一个Weyl平移算子以及一个额外的相位，总的效应恰好等于这里的$\hat{U}_a$。这一定程度反映了等效原理的量子版本，即引力场局部等效于加速参考系所带来的惯性力。
+
+        \subsection{哈密顿量和薛定谔方程的变换与量子达朗贝尔原理}
+
+            即便在经典力学中，哈密顿量在参考系变换下一般不是不变量。考虑牛顿第二定律$F=ma$，仅在惯性系变换下牛顿第二定律仍然成立。而在非惯性系中，物体会受到
+
+
+        \subsection{力学量的变换与Ehrenfest定理}
+
+
 
     \section{惯性系中的谐振子}
         特别地，我们考虑惯性系变换。此时，其中 代表两个参考系之间的相对速度，于是 将会具有形式：
@@ -66,4 +80,12 @@
         其中 。这个算符正是谐振子系统的平移算符，这意味着，在S’看来，S系中的谐振子基态将会变成相干态。考虑到相干态的物理图像是一个运动的高斯波包，于是S’所观测到的S系基态谐振子就是一个运动的高斯波包，这也是符合我们的经典图像和预期的。
     
 
+
+    \section*{参考文献}
+    \begin{itemize}
+        \item[1] F. Giacomini, et al. Nature Communications (2019)10:494
+        \item[2] D. M. Greenberg. Am. J. Phys. 47.1, 35-38 (1979)
+        \item[3] C. Anastopoulos, et al. arxiv: 1707.04526
+        \item[4] 杨冠卓. 绝热捷径中的若干量子热力学问题研究. 上海：上海大学， 2019
+    \end{itemize}
 \end{document}
