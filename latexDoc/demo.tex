@@ -1,0 +1,114 @@
+\documentclass[a4paper]{article}
+\usepackage{ctex}
+
+\usepackage{geometry}  
+\geometry{left=2.0cm, right=2.0cm, top=2.5cm, bottom=2.5cm}
+
+\usepackage{braket}   
+
+\title{谐振子的Unruh效应}
+\author{吴梦之}
+
+\begin{document}
+    \maketitle
+
+    \section{引言}
+    \subsection{研究背景}
+        Unruh效应是弯曲时空场论的一个有趣的结论。考虑闵氏时空中处于真空态的一个标量场，在任何惯性系中，它都处于真空态。然而，如果我们以匀加速观者的视角(Rindler时空)来考察它，我们将会发现这个场处于热平衡态，并且温度正比于加速度。Unruh效应有趣之处在于，我们所考虑的背景时空闵氏时空是平直的，这暗示我们另一种平直时空——Galileo时空可能也会有类似的效应，即匀加速观者观测Galileo时空中的物理现象，可能存在不平凡的物理效应。
+
+        仿照格点QCD中的技巧，我们可以将时空格点化，这时我们所考虑的自由标量场就会退化为由无穷多个谐振子所构成的多体系统。最典型的由谐振子组成的多体系统是晶格振动系统(在正则量子化之后，可以称作声子系统)，这启发我们可以思考晶格中是否也存在Unruh效应，即考虑零温声子场，匀加速观者是否能够观察到一个热能谱。
+
+        为了研究无穷多谐振子的系统，我们可以从单体谐振子入手，即考虑一个一维谐振子在匀加速观者看到的效应。这本身也是一个很有趣的课题，近些年，一些课题组[2]做了一些有关量子力学中的参考系变换问题，得到了很多有趣的结论。文献[3]还讨论了匀加速观者对自由粒子的观测结果，并讨论了两种量子力学版本的等效原理。所以对于单个简谐振子，我们也可以考虑量子力学版本的等效原理，考察引力场中的谐振子和匀加速观者看到的无外场谐振子。
+
+    \subsection{本文的主要结果}    
+
+        \begin{itemize}
+            \item 量子力学中的参考系变换的一般理论简述，以及量子达朗贝尔原理的构建与物理意义
+            \item 惯性系变换和匀加速参考系变换下的谐振子
+            \item 谐振子的Unruh效应
+        \end{itemize}
+
+    \section{量子力学中的参考系变换}
+
+        关于量子力学中的参考系变换以及Galileo对称性，文献[1]做了很多讨论。不过由于[1]历史较为久远，在Schrodinger绘景下研究问题，很多问题不能看得很透彻，甚至有一些错误。文献[2]对其则进行了更为深刻但较为简略的回顾。在此，本文将从他们工作的基础上入手。
+
+    \subsection{Schrodinger方程的Galileo对称性、绝热规范势与量子达朗贝尔原理}
+        考虑实验室参考系S中的一个态$\ket{\Psi}$，设S'参考系与S的坐标变换为$x'=x+\zeta(t), t'=t$。一般认为，S'对这个态的观测的观测由一个幺正算符$\hat{U}_a$来刻画，量子态和Hamilton量分别变换为$\hat{U}_a\ket{\Psi}$和$\hat{U}_a\hat{H}\hat{U}_a^+$。然而，接下来的论述中我们将看到，在这样的变换下，Schrodinger方程的形式无法保持不变，为了抵消参考系变换带来的额外的效应，我们将看到绝热规范势和量子达朗贝尔原理[4]的物理意义。
+
+        我们首先考虑不含时的参考系变换$x\rightarrow x'=x+\zeta$，其中$\zeta$为常数。这个参考系变换的意义就是将空间原点平移了一段距离$\zeta$，此时参考系变换算符$\hat{U}_a=\exp\big(\frac{i}{\hbar}\zeta\hat{p} \big)$，正是空间平移算子。这时Hamilton量的变换法则为$\hat{H}\rightarrow \hat{H}'=\hat{U}_a\hat{H}\hat{U}_a^+$。我们不难计算S'参考系中的，$\hat{H}'\ket{\Psi'}=\hat{U}_a\hat{H}\hat{U}_a^+\hat{U}_a\ket{\Psi}=\hat{U}_a\hat{H}\ket{\Psi}=\hat{U}_a i\hbar\frac{\partial}{\partial t}\ket{\Psi}$，由于此处$\hat{U}_a$不含时，因此可以与$\frac{\partial}{\partial t}$交换次序，从而得到$\hat{H}'\ket{\Psi'}=i\hbar\frac{\partial}{\partial t}\hat{U}_a\ket{\Psi}=i\hbar\frac{\partial}{\partial t}\ket{\Psi'}$。也就是说，在这样的参考系变换下，Schrodinger方程的形式保持不变。我们可以从对称性的角度重新理解这个结论，它表明了Schrodinger方程具有空间平移对称性，根据Noether定理，这将会给出一个守恒量——动量。
+
+        场论中，给定一个全局对称性，我们往往可以考虑相应的局域对称性(规范对称性)。这里，我们也可以考虑定域对称性，应当注意的是，定域对称性在场论层面理解为$\hat{U}_a$是时空坐标$x^\mu$的函数，在量子力学层面应理解为$\hat{U}_a$是时间t的函数，我们某种程度上可以说量子力学是0+1维场论。这时我们考察经过算符$\hat{U}_a$变换后的Schrodinger方程：$i\hbar\frac{\partial}{\partial t}\ket{\Psi'} = i\hbar\frac{\partial}{\partial t}\big(\hat{U}_a\ket{\Psi}\big) = i\hbar\frac{\partial\hat{U}_a}{\partial t}\ket{\Psi} + i\hbar\hat{U}_a\frac{\partial}{\partial t}\ket{\Psi} = i\hbar\frac{\partial\hat{U}_a}{\partial t}\ket{\Psi} + \hat{U}_a\hat{H}\ket{\Psi} = i\hbar\frac{\partial\hat{U}_a}{\partial t}\ket{\Psi} + \hat{H}'\ket{\Psi'}$。我们会发现Schrodinger方程经过$\hat{U}_a$变换后不再成立，会有多出来的一项$i\hbar\frac{\partial\hat{U}_a}{\partial t}\ket{\Psi} = i\hbar\frac{\partial\hat{U}_a}{\partial t}\hat{U}_a^+\ket{\Psi}$。关于这一项，我们可以有两种思想来理解它。
+
+        \begin{itemize}
+        \item[1] 绝热规范势 
+            
+            我们可以参照规范场论来理解这一项。我们要求系统的运动方程具有$\hat{U}_a$所刻画的定域对称性(规范对称性)，其中这里的"定域"是指时域上的定域，那么时域偏导数$\frac{\partial}{\partial t}$会破坏这种规范对称性。仿照规范场论，我们应当引入规范场(如电磁场、胶子场)来抵消额外的项，将偏导数改写为协变导数$\frac{D}{Dt}=\frac{\partial}{\partial t}+connection\ term$，并要求其与$\hat{U}_a$对易，即$\frac{D}{Dt}\big(\hat{U}_a\ket{\Psi}\big)=\hat{U}_a\frac{D}{Dt}\ket{\Psi}$。我们根据这一限制条件，不难得到联络项应当为$-i\hbar\frac{\partial\hat{U}_a}{\partial t}\hat{U}_a^+$，这正是我们定域幺正变换在Schrodinger方程中带来的额外的一项。将普通导数改为协变导数之后，Schrodinger方程变为：
+
+            \begin{equation}
+                i\hbar\frac{D}{Dt}\ket{\Psi} = \hat{H}\ket{\Psi}
+            \end{equation}
+
+            其中$\frac{D}{Dt}=\frac{\partial}{\partial t}-i\hbar\frac{\partial\hat{U}_a}{\partial t}\hat{U}_a^+$。这个Schrodinger方程在$\hat{U}_a$变换下保持不变，即具有$\hat{U}_a$定域不变性。从这一角度来看，我们可以将这一项理解为规范对称性所带来的联络项，这也是为什么很多文献将其称为绝热规范势的原因。数学上来看，这一项代表了主纤维丛上的几何量，因此将会贡献几何相位(Berry相位)。
+        
+        \item[2] 量子达朗贝尔原理
+            
+            我们可以重新剖析一下我们所遇到的问题。我们对系统的量子态和Hamilton量做了一个含时的幺正变换后，时域偏导数作用在这个幺正变换算符上会给出额外的一项，多出来的这一项破坏了运动方程——Schrodinger方程。类似的问题其实在经典物理层面也存在。在惯性系中，物体的经典运动方程是Newton第二定律$m\frac{d^2x}{dt^2}=F[x(t),\frac{dx}{dt}]$，其中$F[x(t),\frac{dx}{dt}]$是x(t)和$\frac{dx}{dt}$的泛函。但是在非惯性系中，物体的运动方程中存在一个惯性力，这个惯性力破坏了物体的运动方程——Newton第二定律。
+
+            经典物理层面，我们采用达朗贝尔原理来处理惯性力，即重新定义$F[x(t),\frac{dx}{dt}]$，将惯性力吸收进去，这样我们就可以保持运动方程不变。量子力学层面我们也可以重新定义Hamilton量$\hat{H}'=\hat{U}_a\hat{H}\hat{U}_a^+ + i\hbar\frac{\partial\hat{U}_a}{\partial t}\hat{U}_a^+$，这样就可以保持运动方程不变。我们将重新定义Hamilton量来保证Schrodinger方程不变的这一想法称作量子达朗贝尔原理。当然，这一方法在传统文献中也常常使用，并且把重新定义的Hamilton量记作$\hat{H}_{eff}$
+            
+        \end{itemize}
+
+        回顾以上讨论，我们所遇到的问题是当我们对系统做幺正变换时，系统可能会产生额外的效应，从而破坏运动方程——Schrodinger方程。我们希望系统具有这样的对称性，因此不希望运动方程遭到破坏，我们可以有两种方法来解决这个问题。第一种方法是改造运动方程，引入规范势，使新的运动方程在幺正变换下保持不变。第二种方法是我们将新的效应吸收到哈密顿量中，从而保持运动方程不变，称为量子达朗贝尔原理。
+
+        应当指出的是，以上讨论原则上针对任意幺正变换，并不局限于参考系变换，可以是其它方式带来的幺正变换，例如态矢量的相位变换。由于参考系变换具有很强的特殊性，它所带来的绝热规范势具有经典对应，即惯性势。而考虑到等效原理，惯性势局部地可以等效为引力，因此量子达朗贝尔原理为我们架起了连接规范理论和引力理论的一个桥梁，这将为我们理解引力的量子本性提供一个有趣的思路。正是由于刻画参考系变换的幺正变换的特殊性，我们将量子达朗贝尔原理区分为狭义和广义两种版本，其中狭义版本专指参考系变换的量子达朗贝尔原理，而广义版本则针对任意幺正变换。本文将主要针对狭义量子达朗贝尔原理开展研究。
+
+    \subsection{量子态的变换}
+
+        根据以上讨论，我们理解了参考系变换下Schrodinger方程和Hamilton量的变换法则后，接下来我们考虑量子态的变换法则。量子态的变换由幺正算符$\hat{U}_a$来刻画，即若S参考系中观测到的态是$\ket{\Psi}$，则S’中观测到的态为$\hat{U}_a\ket{\Psi}$。根据文献[1,2]，$\hat{U}_a$的一般表达式为:
+    
+        \begin{equation}
+            \hat{U}_a=\exp\bigg(-\frac{i}{\hbar} m \frac{d \zeta}{dt} \hat{x}\bigg) \exp\bigg({\frac{i}{\hbar}\zeta(t) \hat{p}}\bigg) \exp\bigg(-\frac{i}{\hbar}\int_0^t\frac{1}{2}m(\frac{d \zeta}{d\tau})^2 d\tau\bigg)
+        \end{equation}
+        
+        应注意，这三项中的前两项是算符，不能随意交换次序，第三项是数，因此可以随意摆放次序。$\hat{U}_a$ 的第三项的物理意义是，参考系变换所带来的额外动能$E_k=\frac{1}{2}m(\frac{d \zeta}{d\tau})^2$所给出的态随时间演化的积分相位。为了更好地看清前两项的物理意义，我们分别考虑该算符作用在坐标算符和动量算符的本征态上，即考虑参考系变换对坐标本征态和动量本征态的影响。
+        \begin{equation}
+            \hat{U}_a \ket{x} = \exp\bigg(-\frac{i}{\hbar}m\frac{d \zeta}{dt}\ (x+\zeta)\bigg)\ \exp\bigg(-\frac{i}{\hbar}\int_0^t\frac{1}{2}m(\frac{d \zeta}{d\tau})^2 d\tau \bigg)\ \ket{x+\zeta}
+        \end{equation}
+        \begin{equation}
+            \hat{U}_a \ket{p} = \exp\bigg(\frac{i}{\hbar}\zeta p \bigg)\ \exp\bigg(-\frac{i}{\hbar}\int_0^t\frac{1}{2}m(\frac{d \zeta}{d\tau})^2 d\tau \bigg)\ \ket{p+m\frac{d \zeta}{dt}}
+        \end{equation}
+
+        由以上两式可以知道，$\hat{U}_a$的作用是将坐标本征态平移一段距离$\zeta(t)$，将动量本征态增加动量$m\frac{d \zeta}{dt}$。这也符合我们对Galileo变换的经典物理图像——参考系变换之后，物理系统动能、动量和坐标零点会发生变化，而这三方面变化分别由以上三个相位来刻画。
+
+        注意到当$[\hat{A}, [\hat{A}, \hat{B}]]=[\hat{B}, [\hat{A}, \hat{B}]]=0$时，$\hat{A}$和$\hat{B}$算符满足Baker-Hausdorff公式: $\exp(\hat{A}+\hat{B})=\exp\hat{A} \exp\hat{B} \exp(-\frac{[\hat{A}, \hat{B}]}{2})$, 因此我们可以将$\hat{U}_a$写成更紧凑的形式：
+        \begin{equation}
+            \hat{U}_a=\exp\bigg(\frac{i}{\hbar}\bigg(\hat{p}\zeta(t)-m\frac{d\zeta}{dt}\hat{x} \bigg) \bigg)\ \exp\bigg(\frac{i}{\hbar}\frac{1}{2}m\zeta\frac{d\zeta}{dt} \bigg)\ \exp\bigg(-\frac{i}{\hbar}\int_0^t\frac{1}{2}m(\frac{d \zeta}{d\tau})^2 d\tau \bigg)
+        \end{equation}
+        此时，第一项是一个Weyl平移算子，第二项来自于$\hat{p}\zeta(t)$和$m\frac{d\zeta}{dt}\hat{x}$的对易关系，它所贡献的相位可以理解为位力定理给出的相位。
+        
+        特别地，对于匀速和匀加速两种类型的参考系变换，幺正算符的形式分别为$\hat{U}_a=\exp\big(-\frac{i}{h}(\hat{p}vt-mv\hat{x})\big)$和$\hat{U}_a=\exp\big(\frac{i}{\hbar}\big(\frac{1}{2}at^2\hat{p}-mat\hat{x} \big)\big)\ \exp\big(\frac{1}{12}\frac{i}{\hbar}ma^2t^3\big)$。文献[3]计算了引力弱场近似下自由粒子的传播子，与无引力情形相比，相差了一个Weyl平移算子以及一个额外的相位，总的效应恰好等于这里的$\hat{U}_a$。这一定程度反映了等效原理的量子版本，即引力场局部等效于加速参考系所带来的惯性力。
+
+    \subsection{力学量的变换以及Ehrenfest定理}
+
+        以上，我们讨论了Schrodinger方程、Hamilton量和量子态在参考系变换下的变换法则。为了更好地理解量子达朗贝尔原理，我们将通过验证Ehrenfest定理，来研究量子达朗贝尔原理的经典对应。
+
+    \section{参考系变换下的谐振子}
+
+    \subsection{惯性系变换下的谐振子}
+
+    \subsection{实验室参考系下的平动谐振子}
+
+    \subsection{匀加速参考系变换下的谐振子}
+
+    \section{谐振子的Unruh效应}
+
+
+    \section*{参考文献}
+    \begin{itemize}
+        \item[1] F. Giacomini, et al. Nature Communications (2019)10:494
+        \item[2] D. M. Greenberg. Am. J. Phys. 47.1, 35-38 (1979)
+        \item[3] C. Anastopoulos, et al. arxiv: 1707.04526
+        \item[4] 杨冠卓. 绝热捷径中的若干量子热力学问题研究. 上海：上海大学， 2019
+    \end{itemize}
+
+\end{document}
