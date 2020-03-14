@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.3.12)  14 MAR 2020 00:17
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.3.12)  14 MAR 2020 15:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -534,14 +534,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 36.
 [1
 
-] [2] [3] [4] (./demo.aux) ) 
+] [2] [3] [4] [5] (./demo.aux) ) 
 Here is how much of TeX's memory you used:
- 16444 strings out of 492483
- 383061 string characters out of 6134979
+ 16477 strings out of 492483
+ 385655 string characters out of 6134979
  473492 words of memory out of 5000000
- 20832 multiletter control sequences out of 15000+600000
+ 20865 multiletter control sequences out of 15000+600000
  536272 words of font info for 59 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 58i,6n,76p,864b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,6n,76p,921b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on demo.pdf (4 pages).
+Output written on demo.pdf (5 pages).

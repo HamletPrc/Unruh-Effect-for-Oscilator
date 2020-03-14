@@ -30,7 +30,7 @@
 
     \section{量子力学中的参考系变换}
 
-        关于量子力学中的参考系变换以及Galileo对称性，文献[1]做了很多讨论。不过由于[1]历史较为久远，在Schrodinger绘景下研究问题，很多问题不能看得很透彻，甚至有一些错误。文献[2]对其则进行了更为深刻但较为简略的回顾。在此，本文将从他们工作的基础上入手。
+        关于量子力学中的参考系变换以及Galileo对称性，文献[1]做了很多讨论。不过由于[1]历史较为久远，在波动力学框架下研究问题，很多问题不能看得很透彻，甚至有一些错误。文献[2]对其则进行了更为深刻但较为简略的回顾。在此，本文将从他们工作的基础上入手。
 
     \subsection{Schrodinger方程的Galileo对称性、绝热规范势与量子达朗贝尔原理}
         考虑实验室参考系S中的一个态$\ket{\Psi}$，设S'参考系与S的坐标变换为$x'=x+\zeta(t), t'=t$。一般认为，S'对这个态的观测的观测由一个幺正算符$\hat{U}_a$来刻画，量子态和Hamilton量分别变换为$\hat{U}_a\ket{\Psi}$和$\hat{U}_a\hat{H}\hat{U}_a^+$。然而，接下来的论述中我们将看到，在这样的变换下，Schrodinger方程的形式无法保持不变，为了抵消参考系变换带来的额外的效应，我们将看到绝热规范势和量子达朗贝尔原理[4]的物理意义。
@@ -62,7 +62,7 @@
 
         应当指出的是，以上讨论原则上针对任意幺正变换，并不局限于参考系变换，可以是其它方式带来的幺正变换，例如态矢量的相位变换。由于参考系变换具有很强的特殊性，它所带来的绝热规范势具有经典对应，即惯性势。而考虑到等效原理，惯性势局部地可以等效为引力，因此量子达朗贝尔原理为我们架起了连接规范理论和引力理论的一个桥梁，这将为我们理解引力的量子本性提供一个有趣的思路。正是由于刻画参考系变换的幺正变换的特殊性，我们将量子达朗贝尔原理区分为狭义和广义两种版本，其中狭义版本专指参考系变换的量子达朗贝尔原理，而广义版本则针对任意幺正变换。本文将主要针对狭义量子达朗贝尔原理开展研究。
 
-    \subsection{量子态的变换}
+    \subsection{$\hat{U}_a$的表达式与物理意义}
 
         根据以上讨论，我们理解了参考系变换下Schrodinger方程和Hamilton量的变换法则后，接下来我们考虑量子态的变换法则。量子态的变换由幺正算符$\hat{U}_a$来刻画，即若S参考系中观测到的态是$\ket{\Psi}$，则S’中观测到的态为$\hat{U}_a\ket{\Psi}$。根据文献[1,2]，$\hat{U}_a$的一般表达式为:
     
@@ -88,9 +88,22 @@
         
         特别地，对于匀速和匀加速两种类型的参考系变换，幺正算符的形式分别为$\hat{U}_a=\exp\big(-\frac{i}{h}(\hat{p}vt-mv\hat{x})\big)$和$\hat{U}_a=\exp\big(\frac{i}{\hbar}\big(\frac{1}{2}at^2\hat{p}-mat\hat{x} \big)\big)\ \exp\big(\frac{1}{12}\frac{i}{\hbar}ma^2t^3\big)$。文献[3]计算了引力弱场近似下自由粒子的传播子，与无引力情形相比，相差了一个Weyl平移算子以及一个额外的相位，总的效应恰好等于这里的$\hat{U}_a$。这一定程度反映了等效原理的量子版本，即引力场局部等效于加速参考系所带来的惯性力。
 
-    \subsection{力学量的变换以及Ehrenfest定理}
+    \subsection{Ehrenfest定理以及狭义量子达朗贝尔原理}
 
-        以上，我们讨论了Schrodinger方程、Hamilton量和量子态在参考系变换下的变换法则。为了更好地理解量子达朗贝尔原理，我们将通过验证Ehrenfest定理，来研究量子达朗贝尔原理的经典对应。
+        以上，我们讨论了Schrodinger方程、Hamilton量和量子态在参考系变换下的变换法则。为了更好地理解量子达朗贝尔原理，我们将通过Ehrenfest定理，来研究该原理的物理意义与经典对应。
+
+        我们已经知道，一般参考系变换下的幺正算符为公式(2)，我们接下来计算其惯性势。$\frac{\partial}{\partial t}\hat{U}_a = \big(-\frac{i}{\hbar}m\frac{d^2 \zeta}{dt^2} \hat{x}\big)\hat{U}_a + \hat{U_a}\big(\frac{i}{\hbar}\frac{d\zeta}{dt}\hat{p} - \frac{i}{\hbar}\frac{1}{2}m(\frac{d\zeta}{dt})^2\big)$。由于惯性势的第二个因子$\hat{U}_a^+$与$\hat{U}_a$相乘等于1，因此我们希望将$\hat{p}$与$\hat{U}_a$交换次序。根据对易关系$[\hat{x},\hat{p}]=i\hbar$，我们用归纳法不难知道$[\hat{x}^n,\hat{p}]=i\hbar n\hat{x}^{n-1}$，进而对于任意能够Taylor展开的算符函数$f(\hat{x},\hat{p})$, 都有$[\hat{f}, \hat{p}]=i\hbar\frac{\partial f}{\partial\hat{x}}$。所以$[\hat{U}_a, \hat{p}] = i\hbar\frac{\partial\hat{U}_a}{\partial\hat{x}} = i\hbar\big(-\frac{i}{\hbar}m\frac{d\zeta}{dt}\big)\hat{U}_a = m\frac{d\zeta}{dt}\hat{U}_a$。于是$\hat{U}_a\hat{p} = \hat{p}\hat{U}_a + [\hat{U}_a, \hat{p}] = \big(\hat{p}+m\frac{d\zeta}{dt}\big)\hat{U}_a$。这样，我们就得到了一般形式的惯性势如下：
+
+        \begin{equation}
+            \hat{V}_{iner} = i\hbar\frac{\partial\hat{U}_a}{\partial t}\hat{U}_a^+ = m \frac{d^2\zeta}{d t^2}\hat{x}-\frac{d\zeta}{dt}\hat{p}-\frac{1}{2}m\bigg(\frac{d\zeta}{dt}\bigg)^2
+        \end{equation}
+
+        量子力学中的Ehrenfest定理告诉我们$\frac{d}{dt}<\hat{p}>=-<\frac{\partial\hat{V}}{\partial \hat{x}}>$，即力学量的期望值服从Newton运动方程。那么经过参考系变换后，势能项增加了一个惯性势，于是Ehrenfest定理将会给出$-<\frac{\partial\hat{V}_{iner}}{\partial \hat{x}}>=-m \frac{d^2\zeta}{d t^2}$，这正是经典惯性力。这也说明，对于描述参考系变换的幺正算符，我们将它所带来的绝热规范势称为惯性势或者达朗贝尔势是合适的。
+
+        特别地，我们可以考虑惯性系的boost变换$x\rightarrow x'=x+vt$，此时惯性势$\hat{V}_{iner}=v\hat{p}-\frac{1}{2}mv^2$，我们发现惯性势不含坐标算符$\hat{x}$，于是它所带来的惯性力等于0。这说明经典Newton运动方程在boost变换下具有不变性，从对称性的角度来看就是Newton方程满足Galileo对称性。另外，文献[2]中也得到了这个惯性势，并利用等效原理称为引力势。这是不合适的，因为我们已经看到$\hat{V}_{iner}$在经典方程层面并没有惯性力的效应，就更不能等价为引力了。
+        
+        然而，我们还应指出，Schrodinger方程在boost变换下惯性势并不等于0，意味着Schrodinger方程并不满足完整的Galileo对称性。浅层次地将，我们可以将其称之为量子效应，它主要会对量子力学中的相位产生影响，在干涉实验中可能可以看到其物理效应。然而从深层次的物理图像来看，boost的非零惯性势将是个灾难！这意味着Schrodinger方程定义了一个绝对参考系，正如狭义相对论提出之前的电动力学定义了一个以太参考系。这个参考系的存在意味着当我们在实验室中做量子力学实验时，必须首先知道我们的实验室参考系相对于绝对参考系的速度是多少，像Michelson和Morley一样，首先测量我们的实验室相对于绝对参考系“以太风”的速度，才能写出一个适用于这个实验室的Schrodinger方程。由于Schrodinger方程并不满足狭义相对论，因此无法像电动力学一样利用狭义相对论来解决其与Galileo对称性的矛盾。我们应当如何看待这个矛盾，是接受绝对空间的存在，还是修改Schrodinger方程或参考系变换法则，这是后续研究的一个有趣的课题。
+
 
     \section{参考系变换下的谐振子}
 
