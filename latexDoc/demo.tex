@@ -1,5 +1,6 @@
 \documentclass[a4paper]{article}
 \usepackage{ctex}
+\usepackage{amsmath}
 
 \usepackage{geometry}  
 \geometry{left=2.0cm, right=2.0cm, top=2.5cm, bottom=2.5cm}
@@ -33,7 +34,7 @@
         关于量子力学中的参考系变换以及Galileo对称性，文献[1]做了很多讨论。不过由于[1]历史较为久远，在波动力学框架下研究问题，很多问题不能看得很透彻，甚至有一些错误。文献[2]对其则进行了更为深刻但较为简略的回顾。在此，本文将从他们工作的基础上入手。
 
     \subsection{Schrodinger方程的Galileo对称性、绝热规范势与量子达朗贝尔原理}
-        考虑实验室参考系S中的一个态$\ket{\Psi}$，设S'参考系与S的坐标变换为$x'=x+\zeta(t), t'=t$。一般认为，S'对这个态的观测的观测由一个幺正算符$\hat{U}_a$来刻画，量子态和Hamilton量分别变换为$\hat{U}_a\ket{\Psi}$和$\hat{U}_a\hat{H}\hat{U}_a^+$。然而，接下来的论述中我们将看到，在这样的变换下，Schrodinger方程的形式无法保持不变，为了抵消参考系变换带来的额外的效应，我们将看到绝热规范势和量子达朗贝尔原理[4]的物理意义。
+        考虑实验室参考系S中的一个态$\ket{\Psi}$，设S'参考系与S的坐标变换为$x'=x+\zeta(t), t'=t$。一般认为，S'对这个态的观测的观测由一个幺正算符$\hat{U}_a$来刻画，量子态和Hamilton量分别变换为$\hat{U}_a\ket{\Psi}$和$\hat{U}_a\hat{H}\hat{U}_a^+$。然而，接下来的论述中我们将看到，在这样的变换下，Schrodinger方程的形式无法保持不变，为了抵消参考系变换带来的额外的效应，我们将看到绝热规范势[5]和量子达朗贝尔原理[4]的物理意义。
 
         我们首先考虑不含时的参考系变换$x\rightarrow x'=x+\zeta$，其中$\zeta$为常数。这个参考系变换的意义就是将空间原点平移了一段距离$\zeta$，此时参考系变换算符$\hat{U}_a=\exp\big(\frac{i}{\hbar}\zeta\hat{p} \big)$，正是空间平移算子。这时Hamilton量的变换法则为$\hat{H}\rightarrow \hat{H}'=\hat{U}_a\hat{H}\hat{U}_a^+$。我们不难计算S'参考系中的，$\hat{H}'\ket{\Psi'}=\hat{U}_a\hat{H}\hat{U}_a^+\hat{U}_a\ket{\Psi}=\hat{U}_a\hat{H}\ket{\Psi}=\hat{U}_a i\hbar\frac{\partial}{\partial t}\ket{\Psi}$，由于此处$\hat{U}_a$不含时，因此可以与$\frac{\partial}{\partial t}$交换次序，从而得到$\hat{H}'\ket{\Psi'}=i\hbar\frac{\partial}{\partial t}\hat{U}_a\ket{\Psi}=i\hbar\frac{\partial}{\partial t}\ket{\Psi'}$。也就是说，在这样的参考系变换下，Schrodinger方程的形式保持不变。我们可以从对称性的角度重新理解这个结论，它表明了Schrodinger方程具有空间平移对称性，根据Noether定理，这将会给出一个守恒量——动量。
 
@@ -54,7 +55,13 @@
             
             我们可以重新剖析一下我们所遇到的问题。我们对系统的量子态和Hamilton量做了一个含时的幺正变换后，时域偏导数作用在这个幺正变换算符上会给出额外的一项，多出来的这一项破坏了运动方程——Schrodinger方程。类似的问题其实在经典物理层面也存在。在惯性系中，物体的经典运动方程是Newton第二定律$m\frac{d^2x}{dt^2}=F[x(t),\frac{dx}{dt}]$，其中$F[x(t),\frac{dx}{dt}]$是x(t)和$\frac{dx}{dt}$的泛函。但是在非惯性系中，物体的运动方程中存在一个惯性力，这个惯性力破坏了物体的运动方程——Newton第二定律。
 
-            经典物理层面，我们采用达朗贝尔原理来处理惯性力，即重新定义$F[x(t),\frac{dx}{dt}]$，将惯性力吸收进去，这样我们就可以保持运动方程不变。量子力学层面我们也可以重新定义Hamilton量$\hat{H}'=\hat{U}_a\hat{H}\hat{U}_a^+ + i\hbar\frac{\partial\hat{U}_a}{\partial t}\hat{U}_a^+$，这样就可以保持运动方程不变。我们将重新定义Hamilton量来保证Schrodinger方程不变的这一想法称作量子达朗贝尔原理。当然，这一方法在传统文献中也常常使用，并且把重新定义的Hamilton量记作$\hat{H}_{eff}$
+            经典物理层面，我们采用达朗贝尔原理来处理惯性力，即重新定义$F[x(t),\frac{dx}{dt}]$，将惯性力吸收进去，这样我们就可以保持运动方程不变。量子力学层面我们也可以重新定义Hamilton量:
+            
+            \begin{equation}
+                \hat{H}'=\hat{U}_a\hat{H}\hat{U}_a^+ + i\hbar\frac{\partial\hat{U}_a}{\partial t}\hat{U}_a^+
+            \end{equation}
+
+            这样在参考系变换下，Schrodinger方程的形式不发生改变。我们将重新定义Hamilton量来保证Schrodinger方程不变的这一想法称作量子达朗贝尔原理。当然，这一方法在传统文献中也常常使用，并且把重新定义的Hamilton量记作$\hat{H}_{eff}$
             
         \end{itemize}
 
@@ -70,7 +77,7 @@
             \hat{U}_a=\exp\bigg(-\frac{i}{\hbar} m \frac{d \zeta}{dt} \hat{x}\bigg) \exp\bigg({\frac{i}{\hbar}\zeta(t) \hat{p}}\bigg) \exp\bigg(-\frac{i}{\hbar}\int_0^t\frac{1}{2}m(\frac{d \zeta}{d\tau})^2 d\tau\bigg)
         \end{equation}
         
-        应注意，这三项中的前两项是算符，不能随意交换次序，第三项是数，因此可以随意摆放次序。$\hat{U}_a$ 的第三项的物理意义是，参考系变换所带来的额外动能$E_k=\frac{1}{2}m(\frac{d \zeta}{d\tau})^2$所给出的态随时间演化的积分相位。为了更好地看清前两项的物理意义，我们分别考虑该算符作用在坐标算符和动量算符的本征态上，即考虑参考系变换对坐标本征态和动量本征态的影响。
+        应注意，这三项中的前两项是算符，不能随意交换次序，第三项是数，因此可以随意摆放次序。为了更好地看清前两项的物理意义，我们分别考虑该算符作用在坐标算符和动量算符的本征态上，即考虑参考系变换对坐标本征态和动量本征态的影响。
         \begin{equation}
             \hat{U}_a \ket{x} = \exp\bigg(-\frac{i}{\hbar}m\frac{d \zeta}{dt}\ (x+\zeta)\bigg)\ \exp\bigg(-\frac{i}{\hbar}\int_0^t\frac{1}{2}m(\frac{d \zeta}{d\tau})^2 d\tau \bigg)\ \ket{x+\zeta}
         \end{equation}
@@ -80,11 +87,17 @@
 
         由以上两式可以知道，$\hat{U}_a$的作用是将坐标本征态平移一段距离$\zeta(t)$，将动量本征态增加动量$m\frac{d \zeta}{dt}$。这也符合我们对Galileo变换的经典物理图像——参考系变换之后，物理系统动能、动量和坐标零点会发生变化，而这三方面变化分别由以上三个相位来刻画。
 
-        注意到当$[\hat{A}, [\hat{A}, \hat{B}]]=[\hat{B}, [\hat{A}, \hat{B}]]=0$时，$\hat{A}$和$\hat{B}$算符满足Baker-Hausdorff公式: $\exp(\hat{A}+\hat{B})=\exp\hat{A} \exp\hat{B} \exp(-\frac{[\hat{A}, \hat{B}]}{2})$, 因此我们可以将$\hat{U}_a$写成更紧凑的形式：
+        注意到当$[\hat{A}, [\hat{A}, \hat{B}]]=[\hat{B}, [\hat{A}, \hat{B}]]=0$时，$\hat{A}$和$\hat{B}$算符满足Baker-Hausdorff公式: $\exp(\hat{A}+\hat{B})=\exp\hat{A} \exp\hat{B} \exp(-\frac{[\hat{A}, \hat{B}]}{2})$, 因此我们可以将$\hat{U}_a$写成Weyl平移算子的形式：
         \begin{equation}
             \hat{U}_a=\exp\bigg(\frac{i}{\hbar}\bigg(\hat{p}\zeta(t)-m\frac{d\zeta}{dt}\hat{x} \bigg) \bigg)\ \exp\bigg(\frac{i}{\hbar}\frac{1}{2}m\zeta\frac{d\zeta}{dt} \bigg)\ \exp\bigg(-\frac{i}{\hbar}\int_0^t\frac{1}{2}m(\frac{d \zeta}{d\tau})^2 d\tau \bigg)
         \end{equation}
-        此时，第一项是一个Weyl平移算子，第二项来自于$\hat{p}\zeta(t)$和$m\frac{d\zeta}{dt}\hat{x}$的对易关系，它所贡献的相位可以理解为位力定理给出的相位。
+        第二项来自于$\hat{p}\zeta(t)$和$m\frac{d\zeta}{dt}\hat{x}$的对易关系，我们将其与第三项合并起来考虑，一并给出其物理意义。第三项的指数因子$-\frac{i}{\hbar}\int_0^t\frac{1}{2}m(\frac{d \zeta}{d\tau})^2 d\tau = -\frac{i}{\hbar}\int_{\zeta(0)\equiv 0}^{\zeta(t)}\frac{1}{2}m\frac{d \zeta}{d\tau} d\zeta = -\frac{i}{\hbar}\bigg(\frac{1}{2}m\zeta(t)\frac{d \zeta}{d\tau}-\int_0^t\frac{1}{2}m\zeta\frac{d^2\zeta}{d\tau^2} d\tau\bigg)$，不难看出分部积分后的第一项恰好可以与$\hat{U}_a$的第二项相消。于是$\hat{U}_a$可以进一步写成更紧凑的形式:
+
+        \begin{equation}
+            \hat{U}_a = \exp\bigg(\frac{i}{\hbar}\bigg(\hat{p}\zeta(t)-m\frac{d\zeta}{dt}\hat{x} \bigg) \bigg)\ \exp\bigg( -\frac{i}{\hbar}\int_0^t-\frac{1}{2}m\zeta\frac{d^2\zeta}{d\tau^2} d\tau\bigg)
+        \end{equation}
+
+        注意到$-m\frac{d^2\zeta}{dt^2}$代表了参考系变换时带来的惯性力，因此第二项的相位是惯性力做功所给出的。
         
         特别地，对于匀速和匀加速两种类型的参考系变换，幺正算符的形式分别为$\hat{U}_a=\exp\big(-\frac{i}{h}(\hat{p}vt-mv\hat{x})\big)$和$\hat{U}_a=\exp\big(\frac{i}{\hbar}\big(\frac{1}{2}at^2\hat{p}-mat\hat{x} \big)\big)\ \exp\big(\frac{1}{12}\frac{i}{\hbar}ma^2t^3\big)$。文献[3]计算了引力弱场近似下自由粒子的传播子，与无引力情形相比，相差了一个Weyl平移算子以及一个额外的相位，总的效应恰好等于这里的$\hat{U}_a$。这一定程度反映了等效原理的量子版本，即引力场局部等效于加速参考系所带来的惯性力。
 
@@ -95,12 +108,16 @@
         我们已经知道，一般参考系变换下的幺正算符为公式(2)，我们接下来计算其惯性势。$\frac{\partial}{\partial t}\hat{U}_a = \big(-\frac{i}{\hbar}m\frac{d^2 \zeta}{dt^2} \hat{x}\big)\hat{U}_a + \hat{U_a}\big(\frac{i}{\hbar}\frac{d\zeta}{dt}\hat{p} - \frac{i}{\hbar}\frac{1}{2}m(\frac{d\zeta}{dt})^2\big)$。由于惯性势的第二个因子$\hat{U}_a^+$与$\hat{U}_a$相乘等于1，因此我们希望将$\hat{p}$与$\hat{U}_a$交换次序。根据对易关系$[\hat{x},\hat{p}]=i\hbar$，我们用归纳法不难知道$[\hat{x}^n,\hat{p}]=i\hbar n\hat{x}^{n-1}$，进而对于任意能够Taylor展开的算符函数$f(\hat{x},\hat{p})$, 都有$[\hat{f}, \hat{p}]=i\hbar\frac{\partial f}{\partial\hat{x}}$。所以$[\hat{U}_a, \hat{p}] = i\hbar\frac{\partial\hat{U}_a}{\partial\hat{x}} = i\hbar\big(-\frac{i}{\hbar}m\frac{d\zeta}{dt}\big)\hat{U}_a = m\frac{d\zeta}{dt}\hat{U}_a$。于是$\hat{U}_a\hat{p} = \hat{p}\hat{U}_a + [\hat{U}_a, \hat{p}] = \big(\hat{p}+m\frac{d\zeta}{dt}\big)\hat{U}_a$。这样，我们就得到了一般形式的惯性势如下：
 
         \begin{equation}
-            \hat{V}_{iner} = i\hbar\frac{\partial\hat{U}_a}{\partial t}\hat{U}_a^+ = m \frac{d^2\zeta}{d t^2}\hat{x}-\frac{d\zeta}{dt}\hat{p}-\frac{1}{2}m\bigg(\frac{d\zeta}{dt}\bigg)^2
+            \hat{V}_{iner} := i\hbar\frac{\partial\hat{U}_a}{\partial t}\hat{U}_a^+ = m \frac{d^2\zeta}{d t^2}\hat{x}-\frac{d\zeta}{dt}\hat{p}-\frac{1}{2}m\bigg(\frac{d\zeta}{dt}\bigg)^2
         \end{equation}
 
         量子力学中的Ehrenfest定理告诉我们$\frac{d}{dt}<\hat{p}>=-<\frac{\partial\hat{V}}{\partial \hat{x}}>$，即力学量的期望值服从Newton运动方程。那么经过参考系变换后，势能项增加了一个惯性势，于是Ehrenfest定理将会给出$-<\frac{\partial\hat{V}_{iner}}{\partial \hat{x}}>=-m \frac{d^2\zeta}{d t^2}$，这正是经典惯性力。这也说明，对于描述参考系变换的幺正算符，我们将它所带来的绝热规范势称为惯性势或者达朗贝尔势是合适的。
 
-        惯性势$\hat{V}_{iner}$中的动量项$-\frac{d\zeta}{dt}\hat{p}$则应当与Hamilton量中的动能项$\frac{\hat{p}^2}{2m}$进行配平方，得到$\frac{\big(\hat{p}-m\frac{d\zeta}{dt}\big)^2}{2m}-\frac{1}{2}m\big(\frac{d\zeta}{dt}\big)$。第一项也是符合经典物理图像的，它代表了在S'系中观测物体运动，其动量会有$-m\frac{d\zeta}{dt}$的变化。第二项与$V_{iner}$中的$\frac{1}{2}m\big(\frac{d\zeta}{dt}\big)^2$合并，给出一个全局相位。
+        惯性势$\hat{V}_{iner}$中的动量项$-\frac{d\zeta}{dt}\hat{p}$则应当与Hamilton量中的动能项$\frac{\hat{p}^2}{2m}$进行配平方，得到$\frac{\big(\hat{p}-m\frac{d\zeta}{dt}\big)^2}{2m}-\frac{1}{2}m\big(\frac{d\zeta}{dt}\big)$。第一项也是符合经典物理图像的，它代表了在S'系中观测物体运动，其动量会有$-m\frac{d\zeta}{dt}$的变化。第二项与$V_{iner}$中的$\frac{1}{2}m\big(\frac{d\zeta}{dt}\big)^2$合并，给出一个全局相位。因此，S'系中的Schrodinger方程的形式为:
+
+        \begin{equation}
+            i\hbar\frac{\partial}{\partial t}\ket{\Psi'} = \frac{\big(\hat{p}-m\frac{d\zeta}{dt}\big)^2}{2m} + V(\hat{x}+\zeta) - m \frac{d^2\zeta}{d t^2}\hat{x} - m\bigg(\frac{d\zeta}{dt}\bigg)^2
+        \end{equation}
 
         特别地，我们可以考虑惯性系的boost变换$x\rightarrow x'=x+vt$，此时惯性势$\hat{V}_{iner}=v\hat{p}-\frac{1}{2}mv^2$，我们发现惯性势不含坐标算符$\hat{x}$，于是它所带来的惯性力等于0。这说明经典Newton运动方程在boost变换下具有不变性，从对称性的角度来看就是Newton方程满足Galileo对称性。此时S'参考系中的Hamilton量变为$\frac{\big(\hat{p}-m\frac{d\zeta}{dt}\big)^2}{2m}+V(\hat{x})-mv^2$，说明Schrodinger方程在boost变换下仅会多出势能零点的一个平移$-mv^2$，贡献一个没有可观测效应的全局相位，因此Schrodinger方程也具有Galileo对称性。
         
@@ -108,13 +125,29 @@
 
     \section{参考系变换下的谐振子}
 
-        以上我们对一般的参考系变换进行了讨论，接下来我们将把结论应用于谐振子系统$\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$。谐振子系统中，$\hat{x}$和$\hat{p}$可以用产生湮灭算符表示$\hat{x}=\sqrt{\frac{\hbar}{2m\omega}}(\hat{a}^{+}+\hat{a})$，$\hat{p}=i\sqrt{\frac{m\hbar\omega}{2}}(\hat{a}^{+}-\hat{a})$。此时，Weyl平移算子$\hat{W}(a, b)=\exp(ia\hat{x}-ib\hat{p})$将会变成$\hat{D}(\alpha)=\exp(\alpha\hat{a}^{+}-\alpha^*\hat{a})$，其中$\alpha=b\sqrt{\frac{m\hbar\omega}{2}}+ia\sqrt{\frac{\hbar}{2m\omega}}$。$D(\alpha)$算符称为谐振子的平移算符，其物理意义是将谐振子基态变换为本征值等于$\alpha$的相干态，即$\hat{a}\hat{D}(\alpha)\ket{0}=\alpha\ket{\alpha}$。
+        以上我们对一般的参考系变换进行了讨论，接下来我们研究谐振子系统$\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$。谐振子系统中，$\hat{x}$和$\hat{p}$可以用产生湮灭算符表示$\hat{x}=\sqrt{\frac{\hbar}{2m\omega}}(\hat{a}^{+}+\hat{a})$，$\hat{p}=i\sqrt{\frac{m\hbar\omega}{2}}(\hat{a}^{+}-\hat{a})$。此时，Weyl平移算子$\hat{W}(a, b)=\exp(ia\hat{x}-ib\hat{p})$将会变成$\hat{D}(\alpha)=\exp(\alpha\hat{a}^{+}-\alpha^*\hat{a})$，其中$\alpha=b\sqrt{\frac{m\hbar\omega}{2}}+ia\sqrt{\frac{\hbar}{2m\omega}}$。$D(\alpha)$算符称为谐振子的平移算符，其物理意义是将谐振子基态变换为本征值等于$\alpha$的相干态，即$\hat{a}\hat{D}(\alpha)\ket{0}=\alpha\ket{\alpha}$。
 
-        
+        由于参考系变换的幺正算符是Weyl平移算符乘一个相位，因此我们知道参考系变换将谐振子基态变成一个相干态，并且$\alpha=-\zeta\sqrt{\frac{m\omega}{\hbar}}-i\frac{d\zeta}{dt}\sqrt{\frac{1}{2m\hbar\omega}}$。波函数则等于:
 
-    \subsection{惯性系变换下的谐振子}
+        \begin{equation}
+            \Psi'_0(x,t) = \bigg(\frac{m\omega}{\pi\hbar}\bigg)^{1/4} \exp\bigg(\frac{i}{\hbar}<p>_\alpha x-\frac{m\omega}{2\hbar}(x-x_\alpha)^2\bigg)\exp\bigg(-\frac{i}{2\hbar}<p>_\alpha<x>_\alpha\bigg)
+        \end{equation}
+
+        其中$<x>_\alpha=\bra{\alpha}\hat{x}\ket{\alpha}$，$<p>_\alpha=\Bra{\alpha}\hat{p}\ket{\alpha}$
 
     \subsection{实验室参考系下的平动谐振子}
+        我们可以考虑实验室系中外力作用下的一个平动谐振子$\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\big(\hat{x}-\zeta(t)\big)^2$，这样的谐振子在量子操控领域很有用，代表了我们输运一个谐振子态。经典力学层面下，我们预期静止参考系下的平动谐振子，应该等同于平动参考系下无平动自由度的谐振子。接下来我们将研究量子情形下这个结论是否仍然成立。
+
+        根据Lewis-Riesenfeld理论[6, 7]，这个Hamilton量具有精确解:
+
+        \begin{equation}
+            \begin{split}  
+                \Psi(x,t)& =\frac{1}{\sqrt{2^n n!}}\bigg(\frac{m\omega}{\pi\hbar}\bigg)^{1/4} \exp\bigg(-\frac{i}{\hbar}\int_0^t \bigg(E_n+\frac{1}{2}m\big(\frac{dx_c}{d\tau}\big)^2\bigg)d\tau\bigg) \\
+                    & \times\exp\bigg(-\frac{m\omega}{2\hbar}(x-x_c)^2\bigg) \exp\bigg(\frac{i}{\hbar}m\frac{dx_c}{dt}x\bigg) H_n\bigg(\sqrt{\frac{m\omega}{\hbar}}(x-x_c)\bigg)
+            \end{split}
+        \end{equation}
+    
+        其中，$x_c$由方程$\frac{d^2}{dt^2}x_c+\omega^2(x_c-\zeta)=0$确定，
 
     \subsection{匀加速参考系变换下的谐振子}
 
@@ -127,6 +160,10 @@
         \item[2] D. M. Greenberg. Am. J. Phys. 47.1, 35-38 (1979)
         \item[3] C. Anastopoulos, et al. arxiv: 1707.04526
         \item[4] 杨冠卓. 绝热捷径中的若干量子热力学问题研究. 上海：上海大学， 2019
+        \item[5] 绝热规范势
+        \item[6] H. R. Lewis. Jr. Math. Phys. 9, 1976(1968) 
+        \item[7] H. R. Lewis, W. B. Riesenfeld. Jr. Math. Phys. 10, 1458(1969)
+        \item[8]  
     \end{itemize}
 
 \end{document}
