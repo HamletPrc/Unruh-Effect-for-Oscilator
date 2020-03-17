@@ -130,10 +130,16 @@
         由于参考系变换的幺正算符是Weyl平移算符乘一个相位，因此我们知道参考系变换将谐振子基态变成一个相干态，并且$\alpha=-\zeta\sqrt{\frac{m\omega}{\hbar}}-i\frac{d\zeta}{dt}\sqrt{\frac{1}{2m\hbar\omega}}$。波函数则等于:
 
         \begin{equation}
-            \Psi'_0(x,t) = \bigg(\frac{m\omega}{\pi\hbar}\bigg)^{1/4} \exp\bigg(\frac{i}{\hbar}<p>_\alpha x-\frac{m\omega}{2\hbar}(x-x_\alpha)^2\bigg)\exp\bigg(-\frac{i}{2\hbar}<p>_\alpha<x>_\alpha\bigg)
+            \Psi'_0(x,t) = \bigg(\frac{m\omega}{\pi\hbar}\bigg)^{1/4} \exp\bigg(\frac{i}{\hbar}<p>_\alpha x-\frac{m\omega}{2\hbar}(x-<x>_\alpha)^2\bigg) \exp\bigg(-\frac{i}{2\hbar}<p>_\alpha<x>_\alpha\bigg) \exp(-\frac{i}{\hbar}E_0t)
         \end{equation}
 
-        其中$<x>_\alpha=\bra{\alpha}\hat{x}\ket{\alpha}$，$<p>_\alpha=\Bra{\alpha}\hat{p}\ket{\alpha}$
+        其中$<x>_\alpha=\bra{\alpha}\hat{x}\ket{\alpha}$，$<p>_\alpha=\Bra{\alpha}\hat{p}\ket{\alpha}$。我们对波函数求模平方，得到
+
+        \begin{equation}
+            |\Psi'_0(x,t)|^2 = \sqrt{\frac{m\omega}{\pi\hbar}}\exp\bigg(\frac{m\omega}{\hbar}(x-<x>_\alpha)^2\bigg)
+        \end{equation}
+
+        说明在S'系参考系观察者看来，谐振子基态是一个运动的高斯波包。其中心位置$<x>_alpha = \bra{\alpha}\hat{x}\ket{\alpha} = \int dx \bra{\alpha}\hat{x}\ket{x}\bra{x}\ket{\alpha} = \int dx x |\Psi_\alpha(x)|^2 = $
 
     \subsection{实验室参考系下的平动谐振子}
         我们可以考虑实验室系中外力作用下的一个平动谐振子$\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\big(\hat{x}-\zeta(t)\big)^2$，这样的谐振子在量子操控领域很有用，代表了我们输运一个谐振子态。经典力学层面下，我们预期静止参考系下的平动谐振子，应该等同于平动参考系下无平动自由度的谐振子。接下来我们将研究量子情形下这个结论是否仍然成立。
@@ -160,10 +166,10 @@
         \item[2] D. M. Greenberg. Am. J. Phys. 47.1, 35-38 (1979)
         \item[3] C. Anastopoulos, et al. arxiv: 1707.04526
         \item[4] 杨冠卓. 绝热捷径中的若干量子热力学问题研究. 上海：上海大学， 2019
-        \item[5] 绝热规范势
+        \item[5] M. Kolodrubetz, et al. arxiv: 1602.01062
         \item[6] H. R. Lewis. Jr. Math. Phys. 9, 1976(1968) 
         \item[7] H. R. Lewis, W. B. Riesenfeld. Jr. Math. Phys. 10, 1458(1969)
-        \item[8]  
+        \item[8] 
     \end{itemize}
 
 \end{document}
