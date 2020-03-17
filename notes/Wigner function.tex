@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{braket}
+
+\geometry{left=2.0cm, right=2.0cm, top=2.5cm, bottom=2.5cm}
+
+\title{Note on Wigner Function}
+\author{Mengzhi Wu}
+
+\begin{document}
+    \maketitle    
+
+    This note aims to summarize the main idea of the Wigner function and the Weyl transformation. It is mainly based on DOI 10.1007/978-1-4419-8840-9 chap 5 and my own calculation.
+    
+    Let's begin with the statiscal average value of an operator $\hat{A}$ in a quantum system described by a density operator $\rho$:
+
+    \begin{equation}
+        \begin{split}
+            <A> &= Tr(\hat{A}\hat{\rho}) = \int dx \bra{x}\hat{A}\hat{\rho}\ket{x} \\
+                &= \int dxdx' \bra{x}\hat{A}\ket{x'}\bra{x'}\hat{\rho}\ket{x}
+        \end{split}
+    \end{equation}
+
+    If we want to know the time evolution of $<\hat{A}>$, since $\hat{A}$, $\ket{x}$ and $\ket{x'}$ are time-independent, the unique term that influence the evolution of $<\hat{A}>$ is $\frac{d}{dt}\hat{\rho} = \frac{1}{i\hbar}[\hat{H},\hat{\rho}]$, according to Liouville's equation. Therefore, 
+
+    \begin{equation}
+        \begin{split}
+            \frac{d}{dt} <A> &= \int dxdx' \bra{x}\hat{A}\ket{x'}\bra{x'}\frac{d}{dt}\hat{\rho}\ket{x} \\
+                &= \int dxdx' \bra{x}\hat{A}\ket{x'}\bra{x'} \frac{1}{i\hbar}[\hat{H},\hat{\rho}]\ket{x} \\
+                &= \frac{1}{i\hbar} \int dxdx' \bra{x}\hat{A}\ket{x'} \biggl[-\frac{\hbar^2}{2m}\biggl(\frac{\partial^2}{\partial x^2}-\frac{\partial^2}{\partial x'^2}\biggr)+(V(x)-V(x'))\biggr] \bra{x'}\hat{\rho}\ket{x}
+        \end{split}
+    \end{equation}
+
+    According to these 2 equations above, we find out that $\bra{x'}\hat{\rho}\ket{x}$ plays a central role to determine the behavior of an operator $\hat{A}$. The method to deal with $\bra{x'}\hat{\rho}\ket{x}$ is double Fourier transformation which is called Weyl transformation.
+\end{document}
