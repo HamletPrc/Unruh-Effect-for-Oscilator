@@ -1,0 +1,110 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{braket}
+
+\geometry{left=2.0cm, right=2.0cm, top=2.5cm, bottom=2.5cm}
+
+\title{Note on coherent state}
+\author{Mengzhi Wu}
+
+\begin{document}
+    \maketitle
+
+    This note aims to summarize essential properties of the coherent state. I plan to cover these points:
+
+    \begin{itemize}
+        \item Basic propertities for creation and annilation operators.
+        \item Coherent states under Hamiltonian representation.
+        \item Coherent states under coordinate representation.
+        \item Wigner functions for coherent states and time evolution.
+        \item classical propertities of coherent states.
+    \end{itemize}
+
+    \section{Properties for operators}
+        In this section, I'd like to briefly review some basic properties of some operators. The Hamiltonian is $\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$, and the commute relations is $[\hat{x},\hat{p}]=i\hbar$(Be careful of the sign!). Then the creation and annilation operator can be defined as 
+
+        \begin{equation}
+            \hat{a}= \frac{1}{\sqrt{2m\hbar\omega}}(i\hat{p}+m\omega\hat{x}), \ \hat{a}^\dagger=\frac{1}{\sqrt{2m\hbar\omega}}(-i\hat{p}+m\omega\hat{x})
+        \end{equation}
+
+        And the commute relations is $[\hat{a}^\dagger, \hat{a}]=-1$(Be careful of the sign!). Inversely, $\hat{x}$, $\hat{p}$ and $\hat{H}$ can be described as 
+
+        \begin{equation}
+            \hat{x}= ,\ \hat{p}= ,\ \hat{H}=(\hat{a}^+\hat{a}+\frac{1}{2})\hbar\omega
+        \end{equation}
+
+        Suppose the eigenstate of the Hamiltonian is $\ket{n}$ with eigenvalue $E_n=(n+\frac{1}{2})\hbar\omega$ whose wavefunction is $\Psi_n(x)=$. Then 
+
+        \begin{equation}
+            \hat{a}\ket{n}=\sqrt{n}\ket{n-1},\ \hat{a}^\dagger\ket{n}=\sqrt{n+1}\ket{n+1}
+        \end{equation}
+
+        \vbox{}
+
+        \vbox{}
+
+        Then let's review some useful formulas. The first one is Glauber's formula, based on Baker-Hausdorff formula. This formula claims that if operators $\hat{A}$ and $\hat{B}$ satisfies $[\hat{A}, [\hat{A}, \hat{B}]] = [\hat{B}, [\hat{A}, \hat{B}]] = 0$, then 
+
+        \begin{equation}\label{formula1}
+            \exp(\hat{A}+\hat{B}) = \exp(\hat{A})\exp(\hat{B})\exp\biggl(-\frac{1}{2}[\hat{A}, \hat{B}]\biggr)
+        \end{equation}
+
+        The 2nd formula is 
+
+        \begin{equation}\label{formula2}
+            \exp(\lambda\hat{A})\hat{B}\exp(-\lambda\hat{A}) = \hat{B} + \lambda [\hat{A},\hat{B}] + \frac{\lambda^2}{2!} [\hat{A}, [\hat{A}, \hat{B}]] + \frac{\lambda^3}{3!}[\hat{A}, [\hat{A}, [\hat{A}, \hat{B}]]] + \dots
+        \end{equation}
+
+        Specially, if $[\hat{A}, \hat{B}]=const=:C$, then 
+
+        \begin{equation}
+            \exp(\lambda\hat{A})\hat{B}\exp(-\lambda\hat{A}) = \hat{B} + \lambda C
+        \end{equation}
+
+        which means a translation of operator $\hat{B}$. More specially, we set $\hat{A}=-\alpha\hat{a}^\dagger+\alpha^*\hat{a}$, $\hat{B}=\hat{a}$ or $\hat{B}=\hat{a}^\dagger$, then we may obtain 
+
+        \begin{equation}\label{translation operator 1}
+            \exp(-\alpha\hat{a}^++\alpha^*\hat{a})\hat{a}\exp(\alpha\hat{a}^+-\alpha^*\hat{a}) = \hat{a}+\alpha
+        \end{equation}
+
+        \begin{equation}
+            \exp(-\alpha\hat{a}^\dagger+\alpha^*\hat{a})\hat{a}^\dagger\exp(\alpha\hat{a}^\dagger-\alpha^*\hat{a}) = \hat{a}^\dagger+\alpha^*
+        \end{equation}
+
+        Equation (\ref{translation operator 1}) is very important. Denote $\hat{D}(\alpha)=\exp(\alpha\hat{a}^\dagger -\alpha^*\hat{a})$, then (\ref{translation operator 1}) presents
+
+        \begin{equation}\label{translation operator 2}
+            \hat{D}^\dagger(\alpha)\hat{a}\hat{D}(\alpha) = \hat{a} + \alpha
+        \end{equation}
+
+        Based on (\ref{translation operator 2}), we may prove that all the eigenstates of $\hat{a}$ are 
+
+        \begin{equation}
+            \hat{a} (\hat{D}(\alpha)\ket{0}) = \alpha (\hat{D}(\alpha)\ket{0})
+        \end{equation}
+
+        Therefore, we may define the coherent states as $\ket{\alpha} = \hat{D}(\alpha)\ket{0}$ with ANY complex number eigenvalue $\alpha\in\mathbb{C}$
+
+        \vbox{}
+
+        \vbox{}
+
+        In the end of this section, I'd like to mention a further appliacation of (\ref{formula2}). Set $\hat{A}=\hat{N}=\hat{a}^\dagger\hat{a}$, and $\hat{B}=\hat{a}^\dagger$ or $\hat{a}$. Then we may obtain
+
+        \begin{equation}
+            \exp(\lambda\hat{N})\hat{a}\exp(-\lambda\hat{N}) = \hat{a} e^{-\lambda}
+        \end{equation}
+
+        \begin{equation}
+            \exp(\lambda\hat{N})\hat{a}^\dagger\exp(-\lambda\hat{N}) = \hat{a}^\dagger e^{\lambda}
+        \end{equation}
+
+        Still pay attention to the sign! This formula will give out the squeezed states. 
+
+    \section{Coherent states under Hamiltonian representation}
+
+    \section{Coherent states under coordinate representation}
+\end{document}
