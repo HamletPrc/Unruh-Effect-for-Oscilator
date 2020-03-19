@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.3.12)  19 MAR 2020 19:03
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.3.12)  19 MAR 2020 23:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -171,14 +171,14 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-] [2] [3] (./coherent state.aux) ) 
+] [2] [3] [4] (./coherent state.aux) ) 
 Here is how much of TeX's memory you used:
  1962 strings out of 492483
  23483 string characters out of 6134979
- 103324 words of memory out of 5000000
+ 104324 words of memory out of 5000000
  6454 multiletter control sequences out of 15000+600000
  10024 words of font info for 45 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 30i,19n,31p,555b,202s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,19n,31p,646b,202s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on coherent state.pdf (3 pages).
+Output written on coherent state.pdf (4 pages).

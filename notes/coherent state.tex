@@ -16,8 +16,8 @@
     This note aims to summarize essential properties of the coherent state. I plan to cover these points:
 
     \begin{itemize}
-        \item Basic propertities for creation and annihilation operators.
-        \item Coherent states under Hamiltonian representation.
+        \item Basic knowledges on oscillators and coherent states.
+        \item Coherent states under Hamiltonian representation and time.
         \item Coherent states under coordinate representation.
         \item Wigner functions for coherent states and time evolution.
         \item classical propertities of coherent states.
@@ -62,6 +62,16 @@
         \begin{equation}\label{formula1}
             \exp(\hat{A}+\hat{B}) = \exp(\hat{A})\exp(\hat{B})\exp\biggl(-\frac{1}{2}[\hat{A}, \hat{B}]\biggr)
         \end{equation}
+
+        This formula tell us the commutation property of $\exp(\hat{A})$ and $\exp(\hat{B})$ which is called Weyl commutation relation:
+        
+        \begin{equation}
+            \exp(\hat{A})\exp(\hat{B}) = \exp(\hat{B})\exp(\hat{A})\exp([\hat{A}, \hat{B}])
+        \end{equation}
+
+        \vbox{}
+
+        \vbox{}
 
         The 2nd formula is 
 
@@ -121,7 +131,7 @@
             \hat{D}(\alpha) = \exp\biggl(i\Im(\alpha)\sqrt{\frac{2m\alpha}{\hbar}}\hat{x}\biggr) \exp\biggl(-i\Re(\alpha)\sqrt{\frac{2}{m\hbar\omega}}\hat{p}\biggr) \exp(-i \Im(\alpha)\Re(\alpha))
         \end{equation}
 
-        Recall that all $\hat{D}(\alpha)$ forms a group representation of $(\mathbb{C}, +)$, it can also be considered as a group representation of $(\mathbb{R}^2, +)$, where the $\mathbb{R}^2$ represnts the x and p coordinate, which is actually a point in the phase space. So a coherent state is actually a group action by a point in the phase space, and the evolution of a coherent state is a group action by a trajectory in the phase space.  
+        Recall that all $\hat{D}(\alpha)$ forms a group representation of $(\mathbb{C}, +)$, it can also be considered as a group representation of $(\mathbb{R}^2, +)$, where the $\mathbb{R}^2$ represnts the x and p coordinate, which is actually a point in the phase space. So a coherent state is actually a group action by a point $(\Im(\alpha)\sqrt{\frac{2m\omega}{\hbar}}, \Re(\alpha)\sqrt{\frac{2}{m\hbar\omega}})$ in the phase space, and the evolution of a coherent state is a group action by a trajectory in the phase space. Therefore, we may use points and trajectories to describe coherent states of an oscillator.
 
         \vbox{}
 
@@ -162,6 +172,8 @@
             \ket{\alpha(t)} = e^{-i\frac{1}{2}\omega t} \ket{\alpha e^{-i\omega t}}
         \end{equation}
 
+        Now that the translation operator is a group representation of $(\mathbb{R}^2, +)$, where $\mathbb{R}^2$ is the phase space, the evolution of $\ket{\alpha(t)}$ corresponds to $(\Im(\alpha\exp(-i\omega t))\sqrt{\frac{2m\omega}{\hbar}}, \Re(\alpha\exp(-i\omega t))\sqrt{\frac{2}{m\hbar\omega}})$. So we can use a circle in $\mathbb{C}$ to described the trajectory of $\ket{\alpha(t)}$.
+
         
 
     \section{Coherent states under coordinate representation}
@@ -170,8 +182,19 @@
 
         \begin{equation}
             \begin{split}    
-                \hat{D}(\alpha)\ket{x} &= \exp\biggl(i\Im(\alpha)\sqrt{\frac{2m\alpha}{\hbar}}\hat{x}\biggr) \exp\biggl(-i\Re(\alpha)\sqrt{\frac{2}{m\hbar\omega}}\hat{p}\biggr) \exp(-i \Im(\alpha)\Re(\alpha)) \ket{x} \\
-                    &= \exp\biggl(i\Im(\alpha)\sqrt{\frac{2m\omega}{\hbar}}\bigl(x-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}}\bigr)\biggr) \exp(-i \Im(\alpha)\Re(\alpha)) \ket{x-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}}} 
+                \hat{D}(-\alpha)\ket{x} &= \exp\biggl(i\Im(-\alpha)\sqrt{\frac{2m\omega}{\hbar}}\hat{x}\biggr) \exp\biggl(-i\Re(-\alpha)\sqrt{\frac{2}{m\hbar\omega}}\hat{p}\biggr) \exp(-i \Im(-\alpha)\Re(-\alpha)) \ket{x} \\
+                    &= \exp\biggl(-i\Im(\alpha)\sqrt{\frac{2m\omega}{\hbar}}\bigl(x-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}}\bigr)\biggr) \exp(-i \Im(\alpha)\Re(\alpha)) \ket{x-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}}}  \\
+                    &= \exp\biggl(-i\Im(\alpha)\sqrt{\frac{2m\omega}{\hbar}}x\biggr) \exp(i\Im(\alpha)\Re(\alpha)) \ket{x-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}}}
+            \end{split}
+        \end{equation}
+
+        Therefore the wavefunction of a coherent state $\ket{\alpha}$ is 
+        
+        \begin{equation}
+            \begin{split}
+                \Psi_\alpha(x) &= \bra{x}\hat{D}(\alpha)\ket{0} = \braket{\hat{D}(-\alpha)x|0} \\
+                    &= \exp\biggl(i\Im(\alpha)\sqrt{\frac{2m\omega}{\hbar}}x\biggr) \exp(-i\Im(\alpha)\Re(\alpha)) \braket{x-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}} | 0} \\
+                    &= \exp\biggl(i\Im(\alpha)\sqrt{\frac{2m\omega}{\hbar}}x\biggr) \exp(-i\Im(\alpha)\Re(\alpha)) \exp\biggl(\frac{m\omega}{2\hbar} \bigl(x-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}}\bigr)^2 \biggr)
             \end{split}
         \end{equation}
 
