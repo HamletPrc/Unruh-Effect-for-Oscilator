@@ -24,13 +24,13 @@
     \end{itemize}
 
     \section{Basic knowledges on oscillators}
-        In this section, I'd like to briefly review some basic properties of some operators. The Hamiltonian is $\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$, and the commute relations is $[\hat{x},\hat{p}]=i\hbar$(Be careful of the sign!). Then the creation and annihilation operator can be defined as 
+        In this section, I'd like to briefly review some basic properties of some operators. The Hamiltonian is $\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$, and the commutation relation is $[\hat{x},\hat{p}]=i\hbar$(Be careful of the sign!). Then the creation and annihilation operator can be defined as 
 
         \begin{equation}
             \hat{a}= \frac{1}{\sqrt{2m\hbar\omega}}(i\hat{p}+m\omega\hat{x}), \ \hat{a}^\dagger=\frac{1}{\sqrt{2m\hbar\omega}}(-i\hat{p}+m\omega\hat{x})
         \end{equation}
 
-        And the commute relations is $[\hat{a}^\dagger, \hat{a}]=-1$(Be careful of the sign!). Inversely, $\hat{x}$, $\hat{p}$ and $\hat{H}$ can be described as 
+        And the commutation relation is $[\hat{a}^\dagger, \hat{a}]=-1$(Be careful of the sign!). Inversely, $\hat{x}$, $\hat{p}$ and $\hat{H}$ can be described as 
 
         \begin{equation}
             \begin{split}
@@ -97,9 +97,19 @@
             \hat{a} \bigl(\hat{D}(\alpha)\ket{0}\bigr) = \alpha \bigl(\hat{D}(\alpha)\ket{0}\bigr)
         \end{equation}
 
-        Therefore, we may define the coherent states as $\ket{\alpha} = \hat{D}(\alpha)\ket{0}$ with ANY complex number eigenvalue $\alpha\in\mathbb{C}$, and $\hat{a}\ket{\alpha}=\alpha\ket{\alpha}$.
+        Therefore, we may define the coherent states as $\ket{\alpha} = \hat{D}(\alpha)\ket{0}$ with any complex number eigenvalue $\alpha\in\mathbb{C}$, and $\hat{a}\ket{\alpha}=\alpha\ket{\alpha}$. Note that all the translation opertors forms a group called Heisenberg-Weyl group. It's not difficult to find out that Heisenberg-Weyl group is isomorphic to $(\mathbb{C}, +)$, that is 
+        
+        \begin{equation}        
+            \hat{D}(\alpha)\hat{D}(\beta) = \hat{D}(\alpha+\beta)
+        \end{equation}
 
-        Since $\hat{a}^\dagger$ and $\hat{a}$ can be described by $\hat{x}$ and $\hat{p}$, we can write the translation operator as another form: 
+        Since $\hat{D}(\alpha)$ is an operator on a linear space ,the Hilbert space for the oscillator, $\hat{D}(\alpha)$ can be regarded as a group representation of $(\mathbb{C}, +)$.
+
+        \vbox{}
+
+        \vbox{}
+
+        Now that $\hat{a}^\dagger$ and $\hat{a}$ can be described by $\hat{x}$ and $\hat{p}$, we can write the translation operator as another form: 
 
         \begin{equation}\label{Weyl translation 1}
             \hat{D}(\alpha) = \exp\biggl(i\Im(\alpha)\sqrt{\frac{2m\omega}{\hbar}}\hat{x}-i\Re(\alpha)\sqrt{\frac{2}{m\hbar\omega}}\hat{p}\biggr)
@@ -110,6 +120,8 @@
         \begin{equation}\label{Weyl translation 2}
             \hat{D}(\alpha) = \exp\biggl(i\Im(\alpha)\sqrt{\frac{2m\alpha}{\hbar}}\hat{x}\biggr) \exp\biggl(-i\Re(\alpha)\sqrt{\frac{2}{m\hbar\omega}}\hat{p}\biggr) \exp(-i \Im(\alpha)\Re(\alpha))
         \end{equation}
+
+        Recall that all $\hat{D}(\alpha)$ forms a group representation of $(\mathbb{C}, +)$, it can also be considered as a group representation of $(\mathbb{R}^2, +)$, where the $\mathbb{R}^2$ represnts the x and p coordinate, which is actually a point in the phase space. So a coherent state is actually a group action by a point in the phase space, and the evolution of a coherent state is a group action by a trajectory in the phase space.  
 
         \vbox{}
 
@@ -127,10 +139,32 @@
 
         Still pay attention to the sign! This formula will give out the squeezed states. 
 
+    
 
 
+    \section{Hamiltonian representation and time evolution}
+    
+        It's not difficult to show that the expansion of a coherent state $\ket{\alpha}$ by the eigenstates of the Hamiltonian eigenstates is 
 
-    \section{Coherent states under Hamiltonian and coordinate representation}
+        \begin{equation}
+            \ket{\alpha} = e^{-|\alpha|^2/2} \sum \frac{\alpha^n}{\sqrt{n!}}\ket{n}
+        \end{equation}
+
+        Therefore the evolution of that state is $\ket{\alpha(t)}=e^{-i\hat{H}t/\hbar}\ket{\alpha}=\ket{\alpha} = e^{-|\alpha|^2/2} \sum \frac{\alpha^n}{\sqrt{n!}}e^{-iE_nt/\hbar}\ket{n}$. Since $E_n=(n+\frac{1}{2})\hbar\omega$, that factor can be written as $e^{-iE_nt/\hbar}=e^{-i\frac{1}{2}\omega t}e^{-in\omega t}=e^{-i\frac{1}{2}\omega t}\bigl(e^{-i\omega t}\bigr)^n$, where the latter phase can be combined with $\alpha^n$ and presents $(\alpha e^{-i\omega t})^n$ and $|\alpha e^{-i\omega t}|^2=|\alpha|^2$. Therefore, 
+
+        \begin{equation}
+            \ket{\alpha(t)} = e^{-i\frac{1}{2}\omega t} \exp\bigl(-|\alpha e^{-i\omega t}|^2\bigr) \sum \frac{(\alpha e^{-i\omega})^n}{\sqrt{n!}}\ket{n}
+        \end{equation}
+
+        which suggests 
+
+        \begin{equation}
+            \ket{\alpha(t)} = e^{-i\frac{1}{2}\omega t} \ket{\alpha e^{-i\omega t}}
+        \end{equation}
+
+        
+
+    \section{Coherent states under coordinate representation}
         
         Now let's calculate the coherent state under coordinate representation, i.e. wavefunction of the coherent state $\braket{x|\alpha}$. Notice the expression (\ref{Weyl translation 1}) of $\hat{D}(\alpha)$ by $\hat{x}$ and $\hat{p}$, we can consider the operation of $\hat{D}(\alpha)$ over coordinate eigenstate $\ket{x}$. Then  $\braket{x|\alpha}$ can be expressed as $\bra{x}\hat{D}(\alpha)\ket{{0}}$, where the translation operator operates on $\bra{x}$. Note that $\hat{D}(\alpha)^\dagger=\hat{D}(-\alpha)$
 
