@@ -1,6 +1,7 @@
 \documentclass[a4paper]{article}
 \usepackage{ctex}
 \usepackage{amsmath}
+\usepackage{amssymb}
 
 \usepackage{geometry}  
 \geometry{left=2.0cm, right=2.0cm, top=2.5cm, bottom=2.5cm}
@@ -128,7 +129,13 @@
 
     \section{参考系变换下的谐振子}
 
-        以上我们对一般的参考系变换进行了讨论，接下来我们研究谐振子系统$\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$。谐振子系统中，$\hat{x}$和$\hat{p}$可以用产生湮灭算符表示$\hat{x}=\sqrt{\frac{\hbar}{2m\omega}}(\hat{a}^{+}+\hat{a})$，$\hat{p}=i\sqrt{\frac{m\hbar\omega}{2}}(\hat{a}^{+}-\hat{a})$。此时，Weyl平移算子$\hat{W}(a, b)=\exp(ia\hat{x}-ib\hat{p})$将会变成$\hat{D}(\alpha)=\exp(\alpha\hat{a}^{+}-\alpha^*\hat{a})$，其中$\alpha=b\sqrt{\frac{m\hbar\omega}{2}}+ia\sqrt{\frac{\hbar}{2m\omega}}$。$D(\alpha)$算符称为谐振子的平移算符，其物理意义是将谐振子基态变换为本征值等于$\alpha$的相干态，即$\hat{a}\hat{D}(\alpha)\ket{0}=\alpha\hat{D}(\alpha)\ket{0}$。
+        以上我们对一般的参考系变换进行了讨论，接下来我们研究谐振子系统$\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$。谐振子系统中，$\hat{x}$和$\hat{p}$可以用产生湮灭算符表示$\hat{x}=\sqrt{\frac{\hbar}{2m\omega}}(\hat{a}^{+}+\hat{a})$，$\hat{p}=i\sqrt{\frac{m\hbar\omega}{2}}(\hat{a}^{+}-\hat{a})$。此时，Weyl平移算子$\hat{W}(a, b)=\exp(ia\hat{x}-ib\hat{p})$将会变成$\hat{D}(\alpha)=\exp(\alpha\hat{a}^{+}-\alpha^*\hat{a})$，其中$\alpha=b\sqrt{\frac{m\hbar\omega}{2}}+ia\sqrt{\frac{\hbar}{2m\omega}}$。$\hat{D}(\alpha)$算符称为谐振子的平移算符，其物理意义是将谐振子基态变换为本征值等于$\alpha$的相干态，即$\hat{a}\hat{D}(\alpha)\ket{0}=\alpha\hat{D}(\alpha)\ket{0}$。
+
+        全体$\hat{D}(\alpha)$模掉一个全局相位后构成一个群$\{\hat{D}(\alpha):\mathcal{H}\to\mathcal{H}|\alpha\in\mathbb{C}\}/\sim$，其中$\sim$指$\hat{D}(\alpha)\sim\hat{D}(\beta) \Leftrightarrow \hat{D}(\alpha)=\hat{D}(\beta)\exp(i\phi),\ \phi\in\mathbb{R}$。这个群有时称为Weyl-Heisenberg群，并且满足$\hat{D}(\alpha+\beta)=\hat{D}(\alpha)\hat{D}(\beta)$，其中“=”指模掉全局相位意义下的相等。进而不难验证Weyl-Hersenberg群与$(\mathbb{C},+)$同构，因此可以说$\hat{D}(\alpha)$事实上是$(\mathbb{C},+)$群在谐振子Hilbert空间上的群表示，进而相干态可以认为是复平面上的点作用在基态上，从而相干态与复平面上的点是一一对应的。
+
+        由于$\hat{W}(a,b)$与$\hat{D}(\alpha)$具有一一对应关系，因此在模掉一个全局相位的意义下，$\hat{W}(a,b)$事实上代表了$(\mathbb{R}^2,+)$群在Hilbert空间上的群表示，并且相干态上与$\mathbb{R}^2$的点一一对应。(a, b)的物理意义是经典相空间，其中a代表相空间动量，b代表相空间坐标。因此$\hat{W}(a,b)$代表了经典相空间作为一个加法群作用在量子态空间上，相空间的一个点对应于一个平移算符，相空间中随时间演化的一条径迹则对应于随时间演化的一族平移算符。将这族平移算子作用在谐振子基态上，就对应于基态的演化。参考系变换对应的Weyl平移算子为$\hat{W}(-m\frac{d\zeta}{dt}, -\zeta)$，接下来我们将计算坐标空间和动量空间波函数以及谐振子的Wigner函数，最后将看到$\hat{W}(-m\frac{d\zeta}{dt}, -\zeta)$意味着基态的中心位置将以$-\zeta(t)$进行平移运动，而动量中心值将以$-\frac{d\zeta}{dt}$平移。这是符合经典物理图像的
+
+    \subsection{平动参考系中谐振子的演化}
 
         由于参考系变换的幺正算符是Weyl平移算符乘一个相位，因此我们知道参考系变换将谐振子基态变成一个相干态，并且$\alpha=-\zeta\sqrt{\frac{m\omega}{2\hbar}}-i\frac{d\zeta}{dt}\sqrt{\frac{1}{2m\hbar\omega}}$。波函数则等于:
 
