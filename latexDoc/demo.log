@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.3.12)  24 MAR 2020 13:20
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.3.24)  25 MAR 2020 11:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -596,7 +596,12 @@ Overfull \hbox (2.4211pt too wide) in paragraph at lines 117--118
 []\TU/FandolSong-Regular(0)/m/n/10.53937 绝 热 规 范 势 $[]$ 中 的 动 量 项 $\OMS/cmsy/m/n/10.53937 ^^@[][]$ \TU/FandolSong-Regular(0)/m/n/10.53937 则 应 当 与 \TU/lmr/m/n/10.53937 Hamilton \TU/FandolSong-Regular(0)/m/n/10.53937 量 中 的 动 能 项 $[]$ 进 行 配 平 方，|  得 到 $[] \OMS/cmsy/m/n/10.53937 ^^@
  []
 
-[4] [5] [6] (./demo.aux) ) 
+[4]
+Overfull \hbox (6.09302pt too wide) in paragraph at lines 140--141
+[]\TU/FandolSong-Regular(0)/m/n/10.53937 由 以 上 分 析 论 证，|  我 们 知 道 参 考 系 变 换 将 谐 振 子 基 态 变 成 一 个 相 干 态，|  其 中 $\OML/cmm/m/it/10.53937 ^^K \OT1/cmr/m/n/10.53937 = \OMS/cmsy/m/n/10.53937 ^^@\OML/cmm/m/it/10.53937 ^^P[] \OMS/cmsy/m/n/10.53937 ^^@ \OML/cmm/m/it/10.53937 im[][]$\TU/FandolSong-Regular(0)/m/n/10.53937 。|
+ []
+
+[5] [6] (./demo.aux) ) 
 Here is how much of TeX's memory you used:
  17651 strings out of 492483
  400528 string characters out of 6134979

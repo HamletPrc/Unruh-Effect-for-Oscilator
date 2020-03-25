@@ -194,10 +194,30 @@
             \begin{split}
                 \Psi_\alpha(x) &= \bra{x}\hat{D}(\alpha)\ket{0} = \braket{\hat{D}(-\alpha)x|0} \\
                     &= \exp\biggl(i\Im(\alpha)\sqrt{\frac{2m\omega}{\hbar}}x\biggr) \exp(-i\Im(\alpha)\Re(\alpha)) \braket{x-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}} | 0} \\
-                    &= \exp\biggl(i\Im(\alpha)\sqrt{\frac{2m\omega}{\hbar}}x\biggr) \exp(-i\Im(\alpha)\Re(\alpha)) \exp\biggl(\frac{m\omega}{2\hbar} \bigl(x-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}}\bigr)^2 \biggr)
+                    &= N \exp\biggl(i\Im(\alpha)\sqrt{\frac{2m\omega}{\hbar}}x\biggr) \exp(-i\Im(\alpha)\Re(\alpha)) \exp\biggl(-\frac{m\omega}{2\hbar} \bigl(x-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}}\bigr)^2 \biggr)
             \end{split}
         \end{equation}
 
+        where N is the normalization constant.
+
+        Since $\ket{\alpha(t)}=e^{-i\frac{1}{2}\omega t}\ket{\alpha e^{-i\omega t}}$, the wavefunction at time t is 
+
+        \begin{equation}
+            \begin{split}
+                \Psi_\alpha(x,t) &= N \exp\biggl(i\Im(\alpha e^{-i\omega t})\sqrt{\frac{2m\omega}{\hbar}}x\biggr) \exp(-i\Im(\alpha e^{-i\omega t})\Re(\alpha e^{-i\omega t})) \exp\biggl(-\frac{m\omega}{2\hbar} \bigl(x-\Re(\alpha e^{-i\omega t})\sqrt{\frac{2\hbar}{m\omega}}\bigr)^2 \biggr) \exp(-i\frac{1}{2}\omega t) \\
+                    &= N \exp\biggl(i\bigl(\Im(\alpha)\cos(\omega t)-\Re(\alpha)\sin(\omega t)\bigr) \sqrt{\frac{2m\omega}{\hbar}}x\biggr) \exp\biggl(-i\bigl(\Re(\alpha)\Im(\alpha)\cos(2\omega t)-\frac{(\Re(\alpha)^2-\Im(\alpha)^2)}{2}\sin(2\omega t)\bigr)\biggr) \\
+                    &\times \exp\biggl(-\frac{m\omega}{2\hbar} \bigl(x-\Re(\alpha)\cos(\omega t)+\Im(\alpha)\sin(\omega t)\sqrt{\frac{2\hbar}{m\omega}}\bigr)^2 \biggr) \exp(-i\frac{1}{2}\omega t)
+            \end{split}
+        \end{equation}
         
+
+    \section{Wigner function for coherent states}
+
+        The Wigner function is defined as 
+
+        \begin{equation}
+            W(x, p) = \int_{-\infty}^\infty \frac{d\xi}{2\pi}\bra{x+\frac{1}{2}\xi}\hat{\rho}\ket{x-\frac{1}{2}\xi} e^{-\frac{i}{\hbar}p\xi}
+        \end{equation}
         
+        which is used to describe the quasi-probablity of a quantum state.
 \end{document}
