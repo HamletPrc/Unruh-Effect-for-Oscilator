@@ -39,7 +39,7 @@
 
         我们首先考虑不含时的参考系变换$x\rightarrow x'=x+\zeta$，其中$\zeta$为常数。这个参考系变换的意义就是将空间原点平移了一段距离$\zeta$，此时参考系变换算符$\hat{U}_a=\exp\big(\frac{i}{\hbar}\zeta\hat{p} \big)$，正是空间平移算子，而Hamilton量的变换法则是$\hat{H}\rightarrow \hat{H}'=\hat{U}_a\hat{H}\hat{U}_a^+$。于是在S'参考系中，$\hat{H}'\ket{\Psi'}=\hat{U}_a\hat{H}\hat{U}_a^+\hat{U}_a\ket{\Psi}=\hat{U}_a\hat{H}\ket{\Psi}=\hat{U}_a i\hbar\frac{\partial}{\partial t}\ket{\Psi}$，由于此处$\hat{U}_a$不含时，因此可以与$\frac{\partial}{\partial t}$交换次序，从而得到$\hat{H}'\ket{\Psi'}=i\hbar\frac{\partial}{\partial t}\hat{U}_a\ket{\Psi}=i\hbar\frac{\partial}{\partial t}\ket{\Psi'}$。也就是说，在这样的参考系变换下，Schrodinger方程的形式保持不变。从对称性的角度来看，这表明了Schrodinger方程具有空间平移对称性。我们可以进一步考虑Noether定理，这将会给出一个守恒量——动量。
 
-        场论中，给定一个全局对称性，我们往往可以考虑相应的局域对称性(规范对称性)，这里我们也可以考虑定域对称性。应当注意的是，定域对称性在场论层面理解为变换算符$\hat{U}_a$是时空坐标$x^\mu$的函数，而在量子力学层面则应理解为$\hat{U}_a$是时间t的函数，这某种程度上可以说是由于量子力学是0+1维场论。这时我们考察经过算符$\hat{U}_a$变换后的Schrodinger方程：$i\hbar\frac{\partial}{\partial t}\ket{\Psi'} = i\hbar\frac{\partial}{\partial t}\big(\hat{U}_a\ket{\Psi}\big) = i\hbar\frac{\partial\hat{U}_a}{\partial t}\ket{\Psi} + i\hbar\hat{U}_a\frac{\partial}{\partial t}\ket{\Psi} = i\hbar\frac{\partial\hat{U}_a}{\partial t}\ket{\Psi} + \hat{U}_a\hat{H}\ket{\Psi} = i\hbar\frac{\partial\hat{U}_a}{\partial t}\ket{\Psi} + \hat{H}'\ket{\Psi'}$。我们会发现Schrodinger方程经过$\hat{U}_a$变换后不再成立，存在多出来的一项$i\hbar\frac{\partial\hat{U}_a}{\partial t}\ket{\Psi} = i\hbar\frac{\partial\hat{U}_a}{\partial t}\hat{U}_a^+\ket{\Psi‘}$。关于这一项，我们可以有两种思想来理解它。
+        场论中，给定一个全局对称性，我们往往可以考虑相应的局域对称性(规范对称性)，这里我们也可以考虑定域对称性。应当注意的是，定域对称性在场论层面理解为变换算符$\hat{U}_a$是时空坐标$x^\mu$的函数，而在量子力学层面则应理解为$\hat{U}_a$是时间t的函数，这某种程度上可以说是由于量子力学是0+1维场论。这时我们考察经过算符$\hat{U}_a$变换后的Schrodinger方程：$i\hbar\frac{\partial}{\partial t}\ket{\Psi'} = i\hbar\frac{\partial}{\partial t}\big(\hat{U}_a\ket{\Psi}\big) = i\hbar\frac{\partial\hat{U}_a}{\partial t}\ket{\Psi} + i\hbar\hat{U}_a\frac{\partial}{\partial t}\ket{\Psi} = i\hbar\frac{\partial\hat{U}_a}{\partial t}\ket{\Psi} + \hat{U}_a\hat{H}\ket{\Psi} = i\hbar\frac{\partial\hat{U}_a}{\partial t}\ket{\Psi} + \hat{H}'\ket{\Psi'}$。我们会发现Schrodinger方程经过$\hat{U}_a$变换后不再成立，存在多出来的一项$i\hbar\frac{\partial\hat{U}_a}{\partial t}\ket{\Psi} = i\hbar\frac{\partial\hat{U}_a}{\partial t}\hat{U}_a^+\ket{\Psi'}$。关于这一项，我们可以有两种思想来理解它。
 
         \begin{itemize}
         \item[1] 绝热规范势 
@@ -50,7 +50,7 @@
                 i\hbar\frac{D}{Dt}\ket{\Psi} = \hat{H}\ket{\Psi}
             \end{equation}
 
-            其中$\frac{D}{Dt}=\frac{\partial}{\partial t}-i\hbar\frac{\partial\hat{U}_a}{\partial t}\hat{U}_a^+$。这个Schrodinger方程在$\hat{U}_a$变换下保持不变，即具有$\hat{U}_a$定域不变性。从这一角度来看，我们可以将这一项理解为规范对称性所带来的规范场，这也是为什么很多文献将其称为绝热规范势的原因。数学上来看，这一项代表了主纤维丛上的联络，是一个几何上的量，因此将会贡献几何相位(Berry相位)。
+            其中$\frac{D}{Dt}=\frac{\partial}{\partial t}-i\hbar\frac{\partial\hat{U}_a}{\partial t}\hat{U}_a^+$。这个Schrodinger方程在$\hat{U}_a$变换下保持不变，即具有$\hat{U}_a$定域不变性。从这一角度来看，我们可以将这一项理解为规范对称性所带来的规范场，这也是为什么很多文献将其称为绝热规范势的原因。数学上来看，这一项代表了主纤维丛上的联络，称为Maurer-Cartan形式，它是一个几何上的量，因此将会贡献几何相位(Berry相位)。
         
         \item[2] 量子达朗贝尔原理
             
