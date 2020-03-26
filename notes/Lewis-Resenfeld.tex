@@ -1,0 +1,98 @@
+\documentclass[a4paper]{article}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{geometry}  
+\geometry{left=2.0cm, right=2.0cm, top=2.5cm, bottom=2.5cm}
+
+\usepackage{braket}
+
+\title{Lewis-Resenfeld不变量}
+\author{吴梦之}
+
+\begin{document}
+    \maketitle
+
+    这篇note旨在梳理Lewis-Resenfeld不变量的主要思想。本文主要参考。
+
+    \section{Lewis-Resenfeld不变量的引入}
+        我们的目标是求解一个含时Schrodinger方程
+
+        \begin{equation}
+            i\hbar\frac{\partial}{\partial t}\ket{\Psi} = \hat{H}(t)\ket{\Psi}
+        \end{equation}
+
+        在这个系统中，我们假定存在一个厄米算符$\hat{I}(t)$，满足
+
+        \begin{equation}
+            i\hbar\frac{\partial\hat{I}}{\partial t} + [\hat{I}, \hat{H}] = 0
+        \end{equation}
+
+        我们称之是一个不变量。不难验证，$\hat{I}$的一个性质是：若$\ket{\Psi}$是Schrodinger方程的解，那么$\hat{I}\ket{\Psi}$也是Schrodinger方程的解，即
+
+        \begin{equation}
+            i\hbar\frac{\partial}{\partial t}(\hat{I}\ket{\Psi}) = \hat{H} (\hat{I}\ket{\Psi})
+        \end{equation}
+
+        由于我们假定，每个时刻$\hat{I}(t)$都是一个厄米算符，因此可以认为$\hat{I}(t)$每个时刻的瞬时本征态集合$\{\ket{\lambda(t),\kappa(t)}\}$都构成Hilbert空间的一组完备正交基，其中$\lambda(t)$是$\hat{I}(t)$的瞬时本征值，$\kappa(t)$是简并自由度。方便起见，不妨只考虑无简并的情形，因此$\kappa$自由度就没有必要存在了，因此之后我用$\ket{\phi_n(t)}$来表示$\hat{I}(t)$的瞬时本征态。我们还应指出，$\ket{\phi_n(t)}$并不一定满足Schrodinger方程，它具有一个全局相位的自由度，只有特定相位的态才满足Schrodinger方程，记作
+
+        \begin{equation}
+            \ket{\Psi_n(t)}=e^{i\alpha_n(t)}\ket{\phi_n(t)}
+        \end{equation}
+
+        在对态做展开时应当用$\ket{\Psi_n(t)}$而不是$\ket{\phi_n(t)}$，这就好比Gauss波包本身并不是含时Schrodinger方程的解，Gauss波包乘上随时间演化的相位以后才是Schrodinger方程的解(尽管这个相位并没有可观测效应)。
+
+        Lewis和Resenfeld证明了两件很重要的事情，第一个是$\hat{I}(t)$的本征值$\lambda(t)$并不随时间变化，即
+
+        \begin{equation}
+            \frac{\partial\lambda_n}{\partial t} = 0
+        \end{equation}
+
+        第二个重要的事情是相位$\alpha(t)$的演化方程是
+
+        \begin{equation}
+            \hbar\frac{d\alpha_n}{dt} = \bra{\phi_n}i\hbar\frac{\partial}{\partial t}-\hat{H}\ket{\phi_n} 
+        \end{equation}
+
+        事实上，因子$e^{i\alpha_n(t)}$代表了时域上的一个规范场。最终的解为
+
+        \begin{equation}
+            \ket{\Psi(t)} = \Sigma c_n e^{i\alpha(t)} \ket{\phi_n(t)}
+        \end{equation}
+
+
+    \section{Lewis-Resenfeld不变量}
+
+        文献利用Lewis-Resenfeld不变量反解出了$\hat{H}(t)$，思路如下：
+
+        首先利用$\hat{I}(t)$的瞬时本征态的演化写出时间演化算符$\hat{U}(t)$为
+
+        \begin{equation}
+            \hat{U}(t) = \sum e^{i\alpha_n(t)}\ket{\phi_n(t)}\bra{\phi_n(0)}
+        \end{equation}
+
+        它满足时间演化方程
+
+        \begin{equation}
+            i\hbar\frac{\partial\hat{U}}{\partial t} = \hat{H}\hat{U}
+        \end{equation}
+
+        于是我们就可以得到$\hat{H}$的表达式为
+
+        \begin{equation}
+            \begin{split}
+                \hat{H}(t) &= i\hbar\frac{\partial\hat{U}}{\partial t}\hat{U}^\dagger \\
+                    &= -\hbar\sum\frac{d\alpha_n}{dt}e^{i\alpha_n(t)}\ket{\phi_n(t)}\bra{\phi_n(t)} + i\hbar\sum\ket{\partial_t\phi_n(t)}\bra{\phi_n(t)}
+            \end{split}
+        \end{equation}
+
+        在Lie群理论中，$i\hbar\frac{\partial\hat{U}}{\partial t}\hat{U}^\dagger$称作Maurer-Cartan形式。所以从Lie群和微分几何的观点来看，体系的Hamilton量实际上就是U(1)群作用在量子态空间上后的Maurer-Cartan形式的群表示。
+
+
+
+    \section{微分几何观点下的Lewis-Resenfeld不变量}
+
+        从微分几何的观点下来看，量子力学中一个量子态的演化实际上可以视为量子态空间中的一条曲线。Lewis-Resenfeld不变量真正重要的是它给出了一组完备正交基$\ket{\phi_n(t)}$，微分几何的角度来看，这组完备正交基实际上是一组活动标架。而Hamilton量之所以能够表示为一个Maurer-Cartan形式，正是因为它所刻画的是活动标架的运动，这也正是Maurer-Cartan形式的物理意义。另外，量子态空间并不是Hilbert空间，而是Hilbert空间模掉一个全局相位U(1)后的商空间，称为Grassman流形，而Hopf纤维化就给出了这上面的Berry相位。
+
+\end{document}
