@@ -206,7 +206,7 @@
             \begin{split}
                 \Psi_\alpha(x,t) &= N \exp\biggl(i\Im(\alpha e^{-i\omega t})\sqrt{\frac{2m\omega}{\hbar}}x\biggr) \exp(-i\Im(\alpha e^{-i\omega t})\Re(\alpha e^{-i\omega t})) \exp\biggl(-\frac{m\omega}{2\hbar} \bigl(x-\Re(\alpha e^{-i\omega t})\sqrt{\frac{2\hbar}{m\omega}}\bigr)^2 \biggr) \exp(-i\frac{1}{2}\omega t) \\
                     &= N \exp\biggl(i\bigl(\Im(\alpha)\cos(\omega t)-\Re(\alpha)\sin(\omega t)\bigr) \sqrt{\frac{2m\omega}{\hbar}}x\biggr) \exp\biggl(-i\bigl(\Re(\alpha)\Im(\alpha)\cos(2\omega t)-\frac{(\Re(\alpha)^2-\Im(\alpha)^2)}{2}\sin(2\omega t)\bigr)\biggr) \\
-                    &\times \exp\biggl(-\frac{m\omega}{2\hbar} \bigl(x-\Re(\alpha)\cos(\omega t)+\Im(\alpha)\sin(\omega t)\sqrt{\frac{2\hbar}{m\omega}}\bigr)^2 \biggr) \exp(-i\frac{1}{2}\omega t)
+                    &\times \exp\biggl(-\frac{m\omega}{2\hbar} \bigl(x-\big(\Re(\alpha)\cos(\omega t)+\Im(\alpha)\sin(\omega t)\big)\sqrt{\frac{2\hbar}{m\omega}}\bigr)^2 \biggr) \exp(-i\frac{1}{2}\omega t)
             \end{split}
         \end{equation}
         
@@ -219,5 +219,32 @@
             W(x, p) = \int_{-\infty}^\infty \frac{d\xi}{2\pi}\bra{x+\frac{1}{2}\xi}\hat{\rho}\ket{x-\frac{1}{2}\xi} e^{-\frac{i}{\hbar}p\xi}
         \end{equation}
         
-        which is used to describe the quasi-probablity of a quantum state.
+        where the density matrix $\hat{\rho}=\ket{\alpha}\bra{{\alpha}}$. Therefore, 
+
+        \begin{equation}
+            \begin{split}
+                W(x, p) &= \int_{-\infty}^\infty\frac{d\xi}{2\pi} \braket{x+\frac{1}{2}\xi|\alpha}\braket{\alpha|x-\frac{1}{2}\xi} e^{-\frac{i}{\hbar}p\xi} \\
+                    &= N^2 \int_{-\infty}^\infty\frac{d\xi}{2\pi} e^{i\Im(\alpha)\sqrt{\frac{2m\omega}{\hbar}}\bigl(x+\frac{1}{2}\xi\bigr)} e^{-i\Im(\alpha)\Re(\alpha)} e^{-\frac{m\omega}{2\hbar}\biggl(x+\frac{1}{2}\xi-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}}\biggr)^2} \\
+                    &\times e^{-i\Im(\alpha)\sqrt{\frac{2m\omega}{\hbar}}\bigl(x-\frac{1}{2}\xi\bigr)} e^{i\Im(\alpha)\Re(\alpha)} e^{-\frac{m\omega}{2\hbar}\biggl(x-\frac{1}{2}\xi-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}}\biggr)^2} \times e^{-\frac{i}{\hbar}p\xi} \\
+                    &= N^2 \int_{-\infty}^\infty\frac{d\xi}{2\pi} \exp\biggl[i\Im(\alpha)\sqrt{\frac{2m\omega}{\hbar}}  -\frac{m\omega}{2\hbar}\biggl(\bigl(x+\frac{1}{2}\xi-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}}\bigr)^2 + \bigl(x-\frac{1}{2}\xi-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}}\bigr)^2 \biggr) -\frac{i}{\hbar}p\xi \biggr] \\
+                    &= N^2 \int_{-\infty}^\infty\frac{d\xi}{2\pi} \exp\biggl[i\Im(\alpha)\sqrt{\frac{2m\omega}{\hbar}}  -\frac{m\omega}{2\hbar}\biggl(\frac{1}{2}\xi^2 + 2\bigl(x-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}}\bigr)^2 \biggr) -\frac{i}{\hbar}p\xi \biggr] \\
+                    &= N^2 \exp\biggl(-\frac{m\omega}{\hbar}\bigl(x-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}}\bigr)^2\biggr) \int_{-\infty}^\infty\frac{d\xi}{2\pi} \exp\biggl[-\frac{m\omega}{2\hbar}\xi^2+\biggl(\Im(\alpha)\sqrt{\frac{2m\omega}{\hbar}}-\frac{p}{\hbar}\biggr)\xi\biggr] \\
+                    &= N^2 \exp\biggl(-\frac{m\omega}{\hbar}\bigl(x-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}}\bigr)^2\biggr)  \sqrt{\frac{\hbar}{2\pi m\omega}} \exp\biggl[-\frac{\hbar}{2m\omega}\biggl(\Im(\alpha)\sqrt{\frac{2m\omega}{\hbar}}-\frac{p}{\hbar}\biggr)^2\biggr] \\
+                    &= N^2 \sqrt{\frac{\hbar}{2\pi m\omega}} \exp\biggl(-\frac{m\omega}{\hbar}\bigl(x-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}}\bigr)^2\biggr) \exp\biggl(-\frac{1}{2m\hbar\omega}\bigl(p-\Im(\alpha)\sqrt{2m\hbar\omega}\bigr)^2\biggr)
+            \end{split}
+        \end{equation}
+
+        In the 6th "=", we use the formula $\int\frac{dx}{2\pi}e^{-ax^2+ibx} = \frac{e^{-b^2/4a}}{2\sqrt{\pi a}}$. 
+
+        It's not difficult to check the property of the Wigner function that the x and p probability distributions are given by the marginals:
+
+        \begin{equation}
+            \int dp W(x, p) = \bra{x}\hat{\rho}\ket{x} \simeq |\Psi(x)|^2
+        \end{equation}
+
+        \begin{equation}
+            \int dx W(x, p) = \bra{p}\hat{\rho}\ket{p} \simeq |\phi(p)|^2
+        \end{equation}
+
+
 \end{document}

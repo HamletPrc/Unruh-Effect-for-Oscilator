@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.3.24)  25 MAR 2020 11:01
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.3.24)  25 MAR 2020 22:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -176,14 +176,14 @@ Overfull \hbox (16.12279pt too wide) detected at line 211
 []
  []
 
-[4] (./coherent state.aux) ) 
+[4] [5] (./coherent state.aux) ) 
 Here is how much of TeX's memory you used:
  1962 strings out of 492483
  23483 string characters out of 6134979
- 104324 words of memory out of 5000000
+ 108324 words of memory out of 5000000
  6454 multiletter control sequences out of 15000+600000
  10024 words of font info for 45 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 30i,19n,31p,646b,202s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,20n,31p,646b,202s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on coherent state.pdf (4 pages).
+Output written on coherent state.pdf (5 pages).

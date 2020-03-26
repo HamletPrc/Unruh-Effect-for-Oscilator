@@ -26,7 +26,7 @@
 
         \begin{itemize}
             \item 本文首先回顾了一般的幺正变换下Schrodinger方程的变换法则，并据此讨论了绝热规范势的物理意义，进而提出量子达朗贝尔原理，将绝热规范势诠释为惯性势。本文还利用Ehrenfest定理指出了惯性势的经典对应正是惯性力。
-            \item 本文接下来针对谐振子，进行了进一步研究。本文首先指出参考系变换的Weyl平移算子在谐振子系统将给出相干态，并计算其Wigner函数，验证了它是一个以参考系速度运动的高斯波包。本文之后探讨了参考系变换下的谐振子与Lewis-Riesenfeld理论下的运动谐振子，讨论“运动”参考系下的“静止”谐振子与“静止”参考系下的“运动”谐振子的等价性；这里“运动”和“静止”是指其平动自由度，而非振动自由度。
+            \item 本文接下来针对谐振子，进行了进一步研究。本文首先指出参考系变换的Weyl平移算子在谐振子系统将给出相干态，并计算其Wigner函数，验证了它是一个以参考系速度运动的Gauss波包。本文之后探讨了参考系变换下的谐振子与Lewis-Riesenfeld理论下的运动谐振子，讨论“运动”参考系下的“静止”谐振子与“静止”参考系下的“运动”谐振子的等价性；这里“运动”和“静止”是指其平动自由度，而非振动自由度。
             \item 谐振子的Unruh效应
         \end{itemize}
 
@@ -146,27 +146,39 @@
             \end{split}
         \end{equation}
 
-        其中$\Re(\alpha)$和$\Im(\alpha)$分别代表$\alpha$的实部和虚部。我们对波函数求模平方，得到
+        其中$\Re(\alpha)$和$\Im(\alpha)$分别代表$\alpha$的实部和虚部。根据波函数的表达式，我们来计算S'系观察者看到的谐振子基态的Wigner函数
 
         \begin{equation}
-            |\Psi'_0(x,t)|^2 = \sqrt{\frac{m\omega}{\pi\hbar}}\exp\bigg(\frac{m\omega}{\hbar}(x+\zeta)^2\bigg)
+            \begin{split}
+                W(x, p) &= \int_{-\infty}^\infty \frac{d\xi}{2\pi}\bra{x+\frac{1}{2}\xi}\hat{\rho}\ket{x-\frac{1}{2}\xi} e^{-\frac{i}{\hbar}p\xi} \\
+                    &= \int_{-\infty}^\infty\frac{d\xi}{2\pi} \Psi(x+\frac{1}{2}\xi)\Psi^*(x-\frac{1}{2}\xi) e^{-\frac{i}{\hbar}p\xi}
+            \end{split}
         \end{equation}
 
-        说明在S'系观察者看来，谐振子基态是一个运动的高斯波包，其中心位置$-\zeta(t)$正是平动参考系的原点的位置。动量空间中的波函数是
+        这里，$\hat{\rho}=\ket{\alpha}\bra{\alpha}$是S'系观察者看到的谐振子基态的密度矩阵。经过一定量的计算后，可以得到
+
+        \begin{equation}\label{Wigner}
+            \begin{split}
+                W_{S'}(x, p) &= \sqrt{\frac{m\omega}{\pi\hbar}} \sqrt{\frac{\hbar}{2\pi m\omega}} \exp\biggl(-\frac{m\omega}{\hbar}\bigl(x-\Re(\alpha)\sqrt{\frac{2\hbar}{m\omega}}\bigr)^2\biggr) \exp\biggl(-\frac{1}{2m\hbar\omega}\bigl(p-\Im(\alpha)\sqrt{2m\hbar\omega}\bigr)^2\biggr) \\
+                    &= \frac{1}{\sqrt{2}\pi} \exp\biggl(-\frac{m\omega}{\hbar}\bigl(x+\zeta\bigr)^2\biggr) \exp\biggl(-\frac{1}{2m\hbar\omega}\bigl(p+m\frac{d\zeta}{dt}\bigr)^2\biggr)
+            \end{split}
+        \end{equation}
+
+        我们知道，对Wigner函数的一个变量求积分可以得到另一个变量的概率分布，即Wigner函数的边缘分布性质：$\bra{x}\hat{\rho}\ket{x}=\int dp W(x, p)$以及$\bra{p}\hat{\rho}\ket{p}=\int dx W(x, p)$。我们对(\ref{Wigner})积分，即可得到S'参考系中观察者看到的坐标和动量的概率分布：
 
         \begin{equation}
-            \Psi'_0(p,t)
+            |\Psi'_0(x,t)|^2 = \sqrt{\frac{m\omega}{\pi\hbar}} \exp\bigg(\frac{m\omega}{\hbar}(x+\zeta)^2\bigg)
         \end{equation}
-
-        说明在S'系观察者看来，谐振子基态的动量是。
-
-        接下来我们来计算S'系观察者看到的谐振子基态的Wigner函数
 
         \begin{equation}
-            W(x, p) = \int_{-\infty}^\infty \frac{d\xi}{2\pi}\bra{x+\frac{1}{2}\xi}\hat{\rho}\ket{x-\frac{1}{2}\xi} e^{-\frac{i}{\hbar}p\xi}
+            |\Psi'_0(p,t)|^2 = \sqrt{\frac{m\hbar\omega}{\pi}} \exp\biggl(-\frac{1}{2m\hbar\omega}\bigl(p+m\frac{d\zeta}{dt}\bigr)^2\biggr)
         \end{equation}
+        
+        说明在S'系观察者看来，谐振子基态是一个运动的Gauss波包，其中心位置$-\zeta(t)$正是平动参考系的原点的位置。
 
-        这里，$\hat{\rho}=\ket{\alpha}\bra{\alpha}$是S'系观察者看到的谐振子基态的密度矩阵。
+
+
+
 
     \subsection{实验室参考系下的平动谐振子}
         我们可以考虑实验室系中外力作用下的一个平动谐振子$\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\big(\hat{x}-\zeta(t)\big)^2$，这样的谐振子在量子操控领域很有用，代表了我们输运一个谐振子态。经典力学层面下，我们预期静止参考系下的平动谐振子，应该等同于平动参考系下无平动自由度的谐振子。接下来我们将研究量子情形下这个结论是否仍然成立。
