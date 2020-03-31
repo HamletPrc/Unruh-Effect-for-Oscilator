@@ -1,0 +1,67 @@
+\documentclass[a4paper]{article}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{geometry}  
+\geometry{left=2.0cm, right=2.0cm, top=2.5cm, bottom=2.5cm}
+
+\usepackage{braket}
+
+\title{量子力学中的参考系变换}
+\author{吴梦之}
+
+\begin{document}
+    \maketitle
+
+    这篇短文旨在讨论非相对论量子力学中的平动参考系变换。
+
+    我们考虑两个经典参考系S和S'，其中S'相对于S做平移运动。平移运动的特点在于，我们只需要知道S'参考系的原点O'相对于S参考系的原点O的相对运动状态，就可以完全确定S'中每一点相对于S参考系中对应点的相对运动状态。也就是说，对于平动参考系变换，我们只需要刻画原点的运动即可完全确定参考系变换。对于转动情形，则复杂得多，因此本文不予考虑。
+
+    我们考虑非相对论时空，即S'和S的时间t是一致的。设S'的原点O'相对于S的原点O的运动为$\vec{\xi}(t)$，则一个物体P在S'中的坐标为$\vec{r}'=\vec{r}-\vec{\xi}(t)$，动量为$\vec{p}'=\vec{p}-m\frac{d\vec{\xi}}{dt}$。那么对于量子力学的一个态$\ket{\psi}$，我们应当要求其期望值满足此性质，即
+
+    \begin{equation}
+        \begin{split}
+            <\vec{r}'>&=<\vec{r}-\vec{\xi(t)}>      \\
+            <\vec{p}'>&=<\vec{p}-m\frac{d\vec{\xi}}{dt}>
+        \end{split}
+    \end{equation}
+
+    在Schrodinger绘景中，我们认为坐标算符$\hat{\vec{r}}$和动量算符$\hat{\vec{p}}$不随参考系变换而变化，但是态依赖于参考系。在Heisenberg绘景中，我们认为态不依赖于参考系，而坐标算符和动量算符依赖于参考系。
+
+    $\xi$不依赖于时间t的情形是平凡的，它代表了重新定义S系的原点，这将给出动量守恒。我们将主要考虑$\xi(t)$依赖于时间的情形，这将给出一个规范势。
+
+\subsection{Schrodinger绘景}
+    Schrodinger绘景中，我们认为S'参考系中态将会变成$\ket{\psi'}$，并认为态空间不发生变化，即$\ket{\psi}$和$\ket{\psi'}$同属于同一个态空间，因此总归存在一个算符$\hat{U}$联系这两个态，即$\ket{\psi'}=\hat{U}\ket{\psi}$。由于坐标算符和动量算符的全体本征态分别构成态空间的一组基，因此我们只需要考虑坐标算符和动量算符的本征态在参考系变换下的变换关系，即可知道任意态在参考系变换下的变换关系，即得到$\hat{U}$的表达式。
+
+    简单起见，我们考虑一维情形。根据经典参考系变换的结果，我们可以要求
+
+    \begin{equation}
+        \hat{U}\ket{x}=e^{i\phi(x,t)}\ket{x-\xi(t)}
+    \end{equation}
+
+    其中，含时待定相位$\phi$允许坐标算符的e指数$e^{ik\hat{x}}$给出一个贡献。由于$\ket{x-\xi}=e^{\frac{i}{\hbar}\hat{p}\xi(t)}\ket{x}$，因此参考系变换算符$\hat{U}$应当包含一个空间平移算子$e^{\frac{i}{\hbar}\hat{p}\xi(t)}$。而对于待定相位$e^{ik\hat{x}}$部分，我们可以通过考虑$\hat{U}$作用在动量本征态$\ket{p}$上来推导。
+
+    \begin{equation}
+        \hat{U}\ket{p}=e^{i\phi(p,t)}\ket{p-m\frac{d\xi}{dt}}
+    \end{equation}
+
+    此时，含时待定相位$\phi$有一部分来自于空间平移算子$e^{\frac{i}{\hbar}\hat{p}\xi(t)}$。由于$\ket{p-m\frac{d\xi}{dt}}=e^{-\frac{i}{\hbar}m\frac{d\xi}{dt}\hat{x}}\ket{p}$，因此$\hat{U}$还应当包含一个动量平移算子$e^{-\frac{i}{\hbar}m\frac{d\xi}{dt}\hat{x}}$。因此参考系变换算符的表达式应该为
+
+    \begin{equation}\label{U}
+        \hat{U}(t)=e^{\frac{i}{\hbar}\hat{p}\xi(t)}e^{-\frac{i}{\hbar}m\frac{d\xi}{dt}\hat{x}}e^{i\phi(t)}
+    \end{equation}
+
+    应当注意，$e^{\frac{i}{\hbar}\hat{p}\xi(t)}$和$e^{-\frac{i}{\hbar}m\frac{d\xi}{dt}\hat{x}}$的次序是重要的，交换次序时会相差一个Weyl相位。在(\ref{U})中，我们允许一个额外的相位$\phi(t)$，这个额外的相位应当由时间演化来确定。
+
+    考虑S系中$\ket{x}$的演化。设体系Hamilton量为$\hat{H}(t)=\frac{\hat{p}^2}{2m}+\hat{V}(\hat{x},t)$，则经过一个无穷小时间间隔$\Delta t$后，$\ket{x}$演化为$e^{-\frac{i}{\hbar}\hat{H}\Delta t}\ket{x}$。我们希望经过参考系变换之后，$e^{-\frac{i}{\hbar}\hat{H}\Delta t}\ket{x}$等价于$\hat{U}\ket{x}$经过$\Delta t$演化后的态，即我们要求时间演化算符和参考系变换算符对易，即
+
+    \begin{equation}
+        \hat{U}_{evolu}(t)\hat{U}_{frame}(t)=\hat{U}_{frame}(t)\hat{U}_{evolu}(t)
+    \end{equation}
+
+    经过较为辅助的计算，可以确定出(\ref{U})中的待定相位$\phi(t)$。
+
+\subsection{Heisenberg绘景}
+    Heisenberg绘景中，经过一个参考系变换，我们认为态保持不变，但是力学量算符发生变化。具体来讲，就是$\hat{x}(t)\to\hat{x}(t)-\xi(t)$以及$\hat{p}(t)\to\hat{p}(t)-m\frac{d\xi}{dt}$。不难验证$e^{i\hat{p}a}\hat{x}e^{-i\hat{p}a}=\hat{x}-a$以及$e^{i\hat{x}k}\hat{p}e^{-i\hat{x}k}=\hat{p}-k$。于是经过参考系变换仍然可以由Schrodinger绘景下的$\hat{U}$来刻画，$\hat{x}'=\hat{U}^\dagger\hat{x}\hat{U}$以及$\hat{p}'=\hat{U}^\dagger\hat{p}\hat{U}$。
+\end{document}

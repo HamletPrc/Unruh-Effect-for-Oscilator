@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.3.24)  27 MAR 2020 00:54
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.3.24)  31 MAR 2020 19:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**Lewis-Resenfeld
-(./Lewis-Resenfeld.tex
+**"reference transformation"
+(./reference transformation.tex
 LaTeX2e <2019-10-01> patch level 1
 (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/08/27 v1.4j Standard LaTeX document class
@@ -470,8 +470,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen191
 \Gm@layoutvoffset=\dimen192
 \Gm@dimlist=\toks21
-) (/usr/share/texmf-dist/tex/latex/braket/braket.sty) (./Lewis-Resenfeld.aux)
-\openout1 = `Lewis-Resenfeld.aux'.
+) (/usr/share/texmf-dist/tex/latex/braket/braket.sty) (./reference transformation.aux)
+\openout1 = `"reference transformation.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
@@ -591,14 +591,14 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-] [2] (./Lewis-Resenfeld.aux) ) 
+] [2] (./reference transformation.aux) ) 
 Here is how much of TeX's memory you used:
- 17549 strings out of 492483
- 392851 string characters out of 6134979
- 472368 words of memory out of 5000000
- 21902 multiletter control sequences out of 15000+600000
- 540088 words of font info for 75 fonts, out of 8000000 for 9000
+ 17517 strings out of 492483
+ 390425 string characters out of 6134979
+ 477398 words of memory out of 5000000
+ 21871 multiletter control sequences out of 15000+600000
+ 540080 words of font info for 74 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 58i,17n,76p,442b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,17n,76p,467b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Lewis-Resenfeld.pdf (2 pages).
+Output written on reference transformation.pdf (2 pages).
