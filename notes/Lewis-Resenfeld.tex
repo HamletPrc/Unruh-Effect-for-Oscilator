@@ -62,7 +62,7 @@
         \end{equation}
 
 
-    \section{Lewis-Resenfeld不变量}
+    \section{Lewis-Resenfeld不变量构建Hamilton量}
 
         文献利用Lewis-Resenfeld不变量反解出了$\hat{H}(t)$，思路如下：
 
@@ -91,7 +91,7 @@
 
 
 
-    \section{抽象理论观点下的Lewis-Resenfeld不变量}
+    \section{数学物理观点下的Lewis-Resenfeld不变量}
 
         量子力学中的物理态空间其实并不是Hilbert空间，而是复射影空间$\mathbb{H}/\mathbb{C}^\times$，其中$\mathbb{H}$是Hilbert空间。特别地，对于有限维Hilbert空间$\mathbb{C}^{n+1}$，其物理态空间是$\mathbb{CP}^n=\mathbb{C}^{n+1}/\mathbb{C}^\times$。例如二能级系统的态空间是$\mathbb{CP}^1$，它微分同胚于单位球面$S^1$，即物理态和$S^1$上的点一一对应，因此我们可以用$S^1$对二能级系统进行可视化描述，这正是Bloch球。
     
@@ -105,6 +105,6 @@
 
         根据陈玺的论文，真正核心的其实是一组基(活动标架)的演化，当我们知道某一组基的演化后，就可以构建时间演化算子，进而构建Hamilton量，其中Hamilton量与时间演化算子的关系由Maurer-Cartan形式来刻画。Lewis-Resenfeld不变量在这个理论中起到脚手架的作用，即Lewis-Resenfeld不变量帮助我们找到了一组基的演化。当然，对于定态问题和绝热过程，我们是已知其一组基的演化的（Hamilton量本征态演化为下一时刻的Hamilton量的本征态），所以这两种情形我们就不需要Lewis-Resenfeld不变量了。当然如果我们非要考虑Lewis-Resenfeld不变量，那么显然Hamilton量本身就是Lewis-Resenfeld不变量。
 
-        我们来进一步考察Lewis-Resenfeld不变量到底干了什么事。若$\ket{\phi_n(t)}$是$\hat{I}(t)$的本征态，即$\hat{I}(t)\ket{\phi_n(t)}=\lambda_n\ket{\phi_n(t)}$，那么经过$\Delta t$的演化，有$\hat{U}(t+\Delta t, t)\ket{\phi_n(t)}\propto\ket{\phi_n(t+\Delta t)}$。但是对于一般的一组基$\ket{\psi_n(t)}$，它们的演化将是$\hat{U}(t+\Delta t, t)\ket{\psi_n(t)}=\sum_m c_{mn}\ket{\psi_m(t+\Delta t)}$。也就是说，某一时刻$\hat{I}(t)$所定义的基(活动标架)，经过任意长时间的演化，是那个时刻$\hat{I}(t+\Delta t)$所定义的基(活动标架)；而对于一般的表象Q，某一时刻$Q(t)$所定义的基(活动标架)，经过一段时间的演化，就不再是那个时刻下$Q(t+\Delta t)$所定义的基(活动标架)了。
+        我们来进一步考察Lewis-Resenfeld不变量的物理意义。若$\ket{\phi_n(t)}$是$\hat{I}(t)$的本征态，即$\hat{I}(t)\ket{\phi_n(t)}=\lambda_n\ket{\phi_n(t)}$，那么经过$\Delta t$的演化，有$\hat{U}(t+\Delta t, t)\ket{\phi_n(t)}\propto\ket{\phi_n(t+\Delta t)}$。但是对于一般的一组基$\ket{\psi_n(t)}$，它们的演化将是$\hat{U}(t+\Delta t, t)\ket{\psi_n(t)}=\sum_m c_{mn}\ket{\psi_m(t+\Delta t)}$。也就是说，某一时刻$\hat{I}(t)$所定义的基(活动标架)，经过任意长时间的演化，是那个时刻$\hat{I}(t+\Delta t)$所定义的基(活动标架)；而对于一般的表象Q，某一时刻$Q(t)$所定义的基(活动标架)，经过一段时间的演化，就不再是那个时刻下$Q(t+\Delta t)$所定义的基(活动标架)了。
 
 \end{document}

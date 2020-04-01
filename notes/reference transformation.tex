@@ -54,10 +54,10 @@
 
     应当注意，$e^{\frac{i}{\hbar}\hat{p}\xi(t)}$和$e^{-\frac{i}{\hbar}m\frac{d\xi}{dt}\hat{x}}$的次序是重要的，交换次序时会相差一个Weyl相位。在(\ref{U})中，我们允许一个额外的相位$\phi(t)$，这个额外的相位应当由时间演化来确定。
 
-    考虑S系中$\ket{x}$的演化。设体系Hamilton量为$\hat{H}(t)=\frac{\hat{p}^2}{2m}+\hat{V}(\hat{x},t)$，则经过一个无穷小时间间隔$\Delta t$后，$\ket{x}$演化为$e^{-\frac{i}{\hbar}\hat{H}\Delta t}\ket{x}$。我们希望经过参考系变换之后，$e^{-\frac{i}{\hbar}\hat{H}\Delta t}\ket{x}$等价于$\hat{U}\ket{x}$经过$\Delta t$演化后的态，即我们要求时间演化算符和参考系变换算符对易，即
+    考虑S系中$\ket{x}$的演化。设体系Hamilton量为$\hat{H}(t)=\frac{\hat{p}^2}{2m}+\hat{V}(\hat{x},t)$，则经过一个无穷小时间间隔$\Delta t$后，$\ket{x}$演化为$e^{-\frac{i}{\hbar}\hat{H}\Delta t}\ket{x}$。我们希望经过参考系变换之后，$e^{-\frac{i}{\hbar}\hat{H}\Delta t}\ket{x}$等价于$\hat{U}\ket{x}$经过$\Delta t$演化后的态，即我们要求时间演化算符和参考系变换算符对易，这给我们一个约束条件
 
     \begin{equation}
-        \hat{U}_{evolu}(t)\hat{U}_{frame}(t)=\hat{U}_{frame}(t)\hat{U}_{evolu}(t)
+        \hat{U}_{evolu}(t)\hat{U}_{frame}(0)=\hat{U}_{frame}(t)\hat{U}_{evolu}(t)
     \end{equation}
 
     经过较为辅助的计算，可以确定出(\ref{U})中的待定相位$\phi(t)$。
