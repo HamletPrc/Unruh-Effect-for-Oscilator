@@ -115,7 +115,7 @@
 
     \section{运动方程的Galileo对称性与绝热规范势}
 
-        以上我们讨论了参考系变换下量子态的变换法则$\ket{\Psi}\to\ket{\Psi'}=\hat{U}\ket{\Psi}$，我们指出了变换算符$\hat{U}$的形式是一个Weyl平移算子乘一个全局相位\ref{U-Weyl}，并且可以认为是作为加法群的经典相空间在量子态空间上的群表示。接下来我们来研究Schrodinger方程在参考系变换下的变化。
+        以上我们讨论了参考系变换下量子态的变换法则$\ket{\Psi}\to\ket{\Psi'}=\hat{U}\ket{\Psi}$，我们指出了变换算符$\hat{U}$的形式是一个Weyl平移算子乘一个全局相位(\ref{U-Weyl})，并且可以认为是作为加法群的经典相空间在量子态空间上的群表示。接下来我们来研究Schrodinger方程在参考系变换下的变化。
 
         Schrodinger方程是量子力学中的运动方程，我们应当要求它在参考系变换下具有某种意义上的不变性。正如我们要求经典力学的Newton第二定律Galileo对称性、量子场论的各种场和单粒子态必须满足Poincare或Lorentz对称性一样，运动方程必须要满足时空对称性，否则我们就会遇到1905年之前的电动力学的困境——只有在以太参考系下Maxwell方程组才成立，其它参考系中运动方程必须要大幅修正才能描述物理现象。然而接下来我们将看到，由于参考系变换$\hat{U}(t)$含时，Schrodinger方程中的$\partial_t$作用其上将会带来额外效应，这正是绝热规范势[?]的物理意义。
 
@@ -168,10 +168,10 @@
 
         以上，我们讨论了Schrodinger方程、Hamilton量和量子态在参考系变换下的变换法则。为了更好地理解量子达朗贝尔原理，我们将通过Ehrenfest定理，来研究该原理的物理意义与经典对应。
 
-        我们已经知道，一般参考系变换下的幺正算符为(\ref{U})或(\ref{U-Weyl}），我们接下来计算其惯性势。$\frac{\partial}{\partial t}\hat{U} = \big(-\frac{i}{\hbar}m\frac{d^2 \xi}{dt^2} \hat{x}\big)\hat{U} + \hat{U_a}\big(\frac{i}{\hbar}\frac{d\xi}{dt}\hat{p} - \frac{i}{\hbar}\frac{1}{2}m(\frac{d\xi}{dt})^2\big)$。由于惯性势的第二个因子$\hat{U}^+$与$\hat{U}$相乘等于1，因此我们希望将$\hat{p}$与$\hat{U}$交换次序。根据对易关系$[\hat{x},\hat{p}]=i\hbar$，我们用归纳法不难知道$[\hat{x}^n,\hat{p}]=i\hbar n\hat{x}^{n-1}$，进而对于任意能够Taylor展开的算符函数$f(\hat{x},\hat{p})$, 都有$[\hat{f}, \hat{p}]=i\hbar\frac{\partial f}{\partial\hat{x}}$。所以$[\hat{U}, \hat{p}] = i\hbar\frac{\partial\hat{U}}{\partial\hat{x}} = i\hbar\big(-\frac{i}{\hbar}m\frac{d\xi}{dt}\big)\hat{U} = m\frac{d\xi}{dt}\hat{U}$。于是$\hat{U}\hat{p} = \hat{p}\hat{U} + [\hat{U}, \hat{p}] = \big(\hat{p}+m\frac{d\xi}{dt}\big)\hat{U}$。这样，我们就得到了一般形式的惯性势如下：
+        我们已经知道，一般参考系变换下的幺正算符为(\ref{U})或(\ref{U-Weyl}），我们接下来计算其惯性势。$\frac{\partial}{\partial t}\hat{U} = \big(-\frac{i}{\hbar}m\frac{d^2 \xi}{dt^2} \hat{x}\big)\hat{U} + \hat{U}\big(\frac{i}{\hbar}\frac{d\xi}{dt}\hat{p} - \frac{i}{\hbar}\frac{1}{2}m(\frac{d\xi}{dt})^2\big)$。由于惯性势的第二个因子$\hat{U}^\dagger$与$\hat{U}$相乘等于1，因此我们希望将$\hat{p}$与$\hat{U}$交换次序。根据对易关系$[\hat{x},\hat{p}]=i\hbar$，我们用归纳法不难知道$[\hat{x}^n,\hat{p}]=i\hbar n\hat{x}^{n-1}$，进而对于任意能够Taylor展开的算符函数$f(\hat{x},\hat{p})$, 都有$[\hat{f}, \hat{p}]=i\hbar\frac{\partial f}{\partial\hat{x}}$。所以$[\hat{U}, \hat{p}] = i\hbar\frac{\partial\hat{U}}{\partial\hat{x}} = i\hbar\big(-\frac{i}{\hbar}m\frac{d\xi}{dt}\big)\hat{U} = m\frac{d\xi}{dt}\hat{U}$。于是$\hat{U}\hat{p} = \hat{p}\hat{U} + [\hat{U}, \hat{p}] = \big(\hat{p}+m\frac{d\xi}{dt}\big)\hat{U}$。这样，我们就得到了一般形式的惯性势如下：
 
         \begin{equation}
-            \hat{V}_{iner} := i\hbar\frac{\partial\hat{U}}{\partial t}\hat{U}^+ = m \frac{d^2\xi}{d t^2}\hat{x}-\frac{d\xi}{dt}\hat{p}-\frac{1}{2}m\bigg(\frac{d\xi}{dt}\bigg)^2
+            \hat{V}_{iner} := i\hbar\frac{\partial\hat{U}}{\partial t}\hat{U}^\dagger = m \frac{d^2\xi}{d t^2}\hat{x}-\frac{d\xi}{dt}\hat{p}-\frac{1}{2}m\bigg(\frac{d\xi}{dt}\bigg)^2
         \end{equation}
 
         量子力学中的Ehrenfest定理告诉我们$\frac{d}{dt}<\hat{p}>=-<\frac{\partial\hat{V}}{\partial \hat{x}}>$，即力学量的期望值服从Newton运动方程。那么经过参考系变换后，势能项增加了一个惯性势，于是Ehrenfest定理将会给出$-<\frac{\partial\hat{V}_{iner}}{\partial \hat{x}}>=-m \frac{d^2\xi}{d t^2}$，这正是经典惯性力。这也说明，对于描述参考系变换的幺正算符，我们将它所带来的绝热规范势称为惯性势或者达朗贝尔势是合适的。
@@ -242,5 +242,44 @@
         \end{equation}
         
         说明在S'系观察者看来，谐振子基态是一个运动的Gauss波包，其中心位置$-\xi(t)$正是平动参考系的原点的位置，动量的中心值$-m\frac{d\xi}{dt}$也正是平动参考系带来的额外的动量。
+
+
+
+    \section{伽利略时空中一维谐振子的Unruh效应}
+
+        以上我们已经说明了在S'系中看来，S系中谐振子的基态会变成$\ket{\alpha}$，相对于S系的哈密顿量$\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$而言，这是一个相干态。然而，对于S'系的观察者，谐振子的态$\ket{\alpha}$应当对$\hat{H}'=\hat{U}\hat{H}\hat{U}^\dagger+i\hbar\frac{\partial\hat{U}}{\partial t}\hat{U}^\dagger$求瞬时产生湮灭算符，考察$\ket{\alpha}$是不是瞬时产生湮灭算符的本征态，才可判断在S'观者观测到的态是不是相干态。
+
+        \subsection{匀速直线运动情形}
+
+            匀速运动情形下，惯性力为０，于是S'系中的哈密顿量为$\hat{H}'=\hat{U}\hat{H}\hat{U}^\dagger=\frac{(\hat{p}-mv)^2}{2m}+\frac{1}{2}m\omega^2(\hat{x}-vt)^2$。引入瞬时动量算符和坐标算符$\hat{P}=\hat{p}-mv$和$\hat{Q}=\hat{x}-vt$，不难验证对易关系$[\hat{Q},\hat{P}]=i\hbar$，于是$\hat{H}'=\frac{\hat{P}^2}{2m}+\frac{1}{2}m\omega^2\hat{Q}^2$仍然是一个谐振子。因此我们可以引入相应的产生湮灭算符
+
+            \begin{equation}
+                \begin{array}{lr}
+                    \hat{b}=\frac{1}{\sqrt{2m\hbar\omega}}(m\omega\hat{Q}-i\hat{P})=\frac{1}{\sqrt{2m\hbar\omega}}(m\omega\hat{x}-i\hat{p}-m\omega vt+imv)=\hat{a}+\frac{mv(\omega t-i)}{\sqrt{2m\hbar\omega}} \\
+                    \hat{b}^\dagger=\frac{1}{\sqrt{2m\hbar\omega}}(m\omega\hat{Q}+i\hat{P})=\frac{1}{\sqrt{2m\hbar\omega}}(m\omega\hat{x}+i\hat{p}+m\omega vt-imv)=\hat{a}+\frac{mv(\omega t+i)}{\sqrt{2m\hbar\omega}}
+                \end{array}
+            \end{equation}
+
+            在匀速运动情形下，S'系中的观察者看到的S系的基态变成了$\ket{\alpha}$，其中$\alpha=-vt\sqrt{\frac{m\omega}{2\hbar}}-imv\sqrt{\frac{1}{2m\hbar\omega}}$，即$\hat{a}\ket{\alpha}$。由S'系的湮灭算符与S系的湮灭算符的关系$\hat{b}=\hat{a}+\frac{mv(\omega t-i)}{\sqrt{2m\hbar\omega}}$可知，$\hat{b}\ket{\alpha}=0$，即匀速运动情形下，S系的基态在S'系中仍然是基态，尽管这个基态在$\hat{H}$表象下是一个相干态。
+
+
+        \subsection{匀加速运动情形与Unruh效应}
+
+            然而，在匀加速情形下，由于惯性力的作用，我们将看到S系的基态在S'系中不再是基态了。S'系中的态矢量$\ket{\alpha}$中$\alpha=-\frac{1}{2}at^2\sqrt{\frac{m\omega}{2\hbar}}-imat\sqrt{\frac{1}{2m\hbar\omega}}$，哈密顿量
+            
+            \begin{equation}
+                \begin{split}
+                    \hat{H}' &= \hat{U}\hat{H}\hat{U}^\dagger+i\hbar\frac{\partial\hat{U}}{\partial t}\hat{U}^\dagger = \frac{(\hat{p}-mat)^2}{2m}+\frac{1}{2}m\omega^2(\hat{x}-\frac{1}{2}at^2)^2-ma\hat{x} \\
+                        &= \frac{(\hat{p}-mat)^2}{2m}+\frac{1}{2}m\omega^2(\hat{x}-\frac{1}{2}at^2-\frac{a}{\omega^2})^2-\frac{1}{2}ma^2t^2-\frac{ma^2}{2\omega^2}　\\
+                        &= \frac{(\hat{p}-mat)^2}{2m}+\frac{1}{2}m\omega^2(\hat{x}-\frac{1}{2}at^2-\frac{a}{\omega^2})^2+V_0(t)
+                \end{split}
+            \end{equation}
+                
+            此时，瞬时动量算符和坐标算符定义为$\hat{P}=\hat{p}-mat$，$\hat{Q}=\hat{x}-\frac{1}{2}at^2-\frac{a}{\omega^2}$，相应的产生湮灭算符为
+
+            \begin{equation}
+                \hat{b}=
+            \end{equation}
+
 
 \end{document}
