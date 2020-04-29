@@ -278,8 +278,18 @@
             此时，瞬时动量算符和坐标算符定义为$\hat{P}=\hat{p}-mat$，$\hat{Q}=\hat{x}-\frac{1}{2}at^2-\frac{a}{\omega^2}$，相应的产生湮灭算符为
 
             \begin{equation}
-                \hat{b}=
+                \begin{array}{lr}
+                    \hat{b}=\hat{a}+\frac{1}{\sqrt{2m\hbar\omega}}(mat^2\omega-imat)+\frac{1}{\sqrt{4m\hbar\omega}}mat \\
+                    \hat{b}^\dagger=\hat{a}^\dagger+\frac{1}{\sqrt{2m\hbar\omega}}(mat^2\omega+imat)+\frac{1}{\sqrt{4m\hbar\omega}}mat
+                \end{array}
             \end{equation}
 
+            不难验证$(\hat{a}+\frac{1}{\sqrt{2m\hbar\omega}}(mat^2\omega-imat))\ket{\alpha}=0$，即若不考虑惯性力，$\hat{U}\ket{0}$仍然是$\hat{H}'_0=\hat{U}\hat{H}\hat{U}^\dagger$的瞬时基态。然而由于惯性力的作用，$\hat{U}\ket{0}$不再是$\hat{H}'$的瞬时基态。不难验证$\hat{b}(\hat{U}\ket{0})=\frac{mat}{\sqrt{4m\hbar\omega}}(\hat{U}\ket{0})$，即$\hat{U}\ket{0}$是$\hat{H}'$表象下的相干态$\ket{\alpha'}=e^{-\frac{|\alpha'|^2}{2}}\sum_{n=0}^\infty\frac{\alpha'^n}{\sqrt{n!}}\ket{n}$，其中$\alpha'=$。这说明在S'系观者看来，S系的基态并不处于基态，而是具有概率$\frac{|\alpha'|^{2n}}{n!}$处于第n能级，这个概率形式上可以对应于一个玻尔兹曼因子$e^{-\frac{E_n}{k_BT}}$，其中$E_n=n\hbar\omega$。于是
+
+            \begin{equation}
+                =e^{-\frac{\hbar\omega}{k_BT}}
+            \end{equation}
+
+            这可以形式上给出一个温度$T=-\frac{1}{\ln a}$。这与Unruh温度$T\propto a$是不同的，这主要是非相对论时空与相对论时空的时空结构不同造成的。
 
 \end{document}
