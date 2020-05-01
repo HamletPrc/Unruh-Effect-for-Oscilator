@@ -22,6 +22,10 @@
         \fontsize{18pt}{0}摘\quad\quad 要
     \end{center}
 
+        本文研究了量子力学中的经典平动参考系变换及其在谐振子系统中的应用。本文首先论证了平动参考系变换下量子态的变换由Weyl平移算子刻画，它实际上是经典相空间作为一个加法群在Hilbert空间上的群表示。之后本文研究了参考系变换下哈密顿量的变换法则，指出了此时的绝热规范势代表了惯性力，简单讨论了量子版本的达朗贝尔原理和等效原理。本文接下来根据量子态和哈密顿量的变换法则，研究了平动参考系变换下的谐振子，着重讨论了其基态的变换和哈密顿表象，论证了匀速参考系变换下基态仍为基态，而非匀速参考系变换下由于惯性力的作用，基态将变为相干态。本文最后简单讨论了此结论在量子调控领域的潜在应用，以及伽利略时空下是否存在Unruh效应。
+
+    \subsection*{关键词} 经典平动参考系变换    Weyl平移算子    量子达朗贝尔原理    谐振子相干态
+
 
 
     \section{引言}
@@ -34,7 +38,7 @@
 
     \subsection{本文的结构安排与主要成果}
 
-        本文第二章首先回顾了在Schrodinger绘景中，平动参考系变换下量子态的变换法则，借助Weyl平移算子和Weyl-Heisenberg群，我们证明了平动参考系变换，是经典相空间作为一个加法群作用于量子态空间上。
+        本文第二章首先回顾了平动参考系变换下量子态的变换法则，借助Weyl平移算子和Weyl-Heisenberg群，我们证明了平动参考系变换，是经典相空间作为一个加法群作用于量子态空间上。
 
         本文第三章则考虑参考系变换对Schrodinger方程的影响，回顾绝热规范势的物理意义，指出其经典物理意义是惯性力，并简单讨论量子力学中的等效原理。
 
@@ -192,11 +196,9 @@
 
         以上我们对一般的参考系变换进行了讨论，接下来我们研究谐振子系统$\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$。谐振子系统中，$\hat{x}$和$\hat{p}$可以用产生湮灭算符表示$\hat{x}=\sqrt{\frac{\hbar}{2m\omega}}(\hat{a}^\dagger+\hat{a})$，$\hat{p}=i\sqrt{\frac{m\hbar\omega}{2}}(\hat{a}^\dagger-\hat{a})$。此时，Weyl平移算子$\hat{W}(a,b)=\exp[\frac{i}{\hbar}(a\hat{x}-b\hat{p})]$将会变成$\hat{D}(\alpha)=\exp(\alpha\hat{a}^\dagger-\alpha^*\hat{a})$的形式，其中$\alpha=b\sqrt{\frac{m\omega}{2\hbar}}+i\frac{a}{\sqrt{2m\hbar\omega}}$。$\hat{D}(\alpha)$算符称为谐振子的平移算符，其物理意义是将谐振子基态变换为本征值等于$\alpha$的相干态，即$\hat{a}\hat{D}(\alpha)\ket{0}=\alpha\hat{D}(\alpha)\ket{0}$。
 
-        我们已经知道全体Weyl平移算子在模掉一个全局相位的意义下构成一个群$\mathcal{W}\simeq(\mathbb{R}^2,+)$，相应地，全体$\hat{D}(\alpha)$模掉一个全局相位后构成一个群$\{\hat{D}(\alpha):\mathcal{H}\to\mathcal{H}|\alpha\in\mathbb{C}\}/\sim$，其中$\mathcal{H}$是量子态空间，等价关系$\sim$定义为$\hat{D}(\alpha)\sim\hat{D}(\beta) \Leftrightarrow \hat{D}(\alpha)=\hat{D}(\beta)\exp(i\phi),\ \phi\in\mathbb{R}$。这个群满足$\hat{D}(\alpha+\beta)=\hat{D}(\alpha)\hat{D}(\beta)$，其中“=”指模掉全局相位意义下的相等，进而它与$(\mathbb{C},+)$同构，因此可以说$\hat{D}(\alpha)$事实上是$(\mathbb{C},+)$群在谐振子Hilbert空间上的群表示，进而相干态可以认为是复平面上的点作用在基态上，从而相干态与复平面上的点是一一对应的。由于平动参考系变换由Weyl平移算子$\hat{W}(-m\frac{d\xi}{dt}, -\xi)$刻画，因此我们有以下结论：
+        我们已经知道全体Weyl平移算子在模掉一个全局相位的意义下构成一个群$\mathcal{W}\simeq(\mathbb{R}^2,+)$，相应地，全体$\hat{D}(\alpha)$模掉一个全局相位后构成一个群$\{\hat{D}(\alpha):\mathcal{H}\to\mathcal{H}|\alpha\in\mathbb{C}\}/\sim$，其中$\mathcal{H}$是量子态空间，等价关系$\sim$定义为$\hat{D}(\alpha)\sim\hat{D}(\beta) \Leftrightarrow \hat{D}(\alpha)=\hat{D}(\beta)\exp(i\phi),\ \phi\in\mathbb{R}$。这个群满足$\hat{D}(\alpha+\beta)=\hat{D}(\alpha)\hat{D}(\beta)$，其中“=”指模掉全局相位意义下的相等，进而它与$(\mathbb{C},+)$同构，因此可以说$\hat{D}(\alpha)$事实上是$(\mathbb{C},+)$群在谐振子Hilbert空间上的群表示，进而相干态可以认为是复平面上的点作用在基态上，从而相干态与复平面上的点是一一对应的。由于基态变换的特殊性，我们接下来将着重研究S系中的基态在S'系中的变化。
 
-        \begin{conclusion}
-            平动参考系变换下，谐振子基态变成相干态。
-        \end{conclusion}
+    \subsection{参考系变换下的谐振子基态}
 
         不过这个相干态的演化与普通的相干态的演化是不同的。对于一个普通的相干态$\hat{\alpha}$，它随时间演化的规律是$\ket{\alpha;t}=e^{-i\frac{1}{2}\omega t}\ket{\alpha e^{-i\omega t}}$。但是这里，$\ket{0';t}$的演化来自于两个方面，一个是基态$\ket{0}$自身随时间的演化，另一个是S'参考系随时间有变化，因此参考系变换算符$\hat{U}$随时间有变化。综合两个方面的影响，S'系中观察到的S系谐振子基态为
 
@@ -245,11 +247,11 @@
 
 
 
-    \section{伽利略时空中一维谐振子的Unruh效应}
+    \subsection{S'观者的哈密顿表象}
 
-        以上我们已经说明了在S'系中看来，S系中谐振子的基态会变成$\ket{\alpha}$，相对于S系的哈密顿量$\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$而言，这是一个相干态。然而，对于S'系的观察者，谐振子的态$\ket{\alpha}$应当对$\hat{H}'=\hat{U}\hat{H}\hat{U}^\dagger+i\hbar\frac{\partial\hat{U}}{\partial t}\hat{U}^\dagger$求瞬时产生湮灭算符，考察$\ket{\alpha}$是不是瞬时产生湮灭算符的本征态，才可判断在S'观者观测到的态是不是相干态。
+        以上我们已经说明了在S'系中看来，S系中谐振子的基态会变成一个运动的高斯波包，相对于S系的哈密顿量$\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$而言，这是一个相干态。然而，对于S'系的观察者，这个高斯波包应当在$\hat{H}'=\hat{U}\hat{H}\hat{U}^\dagger+i\hbar\frac{\partial\hat{U}}{\partial t}\hat{U}^\dagger$表象下展开，才能判断是一个什么样的量子态。
 
-        \subsection{匀速直线运动情形}
+        \subsubsection{匀速直线运动情形}
 
             匀速运动情形下，惯性力为０，于是S'系中的哈密顿量为$\hat{H}'=\hat{U}\hat{H}\hat{U}^\dagger=\frac{(\hat{p}-mv)^2}{2m}+\frac{1}{2}m\omega^2(\hat{x}-vt)^2$。引入瞬时动量算符和坐标算符$\hat{P}=\hat{p}-mv$和$\hat{Q}=\hat{x}-vt$，不难验证对易关系$[\hat{Q},\hat{P}]=i\hbar$，于是$\hat{H}'=\frac{\hat{P}^2}{2m}+\frac{1}{2}m\omega^2\hat{Q}^2$仍然是一个谐振子。因此我们可以引入相应的产生湮灭算符
 
@@ -263,7 +265,7 @@
             在匀速运动情形下，S'系中的观察者看到的S系的基态变成了$\ket{\alpha}$，其中$\alpha=-vt\sqrt{\frac{m\omega}{2\hbar}}-imv\sqrt{\frac{1}{2m\hbar\omega}}$，即$\hat{a}\ket{\alpha}$。由S'系的湮灭算符与S系的湮灭算符的关系$\hat{b}=\hat{a}+\frac{mv(\omega t-i)}{\sqrt{2m\hbar\omega}}$可知，$\hat{b}\ket{\alpha}=0$，即匀速运动情形下，S系的基态在S'系中仍然是基态，尽管这个基态在$\hat{H}$表象下是一个相干态。
 
 
-        \subsection{匀加速运动情形与Unruh效应}
+        \subsubsection{匀加速运动情形与Unruh效应}
 
             然而，在匀加速情形下，由于惯性力的作用，我们将看到S系的基态在S'系中不再是基态了。S'系中的态矢量$\ket{\alpha}$中$\alpha=-\frac{1}{2}at^2\sqrt{\frac{m\omega}{2\hbar}}-imat\sqrt{\frac{1}{2m\hbar\omega}}$，哈密顿量
             
@@ -284,12 +286,33 @@
                 \end{array}
             \end{equation}
 
-            不难验证$(\hat{a}+\frac{1}{\sqrt{2m\hbar\omega}}(mat^2\omega-imat))\ket{\alpha}=0$，即若不考虑惯性力，$\hat{U}\ket{0}$仍然是$\hat{H}'_0=\hat{U}\hat{H}\hat{U}^\dagger$的瞬时基态。然而由于惯性力的作用，$\hat{U}\ket{0}$不再是$\hat{H}'$的瞬时基态。不难验证$\hat{b}(\hat{U}\ket{0})=\frac{mat}{\sqrt{4m\hbar\omega}}(\hat{U}\ket{0})$，即$\hat{U}\ket{0}$是$\hat{H}'$表象下的相干态$\ket{\alpha'}=e^{-\frac{|\alpha'|^2}{2}}\sum_{n=0}^\infty\frac{\alpha'^n}{\sqrt{n!}}\ket{n}$，其中$\alpha'=$。这说明在S'系观者看来，S系的基态并不处于基态，而是具有概率$\frac{|\alpha'|^{2n}}{n!}$处于第n能级，这个概率形式上可以对应于一个玻尔兹曼因子$e^{-\frac{E_n}{k_BT}}$，其中$E_n=n\hbar\omega$。于是
+            不难验证$(\hat{a}+\frac{1}{\sqrt{2m\hbar\omega}}(mat^2\omega-imat))\ket{\alpha}=0$，即若不考虑惯性力，$\hat{U}\ket{0}$仍然是$\hat{H}'_0=\hat{U}\hat{H}\hat{U}^\dagger$的瞬时基态。然而由于惯性力的作用，$\hat{U}\ket{0}$不再是$\hat{H}'$的瞬时基态。不难验证$\hat{b}(\hat{U}\ket{0})=\frac{mat}{\sqrt{4m\hbar\omega}}(\hat{U}\ket{0})$，即$\hat{U}\ket{0}$是$\hat{H}'$表象下的相干态$\ket{\alpha'}=e^{-\frac{|\alpha'|^2}{2}}\sum_{n=0}^\infty\frac{\alpha'^n}{\sqrt{n!}}\ket{n}$，其中$\alpha'=$。特别地，当$\alpha'=0$时，系统回到了基态。
 
-            \begin{equation}
-                =e^{-\frac{\hbar\omega}{k_BT}}
-            \end{equation}
 
-            这可以形式上给出一个温度$T=-\frac{1}{\ln a}$。这与Unruh温度$T\propto a$是不同的，这主要是非相对论时空与相对论时空的时空结构不同造成的。
+
+
+    \section{总结与讨论}
+
+        本文讨论了量子力学中的经典平动参考系变换，首先说明了参考系变换下量子态的变换可以由一个Weyl平移算子来刻画，其物理意义是经典相空间作为一个加法群在量子态空间上的群表示，而这个群正是Weyl-Heisenberg群相对于U(1)群的商群，同构于$(\mathcal{R}^2,+)$。接下来我们讨论了这个幺正算子所诱导的绝热规范势，指出了它的经典物理意义是惯性力，并由此构建了量子达朗贝尔原理。基于参考系变换下量子态和哈密顿量的变换法则，我们研究了一维谐振子，着重分析了基态的变换，证明了匀速参考系变换下基态仍然变为基态，而匀加速情形下基态将变为相干态。
+
+        这个结论是非平庸的，它意味着在S'参考系中量子态的演化存在激发。这个结论可以运用于量子调控的领域中，我们可以操控变化的电磁场中的一个带电谐振子，它的哈密顿量的形式$\hat{H}=\frac{(\hat{p}+qA(t))^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2-qE(t)\hat{x}$，并将初态制备为基态。调控合适的电磁场，使哈密顿量的形式与(???)式一致，那么此电磁场下的谐振子将遵循本文的运动规律，即处于相干态$\ket{\alpha}$。特别地，当$\alpha=0$时，系统回到了基态，这正是量子绝热捷径(short-cut to adiabatic)。所以说，作为一个副产品，本文给出了一系列新的量子绝热捷径。
+
+        另一方面，我们知道匀加速观者看到的闵氏时空将表现为Rindler时空，这个时空中的标量场具有Unruh效应。由于标量场的物理图像是无穷多无耦合谐振子，因此根据本文对谐振子的研究，我们也可以在伽利略时空中考虑是否存在Unruh效应。形式上来看，在匀加速观者看来，谐振子处于相干态，因此处在第n能级的概率正比于$(|\alpha|^2)^n$，对比玻尔兹曼因子$e^{-\frac{E_n}{k_BT}}\sim e^{-\frac{n\hbar\omega}{k_BT}}$，我们形式上可以要求
+
+        \begin{equation}
+            |\alpha|^2=e^{-\frac{\hbar\omega}{k_BT}}
+        \end{equation}
+
+        因此形式上给出一个温度
+
+        \begin{equation}
+            k_BT=-\frac{\hbar\omega}{\ln|\alpha|^2}
+        \end{equation}
+
+        这显然与Unruh效应所预言的$T\sim a$不同。
+
+        
+
+
 
 \end{document}
