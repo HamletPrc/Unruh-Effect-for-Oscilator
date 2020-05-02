@@ -172,18 +172,18 @@
 
         以上，我们讨论了Schrodinger方程、Hamilton量和量子态在参考系变换下的变换法则。为了更好地理解量子达朗贝尔原理，我们将通过Ehrenfest定理，来研究该原理的物理意义与经典对应。
 
-        我们已经知道，一般参考系变换下的幺正算符为(\ref{U})或(\ref{U-Weyl}），我们接下来计算其惯性势。$\frac{\partial}{\partial t}\hat{U} = \big(-\frac{i}{\hbar}m\frac{d^2 \xi}{dt^2} \hat{x}\big)\hat{U} + \hat{U}\big(\frac{i}{\hbar}\frac{d\xi}{dt}\hat{p} - \frac{i}{\hbar}\frac{1}{2}m(\frac{d\xi}{dt})^2\big)$。由于惯性势的第二个因子$\hat{U}^\dagger$与$\hat{U}$相乘等于1，因此我们希望将$\hat{p}$与$\hat{U}$交换次序。根据对易关系$[\hat{x},\hat{p}]=i\hbar$，我们用归纳法不难知道$[\hat{x}^n,\hat{p}]=i\hbar n\hat{x}^{n-1}$，进而对于任意能够Taylor展开的算符函数$f(\hat{x},\hat{p})$, 都有$[\hat{f}, \hat{p}]=i\hbar\frac{\partial f}{\partial\hat{x}}$。所以$[\hat{U}, \hat{p}] = i\hbar\frac{\partial\hat{U}}{\partial\hat{x}} = i\hbar\big(-\frac{i}{\hbar}m\frac{d\xi}{dt}\big)\hat{U} = m\frac{d\xi}{dt}\hat{U}$。于是$\hat{U}\hat{p} = \hat{p}\hat{U} + [\hat{U}, \hat{p}] = \big(\hat{p}+m\frac{d\xi}{dt}\big)\hat{U}$。这样，我们就得到了一般形式的惯性势如下：
+        我们已经知道，一般参考系变换下的幺正算符为(\ref{U})或(\ref{U-Weyl}），我们接下来计算其惯性势。$\frac{\partial}{\partial t}\hat{U} = \big(-\frac{i}{\hbar}m\frac{d^2 \xi}{dt^2} \hat{x}\big)\hat{U} + \hat{U}\big(\frac{i}{\hbar}\frac{d\xi}{dt}\hat{p} + \frac{i}{\hbar}\frac{1}{2}m(\frac{d\xi}{dt})^2\big)$。由于惯性势的第二个因子$\hat{U}^\dagger$与$\hat{U}$相乘等于1，因此我们希望将$\hat{p}$与$\hat{U}$交换次序。根据对易关系$[\hat{x},\hat{p}]=i\hbar$，我们用归纳法不难知道$[\hat{x}^n,\hat{p}]=i\hbar n\hat{x}^{n-1}$，进而对于任意能够Taylor展开的算符函数$f(\hat{x},\hat{p})$, 都有$[\hat{f}, \hat{p}]=i\hbar\frac{\partial f}{\partial\hat{x}}$。所以$[\hat{U}, \hat{p}] = i\hbar\frac{\partial\hat{U}}{\partial\hat{x}} = i\hbar\big(-\frac{i}{\hbar}m\frac{d\xi}{dt}\big)\hat{U} = m\frac{d\xi}{dt}\hat{U}$。于是$\hat{U}\hat{p} = \hat{p}\hat{U} + [\hat{U}, \hat{p}] = \big(\hat{p}+m\frac{d\xi}{dt}\big)\hat{U}$。这样，我们就得到了一般形式的惯性势如下：
 
         \begin{equation}
-            \hat{V}_{iner} := i\hbar\frac{\partial\hat{U}}{\partial t}\hat{U}^\dagger = m \frac{d^2\xi}{d t^2}\hat{x}-\frac{d\xi}{dt}\hat{p}-\frac{1}{2}m\bigg(\frac{d\xi}{dt}\bigg)^2
+            \hat{V}_{iner} := i\hbar\frac{\partial\hat{U}}{\partial t}\hat{U}^\dagger = m \frac{d^2\xi}{d t^2}\hat{x}-\frac{d\xi}{dt}\hat{p}+\frac{1}{2}m\bigg(\frac{d\xi}{dt}\bigg)^2
         \end{equation}
 
         量子力学中的Ehrenfest定理告诉我们$\frac{d}{dt}<\hat{p}>=-<\frac{\partial\hat{V}}{\partial \hat{x}}>$，即力学量的期望值服从Newton运动方程。那么经过参考系变换后，势能项增加了一个惯性势，于是Ehrenfest定理将会给出$-<\frac{\partial\hat{V}_{iner}}{\partial \hat{x}}>=-m \frac{d^2\xi}{d t^2}$，这正是经典惯性力。这也说明，对于描述参考系变换的幺正算符，我们将它所带来的绝热规范势称为惯性势或者达朗贝尔势是合适的。
 
-        绝热规范势$\hat{V}_{iner}$中的动量项$-\frac{d\xi}{dt}\hat{p}$则应当与Hamilton量中的动能项$\frac{\hat{p}^2}{2m}$进行配平方，得到$\frac{\big(\hat{p}-m\frac{d\xi}{dt}\big)^2}{2m}-\frac{1}{2}m\big(\frac{d\xi}{dt}\big)$。第一项也是符合经典物理图像的，它代表了在S'系中观测物体运动，其动量会有$-m\frac{d\xi}{dt}$的变化。第二项与$V_{iner}$中的$\frac{1}{2}m\big(\frac{d\xi}{dt}\big)^2$合并，给出一个没有可观测效应的全局相位。因此，S'系中的Schrodinger方程的形式为：
+        绝热规范势$\hat{V}_{iner}$中的动量项$-\frac{d\xi}{dt}\hat{p}$则应当与Hamilton量中的动能项$\frac{\hat{p}^2}{2m}$进行配平方，得到$\frac{\big(\hat{p}-m\frac{d\xi}{dt}\big)^2}{2m}-\frac{1}{2}m\big(\frac{d\xi}{dt}\big)$。第一项也是符合经典物理图像的，它代表了在S'系中观测物体运动，其动量会有$-m\frac{d\xi}{dt}$的变化。第二项与$V_{iner}$中的$\frac{1}{2}m\big(\frac{d\xi}{dt}\big)^2$恰好相消。因此，S'系中的Schrodinger方程的形式为：
 
         \begin{equation}
-            i\hbar\frac{\partial}{\partial t}\ket{\Psi'} = \biggl(\frac{(\hat{p}-m\frac{d\xi}{dt})^2}{2m}+\hat{V}(x+\xi)-m\frac{d^2\xi}{dt^2}\hat{x}-m(\frac{d\xi}{dt})^2\biggr) \ket{\Psi'}
+            i\hbar\frac{\partial}{\partial t}\ket{\Psi'} = \biggl(\frac{(\hat{p}-m\frac{d\xi}{dt})^2}{2m}+\hat{V}(x+\xi)-m\frac{d^2\xi}{dt^2}\hat{x}\biggr) \ket{\Psi'}
         \end{equation}
         
         特别地，我们可以考虑惯性系的boost变换$x\rightarrow x'=x+vt$，此时惯性势$\hat{V}_{iner}=v\hat{p}-\frac{1}{2}mv^2$，我们发现惯性势不含坐标算符$\hat{x}$，于是它所带来的惯性力等于0。这说明经典Newton运动方程在boost变换下具有不变性，从对称性的角度来看就是Newton方程满足Galileo对称性。此时S'参考系中的Hamilton量变为$\frac{\big(\hat{p}-m\frac{d\xi}{dt}\big)^2}{2m}+V(\hat{x})-mv^2$，说明Schrodinger方程在boost变换下仅会多出势能零点的一个平移$-mv^2$，贡献一个没有可观测效应的全局相位，因此Schrodinger方程也具有Galileo对称性。
