@@ -116,7 +116,7 @@
             量子力学中平动参考系变换的作用是，经典相空间作为一个加法群对量子态空间的群作用，其中相空间的群运算是参考系变换所导致的坐标和动量的平移。
         \end{conclusion}
     
-        最后我们指出，这个群实际上是Weyl-Heisenberg群相对于U(1)群的商群。Weyl-Heisenberg群对应的Lie代数可以给出广义相干态[???]，在第四章我们将会看到，对于谐振子系统，Weyl平移算子可以把其基态变成一个相干态。
+        最后我们指出，这个群实际上是Weyl-Heisenberg群相对于U(1)群的商群。Weyl-Heisenberg群对应的Lie代数可以给出广义相干态[???]，即对于一般的量子系统，Weyl-Heisenberg代数可以定义相应的相干态。作为最简单的例子，在第四章我们将会看到，对于谐振子系统，Weyl平移算子可以把其基态变成一个相干态，即参考系变换下，谐振子基态变成激发态。
 
     \section{运动方程的Galileo对称性与绝热规范势}
 
@@ -160,7 +160,7 @@
             这样在参考系变换下，Schrodinger方程的形式不发生改变。我们将重新定义Hamilton量来保证Schrodinger方程不变的这一想法称作
 
             \begin{D'Alembert}
-                对系统做参考系变换后，Schrodinger方程会因此多出一个规范势，将规范势吸收到Hamilton量中以保持Schrodinger方程形式不变
+                对量子系统做参考系变换后，系统会受到一个惯性力，体现为Schrodinger方程会多出一个绝热规范势，S'参考系中的观测者所感受到的Hamilton量必须包含惯性力的部分。
             \end{D'Alembert}
             
         \end{itemize}
@@ -197,11 +197,11 @@
 
         以上我们对一般的参考系变换进行了讨论，接下来我们研究谐振子系统$\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$。谐振子系统中，$\hat{x}$和$\hat{p}$可以用产生湮灭算符表示$\hat{x}=\sqrt{\frac{\hbar}{2m\omega}}(\hat{a}^\dagger+\hat{a})$，$\hat{p}=i\sqrt{\frac{m\hbar\omega}{2}}(\hat{a}^\dagger-\hat{a})$。此时，Weyl平移算子$\hat{W}(a,b)=\exp[\frac{i}{\hbar}(a\hat{x}-b\hat{p})]$将会变成$\hat{D}(\alpha)=\exp(\alpha\hat{a}^\dagger-\alpha^*\hat{a})$的形式，其中$\alpha=b\sqrt{\frac{m\omega}{2\hbar}}+i\frac{a}{\sqrt{2m\hbar\omega}}$。$\hat{D}(\alpha)$算符称为谐振子的平移算符，其物理意义是将谐振子基态变换为本征值等于$\alpha$的相干态，即$\hat{a}\hat{D}(\alpha)\ket{0}=\alpha\hat{D}(\alpha)\ket{0}$。
 
-        我们已经知道全体Weyl平移算子在模掉一个全局相位的意义下构成一个群$\mathcal{W}\simeq(\mathbb{R}^2,+)$，相应地，全体$\hat{D}(\alpha)$模掉一个全局相位后构成一个群$\{\hat{D}(\alpha):\mathcal{H}\to\mathcal{H}|\alpha\in\mathbb{C}\}/\sim$，其中$\mathcal{H}$是量子态空间，等价关系$\sim$定义为$\hat{D}(\alpha)\sim\hat{D}(\beta) \Leftrightarrow \hat{D}(\alpha)=\hat{D}(\beta)\exp(i\phi),\ \phi\in\mathbb{R}$。这个群满足$\hat{D}(\alpha+\beta)=\hat{D}(\alpha)\hat{D}(\beta)$，其中“=”指模掉全局相位意义下的相等，进而它与$(\mathbb{C},+)$同构，因此可以说$\hat{D}(\alpha)$事实上是$(\mathbb{C},+)$群在谐振子Hilbert空间上的群表示，进而相干态可以认为是复平面上的点作用在基态上，从而相干态与复平面上的点是一一对应的。由于基态变换的特殊性，我们接下来将着重研究S系中的基态在S'系中的变化。
+        我们已经知道全体Weyl平移算子在模掉一个全局相位的意义下构成一个群$\mathcal{W}\simeq(\mathbb{R}^2,+)$，即Weyl-Heisenberg群模掉U(1)群的商群。相应地，全体$\hat{D}(\alpha)$模掉一个全局相位后构成一个群$\{\hat{D}(\alpha):\mathcal{H}\to\mathcal{H}|\alpha\in\mathbb{C}\}/\sim$，其中$\mathcal{H}$是量子态空间，等价关系$\sim$定义为$\hat{D}(\alpha)\sim\hat{D}(\beta) \Leftrightarrow \hat{D}(\alpha)=\hat{D}(\beta)\exp(i\phi),\ \phi\in\mathbb{R}$。这个群满足$\hat{D}(\alpha+\beta)=\hat{D}(\alpha)\hat{D}(\beta)$，其中“=”指模掉全局相位意义下的相等，进而它与$(\mathbb{C},+)$同构，因此可以说$\hat{D}(\alpha)$是$(\mathbb{C},+)$群在谐振子Hilbert空间上的群表示，进而相干态可以认为是复平面上的点作用在基态上，从而相干态与复平面上的点是一一对应的。由于基态变换的特殊性，我们接下来将着重研究S系中的基态在S'系中的变化。
 
     \subsection{参考系变换下的谐振子基态}
 
-        不过这个相干态的演化与普通的相干态的演化是不同的。对于一个普通的相干态$\hat{\alpha}$，它随时间演化的规律是$\ket{\alpha;t}=e^{-i\frac{1}{2}\omega t}\ket{\alpha e^{-i\omega t}}$。但是这里，$\ket{0';t}$的演化来自于两个方面，一个是基态$\ket{0}$自身随时间的演化，另一个是S'参考系随时间有变化，因此参考系变换算符$\hat{U}$随时间有变化。综合两个方面的影响，S'系中观察到的S系谐振子基态为
+        尽管Weyl平移算子作用在谐振子基态上得到一个相干态，但这个相干态与通常意义下的相干态的演化是不同的，这主要是由于Weyl平移算子也会作用于Hamilton量，导致时间演化算符不同。对于一个普通的相干态$\hat{\alpha}$，它随时间演化的规律是$\ket{\alpha;t}=e^{-i\frac{1}{2}\omega t}\ket{\alpha e^{-i\omega t}}$。但是这里，$\ket{0';t}$的演化来自于两个方面，一个是基态$\ket{0}$自身随时间的演化，另一个是S'参考系随时间有变化，因此参考系变换算符$\hat{U}$随时间有变化。综合两个方面的影响，S'系中观察到的S系谐振子基态为
 
         \begin{equation}
             \ket{0';t} = e^{-i\frac{1}{2}\omega t}\ket{\alpha_t}, \ \alpha_t=-\xi\sqrt{\frac{m\omega}{2\hbar}}-im\frac{d\xi}{dt}\sqrt{\frac{1}{2m\hbar\omega}}
@@ -244,13 +244,13 @@
             |\Psi'_0(p,t)|^2 = \sqrt{\frac{m\hbar\omega}{\pi}} \exp\biggl(-\frac{1}{2m\hbar\omega}\bigl(p+m\frac{d\xi}{dt}\bigr)^2\biggr)
         \end{equation}
         
-        说明在S'系观察者看来，谐振子基态是一个运动的Gauss波包，其中心位置$-\xi(t)$正是平动参考系的原点的位置，动量的中心值$-m\frac{d\xi}{dt}$也正是平动参考系带来的额外的动量。
+        说明在S'系观察者看来，谐振子基态是一个运动的Gauss波包，其中心位置$-\xi(t)$正是平动参考系的原点的位置，动量的中心值$-m\frac{d\xi}{dt}$也正是平动参考系带来的额外的动量。但由于参考系变换后，Hamilton量也发生了变化，因而我们不能武断地讲这个Gauss波包在S'系观察者看来，处于基态还是相干态。接下来我们将在S'观者的Hamilton表象下来研究这个问题。
 
 
 
     \subsection{S'观者的Hamilton表象}
 
-        以上我们已经说明了在S'系中看来，S系中谐振子的基态会变成一个运动的高斯波包，相对于S系的Hamilton量$\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$而言，这是一个相干态。然而，对于S'系的观察者，这个高斯波包应当在$\hat{H}'=\hat{U}\hat{H}\hat{U}^\dagger+i\hbar\frac{\partial\hat{U}}{\partial t}\hat{U}^\dagger$表象下展开，才能判断是一个什么样的量子态。
+        以上我们已经说明了在S'系中看来，S系中谐振子的基态会变成一个运动的Gauss波包，相对于S系的Hamilton量$\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$而言，这是一个相干态。然而，对于S'系的观察者，这个Gauss波包应当在$\hat{H}'=\hat{U}\hat{H}\hat{U}^\dagger+i\hbar\frac{\partial\hat{U}}{\partial t}\hat{U}^\dagger$表象下展开，才能判断是一个什么样的量子态。
 
         \subsubsection{匀速直线运动情形}
 
@@ -282,12 +282,12 @@
 
             \begin{equation}
                 \begin{array}{lr}
-                    \hat{b}=\hat{a}+\frac{1}{\sqrt{2m\hbar\omega}}(mat^2\omega-imat)+\frac{1}{\sqrt{4m\hbar\omega}}mat \\
-                    \hat{b}^\dagger=\hat{a}^\dagger+\frac{1}{\sqrt{2m\hbar\omega}}(mat^2\omega+imat)+\frac{1}{\sqrt{4m\hbar\omega}}mat
+                    \hat{b}=\hat{a}+\frac{1}{\sqrt{2m\hbar\omega}}(\frac{1}{2}mat^2\omega-imat)+\frac{1}{\sqrt{2m\hbar\omega}}\frac{ma}{\omega} \\
+                    \hat{b}^\dagger=\hat{a}^\dagger+\frac{1}{\sqrt{2m\hbar\omega}}(\frac{1}{2}mat^2\omega+imat)+\frac{1}{\sqrt{4m\hbar\omega}}\frac{ma}{\omega}
                 \end{array}
             \end{equation}
 
-            不难验证$(\hat{a}+\frac{1}{\sqrt{2m\hbar\omega}}(mat^2\omega-imat))\ket{\alpha}=0$，即若不考虑惯性力，$\hat{U}\ket{0}$仍然是$\hat{H}'_0=\hat{U}\hat{H}\hat{U}^\dagger$的瞬时基态。然而由于惯性力的作用，$\hat{U}\ket{0}$不再是$\hat{H}'$的瞬时基态。不难验证$\hat{b}(\hat{U}\ket{0})=\frac{mat}{\sqrt{4m\hbar\omega}}(\hat{U}\ket{0})$，即$\hat{U}\ket{0}$是$\hat{H}'$表象下的相干态$\ket{\alpha'}=e^{-\frac{|\alpha'|^2}{2}}\sum_{n=0}^\infty\frac{\alpha'^n}{\sqrt{n!}}\ket{n}$，其中$\alpha'=$。特别地，当$\alpha'=0$时，系统回到了基态。
+            不难验证$(\hat{a}+\frac{1}{\sqrt{2m\hbar\omega}}(mat^2\omega-imat))\ket{\alpha}=0$，即若不考虑惯性力，$\hat{U}\ket{0}$仍然是$\hat{H}'_0=\hat{U}\hat{H}\hat{U}^\dagger$的瞬时基态。然而由于惯性力的作用，$\hat{U}\ket{0}$不再是$\hat{H}'=\hat{U}\hat{H}\hat{U}^\dagger+i\hbar\frac{\partial\hat{U}}{\partial t}\hat{U}^\dagger$的瞬时基态。不难验证$\hat{b}(\hat{U}\ket{0})=\frac{mat}{\sqrt{4m\hbar\omega}}(\hat{U}\ket{0})$，即$\hat{U}\ket{0}$是$\hat{H}'$表象下的相干态$\ket{\alpha'}=e^{-\frac{|\alpha'|^2}{2}}\sum_{n=0}^\infty\frac{\alpha'^n}{\sqrt{n!}}\ket{n}$，其中$\alpha'=\frac{ma}{\omega}$。特别地，当$\alpha'=0$时，系统回到了基态。
 
 
 
