@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.4.8)  2 MAY 2020 21:52
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.4.8)  3 MAY 2020 11:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -481,7 +481,14 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@postskip=\skip65
 \thm@headsep=\skip66
 \dth@everypar=\toks27
-) (./prepaper.aux)
+) (./prepaper.aux
+
+LaTeX Warning: Label `U' multiply defined.
+
+
+LaTeX Warning: Label `U' multiply defined.
+
+)
 \openout1 = `prepaper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -603,26 +610,30 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ] [2] [3] [4] [5]
-Overfull \hbox (2.03223pt too wide) in paragraph at lines 184--185
-[]\TU/FandolSong-Regular(0)/m/n/10.53937 绝 热 规 范 势 $[]$ 中 的 动 量 项 $\OMS/cmsy/m/n/10.53937 ^^@[][]$ \TU/FandolSong-Regular(0)/m/n/10.53937 则 应 当 与 \TU/lmr/m/n/10.53937 Hamilton \TU/FandolSong-Regular(0)/m/n/10.53937 量 中 的 动 能 项 $[]$ 进 行 配 平 方，|  得 到 $[] \OMS/cmsy/m/n/10.53937 ^^@
- []
-
-[6]
-Overfull \hbox (4.71878pt too wide) detected at line 217
+Overfull \hbox (9.51357pt too wide) detected at line 219
 []
  []
 
-[7]
+[6]
+Overfull \hbox (4.71878pt too wide) detected at line 263
+[]
+ []
+
+[7] [8]
 Missing character: There is no 　 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 　 in font [lmroman10-regular]:mapping=tex-text;!
- [8] [9] (./prepaper.aux) ) 
+ [9] (./prepaper.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
  17748 strings out of 492483
  402574 string characters out of 6134980
- 488639 words of memory out of 5000000
+ 486680 words of memory out of 5000000
  22092 multiletter control sequences out of 15000+600000
  540128 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 58i,19n,76p,918b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,19n,76p,933b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on prepaper.pdf (9 pages).
