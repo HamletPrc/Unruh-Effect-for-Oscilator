@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.4.8)  3 MAY 2020 15:48
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.4.8)  3 MAY 2020 18:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**prepaper
-(./prepaper.tex
+**paper-cn
+(./paper-cn.tex
 LaTeX2e <2019-10-01> patch level 1
 (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/08/27 v1.4j Standard LaTeX document class
@@ -481,9 +481,8 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@postskip=\skip65
 \thm@headsep=\skip66
 \dth@everypar=\toks27
-)
-No file prepaper.aux.
-\openout1 = `prepaper.aux'.
+) (./paper-cn.aux)
+\openout1 = `paper-cn.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
@@ -501,7 +500,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
-ABD: EverySelectfont initializing macros
+ ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 18.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
@@ -603,72 +602,24 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-] [2]
-
-LaTeX Warning: Reference `Utmp' on page 3 undefined on input line 89.
-
-
-LaTeX Warning: Reference `U' on page 3 undefined on input line 95.
-
-
-LaTeX Warning: Reference `U' on page 3 undefined on input line 99.
-
-
-LaTeX Warning: Reference `U-Weyl' on page 3 undefined on input line 111.
-
-
-LaTeX Warning: Reference `U-Weyl' on page 3 undefined on input line 111.
-
-[3]
-
-LaTeX Warning: Reference `U-Weyl' on page 4 undefined on input line 123.
-
-[4]
-
-LaTeX Warning: Reference `U' on page 5 undefined on input line 176.
-
-
-LaTeX Warning: Reference `U-Weyl' on page 5 undefined on input line 176.
-
-
-LaTeX Warning: Reference `U' on page 5 undefined on input line 176.
-
-[5]
-
-LaTeX Warning: Reference `U' on page 6 undefined on input line 184.
-
-
-Overfull \hbox (9.51357pt too wide) detected at line 219
+] [2] [3] [4] [5]
+Overfull \hbox (9.51357pt too wide) detected at line 213
 []
  []
 
 [6]
-Overfull \hbox (4.71878pt too wide) detected at line 263
+Overfull \hbox (4.71878pt too wide) detected at line 285
 []
  []
 
-[7]
-
-LaTeX Warning: Reference `Wigner' on page 8 undefined on input line 283.
-
-[8]
-Missing character: There is no 　 in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 　 in font [lmroman10-regular]:mapping=tex-text;!
- [9] (./prepaper.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[7] [8] [9] (./paper-cn.aux) ) 
 Here is how much of TeX's memory you used:
- 17746 strings out of 492483
- 402548 string characters out of 6134980
- 486606 words of memory out of 5000000
- 22092 multiletter control sequences out of 15000+600000
+ 17742 strings out of 492483
+ 401888 string characters out of 6134980
+ 487659 words of memory out of 5000000
+ 22086 multiletter control sequences out of 15000+600000
  540128 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 58i,19n,76p,931b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,19n,76p,768b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on prepaper.pdf (9 pages).
+Output written on paper-cn.pdf (9 pages).
