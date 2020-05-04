@@ -328,7 +328,7 @@
 
         我们将这个Hamilton量中的$\hat{x}$配平方，可得
 
-        \begin{equation}
+        \begin{equation}\label{H'-SHO}
             \hat{H}'=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2(\hat{x}+x_0(t))^2+V_0
         \end{equation}
 
@@ -356,19 +356,53 @@
             \hat{a}'\ket{\alpha_t}=\sqrt{\frac{m}{2\hbar\omega}}\bigl(\frac{1}{\omega}\frac{d^2\xi}{dt^2}-i\frac{d\xi}{dt}\bigr)\ket{\alpha_t}
         \end{equation}
 
-        这说明在S'系观者看来，$\ket{\alpha_t}$是一个相干态，系数$\alpha'=\sqrt{\frac{m}{2\hbar\omega}}\bigl(\frac{1}{\omega}\frac{d^2\xi}{dt^2}-i\frac{d\xi}{dt}\bigr)$。
+        这说明在S'系观者看来，$\ket{\alpha_t}$是一个相干态，系数$\alpha'=\sqrt{\frac{m}{2\hbar\omega}}\bigl(\frac{1}{\omega}\frac{d^2\xi}{dt^2}-i\frac{d\xi}{dt}\bigr)$。特别地，若$\frac{d\xi}{dt}=0$并且$\frac{d^2\xi}{dt^2}=0$，那么在这个瞬间，S系基态在S'系观者看来是瞬时基态。
 
     \subsection{运动谐振子的随动参考系}
         
-        我们知道在量子调控领域，我们常常需要将一个量子态从空间一点输运到另一点，相应的哈密顿量往往是高度含时的，例如将一维谐振子从一点输运到另一点的Hamilton量是$\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2(\hat{x}-x_0)^2$。
+        我们知道在量子调控领域，我们常常需要将一个量子态从空间一点输运到另一点，相应的哈密顿量往往是高度含时的，例如将一维谐振子从一点输运到另一点的Hamilton量是$\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2(\hat{x}-x_0(t))^2$。文献[?]利用Lewis-Resenfeld不变量方法给出了这个Hamilton量的精确解:
 
+        \begin{equation}\label{solution}
+            e^{i\alpha_n}\psi(x) = \exp\bigl[-\frac{i}{\hbar}\bigl(E_nt+\int_0^t\frac{m\dot{x}_c^2}{2}dt'\bigr)\bigr] \exp[im\dot{x_c}x/\hbar] \phi(x-x_c)
+        \end{equation}
 
+        其中$\alpha_n$是Berry相位，$x_c$满足牛顿方程$\ddot{x}_c+\omega^2(x_c-x_0)$，Lewis-Resenfeld不变量为$I=\frac{(\hat{p}-m\dot{\alpha})^2}{2m}+\frac{1}{2}m\omega^2(\hat{x}-x_c)^2$。
+        
+        我们可以从随动参考系的角度来重新研究这个系统，特别是其$x_c$和Lewis-Resenfeld不变量的物理意义。注意到实验室参考系下的Hamilton量的形式与(\ref{H'-SHO})一致，因此我们可以认为实验室参考系是本文中的运动参考系S'，而谐振子的随动参考系为本文中的静止参考系S，并且S'相对于S的运动其实是$-x_c(t)$。于是参考系变换算符$\hat{U}=\hat{D}(\alpha)e^{\frac{i}{\hbar}\frac{1}{2}m\xi\frac{d\xi}{dt}}e^{-\frac{i}{\hbar}\int_0^t\frac{1}{2}m(\frac{d \xi}{d\tau})^2 d\tau}$，这两个相位正是(\ref{solution})中除时间演化相位外的另外两个相位。于是，随动参考系的Hamilton量$\hat{H}_0$与实验室参考系的Hamilton量$\hat{H}$的关系是
 
+        \begin{equation}
+            \hat{H}=\hat{U}\hat{H}_0\hat{U}^\dagger+i\hbar\frac{\partial\hat{U}}{\partial t}\hat{U}^\dagger
+        \end{equation}
 
+        随动参考系中Hamilton量的全体本征态是谐振子本征态$e^{-\frac{i}{\hbar}E_nt}\hat{n}$，所以实验室参考系中的态为
+
+        \begin{equation}
+            \ket{n',t}=\hat{U}e^{-\frac{i}{\hbar}E_nt}\ket{n}=e^{-\frac{i}{\hbar}\bigl(E_nt+\int_0^t\frac{m\dot{x}_c^2}{2}dt'\bigr)} e^{im\dot{x_c}x/\hbar} \ket{n}
+        \end{equation}
+
+        坐标表象下，这个态正是(\ref{solution})。而Lewis-Resenfeld不变量其实就是不考虑绝热规范势$i\hbar\frac{\partial\hat{U}}{\partial t}\hat{U}^\dagger$的实验室参考系Hamilton量:
+
+        \begin{equation}
+            \hat{I}=\hat{U}\hat{H}_0\hat{U}^\dagger=\hat{H}-i\hbar\frac{\partial\hat{U}}{\partial t}\hat{U}^\dagger
+        \end{equation}
+
+        特别地，我们之前已经指出，当$\frac{dx_0}{dt}$和$\frac{d^2x_0}{dt^2}$均为0时，随动参考系的基态在实验室参考系观察者看来也是瞬时基态。类似地不难证明，对于谐振子的第n能级，这个结论仍然使用。这意味着经过量子输运，末态等于初态，而并没有激发。这个结论是非平庸的，一般来讲，只有绝热过程才能保证末态等于初态。这就是所谓的量子绝热捷径[]。
 
     \section{总结与讨论}
 
+        本文主要研究了量子力学中的平动参考系的变换问题，包括量子态和Schrodinger方程的变换。主要的结论是
 
+        \begin{itemize}
+            \item 量子态的变换有Weyl平移算子刻画。群表示论的观点下来看，这代表着经典相空间作为一个加法群$(\mathbb{R}^2,+)$在量子态空间上的群表示。
+            \item 为保持Schrodinger方程在参考系变换后仍然成立，Hamilton量的变换必须包含惯性力的部分，本文称之为量子达朗贝尔原理。
+        \end{itemize}
+
+        基于以上两点结论，本文以谐振子为例，着重讨论了谐振子基态在不同参考系下的观察结果，并简单讨论了运动谐振子的Lewis-Resenfeld不变量。主要的结论是
+
+        \begin{itemize}
+            \item 在运动参考系看来，静止谐振子的基态会变成一个相干态。
+            \item 对于实验室里的一个运动谐振子，可认为实验室参考系是“运动”参考系，随动参考系是“静止”参考系。这个问题中的Lewis-Resenfeld不变量其实就是不考虑绝热规范势时“运动”参考系中的Hamilton量。
+        \end{itemize}
 
 
 \begin{thebibliography}{9}
