@@ -31,11 +31,11 @@
 
         参考系变换在物理学中是一个基本性问题，它刻画着时空的对称性。最初有关于参考系变换下物理规律的协变性的想法可追溯到Galileo的思想实验：在一艘平稳航行的大船上，物理世界看起来与地面上没有说明区别；也就是说，人们无法通过力学实验来判断自己是处于“运动”的船上，还是处于“静止”的地面上。这个思想实验可以提炼为力学的Galileo相对性原理：力学规律在惯性系中保持形式不变。从群论的观点来看，这个原理意味着力学的时空对称性可以由Galileo群来刻画。对于电磁力和引力，Galileo相对性原理则无法适用，为了解决它们之间的矛盾，Einstein构建了狭义相对论和广义相对论，前者将Galileo对称性扩充为Poincare群以融合电磁学与相对性原理，后者利用等效原理将引力与惯性力局域地等同起来。在Einstein以及后世的物理学家的努力下，相对性原理在物理学中成为了一个根基性原理，它告诉人们，不管我们处于什么样的参考系，我们观测到的物理规律总是具有某种协变性，尽管物理状态会有很大的区别。这为实验上提供了很大的方便，它意味着我们做实验时不需要提前知道我们的实验室参考系相对于某个绝对参考系的运动状态，就可以直接使用力学、电磁学、引力理论的原理。
 
-        然而当我们考虑量子效应时，情况变得微妙起来。首先是惯性力与等效原理的问题：经典层面，我们知道相比于惯性系，非惯性系中的物理状态的演化需要考虑惯性力的效应，而根据等效原理，它可以与引力等效起来；然而在量子层面，这样的惯性力应当如何如何刻画，等效原理又应当如何表述，等效出来的“量子引力”应当如何理解，都是一些有趣的问题。另一个微妙的事情在于弯曲时空场论中的一些效应，例如Hawking辐射、Unruh效应等，特别是Unruh效应[]，它告诉我们平直的Minkovski时空中标量场的基态，在匀加速观者看来，将会变成一个热平衡态，其温度正比于观察者的加速度。我们不禁思考，同样作为平直时空的Galileo时空，是否也存在着类似于Unruh效应的现象。另外，在量子层面还有一个热门的研究课题，那就是如果参考系本身是量子的，会有什么样有趣的现象？近两年这方面代表性的工作可参考[]。
+        然而当我们考虑量子效应时，情况变得微妙起来。首先是惯性力与等效原理的问题：经典层面，我们知道相比于惯性系，非惯性系中的物理状态的演化需要考虑惯性力的效应，而根据等效原理，它可以与引力等效起来；然而在量子层面，这样的惯性力应当如何如何刻画，等效原理又应当如何表述，等效出来的“量子引力”应当如何理解，都是一些有趣的问题。另一个微妙的事情在于弯曲时空场论中的一些效应，例如Hawking辐射、Unruh效应等，特别是Unruh效应\cite{bib:one,bib:two}，它告诉我们平直的Minkovski时空中标量场的基态，在匀加速观者看来，将会变成一个热平衡态，其温度正比于观察者的加速度。我们不禁思考，同样作为平直时空的Galileo时空，是否也存在着类似于Unruh效应的现象。另外，在量子层面还有一个热门的研究课题，那就是如果参考系本身是量子的，会有什么样有趣的现象？近两年这方面代表性的工作可参考\cite{bib:three, bib:four,bib:five}。
 
-        应用层面来看，研究量子力学(尤其是非相对论情形)中的参考系变换也是颇有意义的。在量子调控领域，人们常常需要把一个量子态从空间一点输运到另一点，这个问题中天然地存在实验室参考系和量子态随动参考系两个参考系。在实验室参考系中，Hamilton量的形式往往是高度含时的，常见的求解技术是借助Lewis-Resenfeld不变量[]得到一组态的演化，进而得到时间演化算子，但这种求解方法中L-R不变量的构造往往非常困难。但是，如果我们在量子态的随动参考系中考虑问题，Hamilton量的形式可以人为地进行一些简化，在随动参考系中求解之后，转换到实验室参考系中，将会使问题大大简化。
+        应用层面来看，研究量子力学(尤其是非相对论情形)中的参考系变换也是颇有意义的。在量子调控领域，人们常常需要把一个量子态从空间一点输运到另一点，这个问题中天然地存在实验室参考系和量子态随动参考系两个参考系。在实验室参考系中，Hamilton量的形式往往是高度含时的，常见的求解技术是借助Lewis-Resenfeld不变量\cite{bib:six, bib:seven}得到一组态的演化，进而得到时间演化算子，但这种求解方法中L-R不变量的构造往往非常困难。但是，如果我们在量子态的随动参考系中考虑问题，Hamilton量的形式可以人为地进行一些简化，在随动参考系中求解之后，转换到实验室参考系中，将会使问题大大简化。
 
-        因此本文将主要研究经典参考系变换(与文献[]中的量子参考系并不相同)下量子力学的变换以及Galileo对称性，考察经典惯性力在量子力学中的对应，提出量子达朗贝尔原理，并简单讨论量子力学中的等效原理。然后本文将基于量子达朗贝尔原理，研究参考系变换下的简谐振子。
+        因此本文将主要研究经典参考系变换(与文献\cite{bib:three}中的量子参考系并不相同)下量子力学的变换以及Galileo对称性，考察经典惯性力在量子力学中的对应，提出量子达朗贝尔原理，并简单讨论量子力学中的等效原理。然后本文将基于量子达朗贝尔原理，研究参考系变换下的简谐振子。
 
         本文的主要结构安排和结论如下。本文第二章首先回顾了平动参考系变换下量子态的一般性变换法则，讨论幺正变换矩阵每一项的物理意义。然后借助Weyl平移算子和Weyl-Heisenberg群，本文证明了在群表示论的观点下，平动参考系变换是经典相空间作为一个加法群作用于量子态空间上，即为经典相空间的群表示。本文第三章则考虑参考系变换对Schrodinger方程和Hamilton量的影响，回顾绝热规范势的物理意义，指出参考系变换算子所诱导的绝热规范势的经典物理意义是惯性力，由此构建了量子力学版本的达朗贝尔原理，并简单讨论量子力学中的等效原理。本文第四章则基于以上两章的结论，考察平动参考系变换下的谐振子，特别是谐振子基态。本文将Weyl平移算子表示为产生湮灭算符的形式，证明了参考系变换后的基态将变成一个中心位置随参考系运动的Gauss波包，并通过计算这个Gauss波包的Wigner函数及其空间分布和动量分布，来进一步验证这个结论。本文接下来在变换后的Hamilton表象下研究这个Gauss波包，证明了匀速参考系变换情形下，运动的Gauss波包是新Hamilton量的瞬时基态；而在非匀速情形下，由于惯性力的作用，Gauss波包变成了新Hamilton量的相干态。
 
@@ -82,7 +82,7 @@
             \hat{U}(t)=e^{-\frac{i}{\hbar}m\frac{d\xi}{dt}\hat{x}}e^{\frac{i}{\hbar}\hat{p}\xi(t)}e^{i\phi(t)} 
         \end{equation}
 
-        应当注意，$e^{\frac{i}{\hbar}\hat{p}\xi(t)}$和$e^{-\frac{i}{\hbar}m\frac{d\xi}{dt}\hat{x}}$的次序是重要的，交换次序时会相差一个Weyl相位。在(\ref{Utmp})中，我们允许一个额外的相位$\phi(t)$，根据文献[?]，这个相位为$i\phi(t)=-\frac{i}{\hbar}\int_0^t\frac{1}{2}m(\frac{d \xi}{d\tau})^2 d\tau$。因此用于描述参考系变换的算符的完整表达式是
+        应当注意，$e^{\frac{i}{\hbar}\hat{p}\xi(t)}$和$e^{-\frac{i}{\hbar}m\frac{d\xi}{dt}\hat{x}}$的次序是重要的，交换次序时会相差一个Weyl相位。在(\ref{Utmp})中，我们允许一个额外的相位$\phi(t)$，根据文献\cite{bib:three,bib:eight}，这个相位为$i\phi(t)=-\frac{i}{\hbar}\int_0^t\frac{1}{2}m(\frac{d \xi}{d\tau})^2 d\tau$。因此用于描述参考系变换的算符的完整表达式是
 
         \begin{equation}\label{U}
             \hat{U}(t) = \exp\biggl[-\frac{i}{\hbar}m\frac{d\xi}{dt}\hat{x}\biggr] \exp\biggl[\frac{i}{\hbar}\hat{p}\xi(t)\biggr] \exp\biggl[-\frac{i}{\hbar}\int_0^t\frac{1}{2}m(\frac{d \xi}{d\tau})^2 d\tau\biggr]
@@ -107,7 +107,7 @@
 
         (\ref{U-Weyl})可以简写为$\hat{U}=\hat{W}(-m\frac{d\xi}{dt},-\xi)e^{i\phi}$。注意到$-m\frac{d^2\xi}{dt^2}$代表了参考系变换时带来的经典惯性力，因此(\ref{U-Weyl})第二项的相位可以认为是惯性力做功所给出的。特别地，对于匀速和匀加速两种类型的参考系变换，幺正算符的形式分别为$\hat{U}=\exp\big(-\frac{i}{h}(\hat{p}vt-mv\hat{x})\big)$和$\hat{U}=\exp\big(\frac{i}{\hbar}\big(\frac{1}{2}at^2\hat{p}-mat\hat{x} \big)\big)\ \exp\big(\frac{1}{12}\frac{i}{\hbar}ma^2t^3\big)$。
         
-        文献[?]利用路径积分方法研究了弱场近似下的引力场中的自由下落粒子，他们指出，引力的效应可以用一个Weyl平移算子以及一个额外的相位因子$\exp(i\frac{1}{12}mg^2t^3)\hat{W}(-mgt,-\frac{1}{2}gt^2)$描述，进而引力场中的自由下落粒子和自由粒子的概率幅分布是相同的，于是他们给出了量子力学等效原理的一个表述：引力场中自由下落的粒子和自由粒子的概率分布相同，与其质量无关。不难注意到，他们的Weyl平移算子和额外的相位严格地等于$\hat{U}$，因此他们的等效原理其实也可以加强为，不仅仅概率幅相同，其量子态也是完全相同的，与质量无关。
+        文献\cite{bib:nine}利用路径积分方法研究了弱场近似下的引力场中的自由下落粒子，他们指出，引力的效应可以用一个Weyl平移算子以及一个额外的相位因子$\exp(i\frac{1}{12}mg^2t^3)\hat{W}(-mgt,-\frac{1}{2}gt^2)$描述，进而引力场中的自由下落粒子和自由粒子的概率幅分布是相同的，于是他们给出了量子力学等效原理的一个表述：引力场中自由下落的粒子和自由粒子的概率分布相同，与其质量无关。不难注意到，他们的Weyl平移算子和额外的相位严格地等于$\hat{U}$，因此他们的等效原理其实也可以加强为，不仅仅概率幅相同，其量子态也是完全相同的，与质量无关。
 
         应当指出，$\hat{W}(a_1, b_1)\hat{W}(a_2, b_2)=\hat{W}(a_1+a_2, b_1+b_2)e^{i\phi}$，其中相角$\phi=\frac{a_1b_2-a_2b_1}{\hbar}$来自于Baker-Hausdorff公式。因此全体Weyl平移算符在模掉一个全局相位的意义下构成一个群$\mathcal{W}$，即$\hat{W}(a_1, b_1)\hat{W}(a_2, b_2)\sim\hat{W}(a_1+a_2, b_1+b_2)$。由于参数a, b取值为全体实数$\mathbb{R}$，因此这个群事实上同构于$(\mathbb{R}^2,+)$群，因此我们可以认为Weyl平移算符实际上是$(\mathbb{R}^2,+)$群对于量子态空间的群作用。物理上来看，$\hat{W}(-m\frac{d\xi}{dt}, -\xi)$的两个参数$-m\frac{d\xi}{dt}$和$-\xi(t)$代表了参考系变换所导致的经典相空间的平移。所以我们就得到了本节最重要的结论：
 
@@ -115,7 +115,7 @@
             量子力学中平动参考系变换的作用是，经典相空间作为一个加法群对量子态空间的群作用，其中相空间的群运算是参考系变换所导致的坐标和动量的平移。
         \end{conclusion}
     
-        最后我们指出，这个群实际上是Weyl-Heisenberg群[???]相对于U(1)群的商群。Weyl-Heisenberg群对应的Lie代数可以给出广义相干态[???]，即对于一般的量子系统，Weyl-Heisenberg代数可以定义相应的广义相干态。作为最简单的例子，在第四章我们将会看到，对于谐振子系统，Weyl平移算子可以把其基态变成一个相干态，即参考系变换下，谐振子基态变成激发态。
+        最后我们指出，这个群实际上是Weyl-Heisenberg群\cite{bib:ten}相对于U(1)群的商群。Weyl-Heisenberg群对应的Lie代数可以给出广义相干态\cite{bib:ten, bib:thirteen}，即对于一般的量子系统，Weyl-Heisenberg代数可以定义相应的广义相干态。作为最简单的例子，在第四章我们将会看到，对于谐振子系统，Weyl平移算子可以把其基态变成一个相干态，即参考系变换下，谐振子基态变成激发态。
 
 
 
@@ -124,7 +124,7 @@
 
         以上我们讨论了参考系变换下量子态的变换法则$\ket{\Psi}\to\ket{\Psi'}=\hat{U}\ket{\Psi}$，我们指出了变换算符$\hat{U}$的形式是一个Weyl平移算子乘一个全局相位(\ref{U-Weyl})，并且可以认为是作为加法群的经典相空间在量子态空间上的群表示。接下来我们来研究Schrodinger方程在参考系变换下的变化。
 
-        Schrodinger方程是量子力学中的运动方程，我们应当要求它在参考系变换下具有某种意义上的不变性，正如我们要求经典力学的Newton第二定律Galileo对称性，量子场论的各种场和单粒子态必须满足Poincare或Lorentz对称性一样。然而接下来我们将看到，由于参考系变换$\hat{U}(t)$含时，Schrodinger方程中的$\partial_t$作用其上将会带来额外效应，这正是绝热规范势[?]的物理意义。
+        Schrodinger方程是量子力学中的运动方程，我们应当要求它在参考系变换下具有某种意义上的不变性，正如我们要求经典力学的Newton第二定律Galileo对称性，量子场论的各种场和单粒子态必须满足Poincare或Lorentz对称性一样。然而接下来我们将看到，由于参考系变换$\hat{U}(t)$含时，Schrodinger方程中的$\partial_t$作用其上将会带来额外效应，这正是绝热规范势\cite{bib:twelve}的物理意义。
 
     \subsection{绝热规范势与量子达朗贝尔原理}
 
@@ -169,7 +169,7 @@
                     \hat{H}'=\hat{U}\hat{H}\hat{U}^\dagger + i\hbar\frac{\partial\hat{U}}{\partial t}\hat{U}^\dagger
                 \end{equation}
     
-                这样在参考系变换下，Schrodinger方程的形式不发生改变。我们将重新定义Hamilton量来保证Schrodinger方程不变的这一想法称作
+                这样在参考系变换下，Schrodinger方程的形式不发生改变。我们将重新定义Hamilton量来保证Schrodinger方程不变的这一想法称作\cite{bib:eleven}
                 
             \end{itemize}
         
@@ -251,7 +251,7 @@
 
     \subsection{量子达朗贝尔原理的经典对应}
 
-        以上，我们讨论了Schrodinger方程、Hamilton量和量子态在参考系变换下的变换法则。为了更好地理解量子达朗贝尔原理，我们将通过Ehrenfest定理，来研究该原理的物理意义与经典对应。
+        以上，我们讨论了Schrodinger方程、Hamilton量和量子态在参考系变换下的变换法则。为了更好地理解量子达朗贝尔原理，我们将通过Ehrenfest定理，来研究该原理的物理意义与经典对应\cite{bib:eleven}。
 
         量子力学中的Ehrenfest定理告诉我们$\frac{d}{dt}<\hat{p}>=-<\frac{\partial\hat{V}}{\partial \hat{x}}>$，即力学量的期望值服从Newton运动方程。那么经过参考系变换后，势能项增加了一个惯性势，于是Ehrenfest定理将会给出
         
@@ -360,7 +360,7 @@
 
     \subsection{运动谐振子的随动参考系}
         
-        我们知道在量子调控领域，我们常常需要将一个量子态从空间一点输运到另一点，相应的哈密顿量往往是高度含时的，例如将一维谐振子从一点输运到另一点的Hamilton量是$\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2(\hat{x}-x_0(t))^2$。文献[?]利用Lewis-Resenfeld不变量方法给出了这个Hamilton量的精确解:
+        我们知道在量子调控领域，我们常常需要将一个量子态从空间一点输运到另一点，相应的哈密顿量往往是高度含时的，例如将一维谐振子从一点输运到另一点的Hamilton量是$\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2(\hat{x}-x_0(t))^2$。文献\cite{bib:forteen}利用Lewis-Resenfeld不变量方法给出了这个Hamilton量的精确解:
 
         \begin{equation}\label{solution}
             e^{i\alpha_n}\psi(x) = \exp\bigl[-\frac{i}{\hbar}\bigl(E_nt+\int_0^t\frac{m\dot{x}_c^2}{2}dt'\bigr)\bigr] \exp[im\dot{x_c}x/\hbar] \phi(x-x_c)
@@ -386,7 +386,7 @@
             \hat{I}=\hat{U}\hat{H}_0\hat{U}^\dagger=\hat{H}-i\hbar\frac{\partial\hat{U}}{\partial t}\hat{U}^\dagger
         \end{equation}
 
-        特别地，我们之前已经指出，当$\frac{dx_0}{dt}$和$\frac{d^2x_0}{dt^2}$均为0时，随动参考系的基态在实验室参考系观察者看来也是瞬时基态。类似地不难证明，对于谐振子的第n能级，这个结论仍然使用。这意味着经过量子输运，末态等于初态，而并没有激发。这个结论是非平庸的，一般来讲，只有绝热过程才能保证末态等于初态。这就是所谓的量子绝热捷径[]。
+        特别地，我们之前已经指出，当$\frac{dx_0}{dt}$和$\frac{d^2x_0}{dt^2}$均为0时，随动参考系的基态在实验室参考系观察者看来也是瞬时基态。类似地不难证明，对于谐振子的第n能级，这个结论仍然使用。这意味着经过量子输运，末态等于初态，而并没有激发。这个结论是非平庸的，一般来讲，只有绝热过程才能保证末态等于初态。这就是所谓的量子绝热捷径\cite{bib:fifteen}。
 
     \section{总结与讨论}
 
@@ -406,9 +406,22 @@
 
 
 \begin{thebibliography}{9}
-    \bibitem{bib:one}
+    \bibitem{bib:one} W. G. Unruh, Phys. Rev. D 14, 870 (1976).
+    \bibitem{bib:two} L. C. B. Crispino, A. Higuchi, and G. E. A. Matsas, Rev.Mod. Phys. 80, 787 (2008).
+    \bibitem{bib:three} F. Giacomini, E. Castro-Ruiz, C. Bruckner, Nat. Commun. 10, 494 (2019).
+    \bibitem{bib:four} R. M. Angelo, A. D. Ribeiro. J. Phys. A45.46, 465306 (2012).
+    \bibitem{bib:five} S. T. Pereira, R. M. Angelo, Phys. Rev. A91.2, 022107 (2015).
+    \bibitem{bib:six} H. R. Lewis. Jr. Math. Phys. 9, 1976(1968)
+    \bibitem{bib:seven} H. R. Lewis, W. B. Riesenfeld. Jr. Math. Phys. 10, 1458(1969)
+    \bibitem{bib:eight} D. M. Greenberg. Am. J. Phys. 47.1, 35-38 (1979)
+    \bibitem{bib:nine} C. Anastopoulos, Bei-Lok Hu. Class. Quant. Grav. 35, 035011 (2018)
+    \bibitem{bib:ten} P. Jung.  Weyl-Heisenberg Representations in Communication Theory[D]. Berlin: Technische Universität Berlin, 2007
+    \bibitem{bib:eleven} 杨冠卓. 绝热捷径中的若干量子热力学问题研究[D]. 上海：上海大学, 2019
+    \bibitem{bib:twelve} M. Kolodrubetz, D. Sels, P. Mehta, A. Polkovnikov. Physics Reports 697, 1-88 (2017)
+    \bibitem{bib:thirteen} M. R. Kibler, M. Daoud. Physics Conference TIM-11, Timisoara : Roumanie (2011)
+    \bibitem{bib:forteen} E. Torrontegui, S. Ibáñez, Xi Chen, A. Ruschhaupt, D. Guéry-Odelin, J. G. Muga. Phys. Rev. A 83, 013415 (2011)
+    \bibitem{bib:fifteen} Xi Chen, E. Torrontegui, J. G. Muga. Phys. Rev. A 83, 062116 (2011)
 \end{thebibliography}
-
 
 
 \end{document}
