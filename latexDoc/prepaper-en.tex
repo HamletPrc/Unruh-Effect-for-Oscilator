@@ -1,0 +1,68 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{geometry}  
+\geometry{left=2.0cm, right=2.0cm, top=2.5cm, bottom=2.5cm}
+
+\usepackage{braket}
+\usepackage{amsthm}
+\newtheorem*{conclusion}{Conclusion}
+
+\title{The Translation Transformations in Quantum Mechanics and the Physical Interpretation of the Lewis-Resenfeld Invariant of a Oscillator}
+\author{Mengzhi Wu}
+\date{}
+
+\begin{document}
+
+    \bibliographystyle{plain}
+    \maketitle
+
+    \begin{center}
+        \begin{small}
+            School of Physics, University of Chinese Academy of Science, \\
+            wumengzhi17@mails.ucas.edu.cn
+        \end{small}
+    \end{center}
+
+    \bigskip
+
+    \begin{abstract}
+        This paper studies the classical translational reference frame transformation in quantum mechanics and its application in the resonant subsystem. This paper first demonstrates that the transformation of the quantum state under the translational reference frame transformation is characterized by the Weyl translation operator, which is a group representation of the classical phase space as an additive group on the Hilbert space. After that, this paper studies the transformation law of Hamiltonian quantity under the reference frame transformation, and points out that the adiabatic gauge potential at this time represents the inertial force. Then, this paper briefly discusses the quantum version of the D'Alembert principle and the equivalent principle. In this paper, according to the transformation law of quantum state and Hamilton quantity, the harmonic oscillator under the translational reference frame transformation is studied, and the ground state transformation and Hamilton quantity transformation are emphatically discussed. The ground state under the reference system transformation will be proved to be a coherent state . Finally, this paper briefly discusses the potential application of this conclusion in the field of quantum control.
+    \end{abstract}
+
+    \begin{small}
+        {\bf Keywords:} {\em Weyl translation operator, quantum D'Alembert principle, coherent states, Lewis-Resenfeld invariant}
+    \end{small}
+
+    \section{Introduction}
+
+        The reference frame transformation is a fundamental problem in physics, which characterizes the symmetry of space and time. The original idea about the covariance of the laws of physics under the reference frame can be traced back to Galileo ’s thought experiment: on a large ship that sails smoothly, the physical world does not appear to be different from the ground; that is, people cannot pass mechanics Experiment to determine whether you are on a "moving" ship or on a "stationary" ground. This thought experiment can be refined into the Galileo principle of relativity in mechanics: the laws of mechanics remain unchanged in the inertial system. From the perspective of group theory, this principle means that the space-time symmetry of mechanics can be characterized by the Galileo group. For electromagnetic force and gravitation, Galileo's principle of relativity is not applicable. In order to solve the contradiction between them, Einstein constructed a special theory of relativity and a general theory of relativity. The former expanded Galileo's symmetry into a Poincare group to fuse electromagnetics and the principle of relativity The author uses the principle of equivalence to locally equate gravity and inertia. With the efforts of Einstein and later physicists, the principle of relativity has become a fundamental principle in physics. It tells people that no matter what reference frame we are in, the physical laws we observe always have some kind of Covariance, although the physical state will be very different. This provides great convenience for the experiment. It means that we do not need to know the movement state of our laboratory reference system relative to an absolute reference system in advance when we conduct experiments. Principle.
+
+        However, when we consider quantum effects, the situation becomes subtle. The first is the problem of inertial force and the principle of equivalence: at the classical level, we know that the evolution of the physical state in the non-inertial system needs to consider the effect of inertial force compared to the inertial system, and according to the principle of equivalence, it can be equivalent to gravity However, at the quantum level, how to describe such inertial forces, how to express the principle of equivalence, and how to understand the equivalent “quantum gravity” are all interesting questions. Another subtle thing is some effects in the field theory of curved space-time, such as Hawking radiation, Unruh effect, etc., especially the Unruh effect [1, 2], which tells us that the ground state of the flat Minkovski space-time scalar field accelerates uniformly. From the perspective of the observer, it will become a thermal equilibrium state, the temperature of which is proportional to the acceleration of the observer. We can't help thinking whether Galileo spacetime, which is also a flat spacetime, also has a phenomenon similar to the Unruh effect. In addition, there is also a hot research topic at the quantum level, that is, if the reference system itself is quantum, what kind of interesting phenomenon will there be? The representative work in this area in the past two years can be referred to [3, 4, 5].
+
+        From an application perspective, it is also meaningful to study the reference frame transformation in quantum mechanics (especially in the case of non-relativism). In the field of quantum control, people often need to transport a quantum state from one point of space to another. In this problem, there are naturally two reference systems: the laboratory reference system and the quantum state follow-up reference system. In the laboratory reference system, the form of Hamiltonian quantities is often highly time-dependent. The common solution technique is to obtain the evolution of a configuration by means of Lewis-Resenfeld invariants [6, 7], and then obtain the time evolution operator. The construction of LR invariants in this solution is often very difficult. However, if we consider the problem in the following reference system of the quantum state, the form of the Hamilton quantity can be artificially simplified. After solving in the following reference system, switching to the laboratory reference system will greatly simplify the problem. .
+
+        Therefore, this paper will mainly study the transformation of quantum mechanics and Galileo symmetry under the transformation of the classical reference frame (which is not the same as the quantum reference frame in [3]). Principle, and briefly discuss the equivalent principle in quantum mechanics. Then this article will study the simple harmonic oscillator under the transformation of the reference frame based on the quantum D'Alembert principle.
+        The main structural arrangements and conclusions of this article are as follows. The second chapter of this paper first reviews the general transformation rules of quantum states under translational reference frame transformation, and discusses the physical meaning of each item of unitary transformation matrix. Then with the help of Weyl translation operator and Weyl-Heisenberg group, this paper proves that in the viewpoint of group representation theory, the translational reference frame transformation is that the classical phase space acts as an additive group on the quantum state space, that is, the group of classical phase space Said. Chapter 3 of this paper considers the influence of reference frame transformation on Schrodinger equation and Hamilton quantity, reviews the physical meaning of adiabatic gauge potential, and points out that the classic physical meaning of the adiabatic gauge potential induced by the reference frame transformation operator is inertial force. The quantum mechanics version of the D'Alembert principle, and briefly discusses the equivalent principle in quantum mechanics. The fourth chapter of this article is based on the conclusions of the above two chapters and investigates the translation reference
+        The harmonic oscillator under system transformation, especially the ground state of the harmonic oscillator. In this paper, the Weyl translation operator is expressed as a form that produces an annihilation operator. It is proved that the ground state after the reference frame transformation will become a Gauss wave packet whose center position moves with the reference frame, and by calculating the Gauss wave packet Wigner function and its Spatial distribution and momentum distribution to further verify this conclusion. In this paper, the Gauss wave packet is studied under the transformed Hamiltonian representation, and it is proved that the moving Gauss wave packet is the instantaneous ground state of the new Hamiltonian in the case of uniform velocity reference frame transformation; , The Gauss wave packet becomes the coherent state of the new Hamiltonian.
+
+    
+
+    \section{Transformations of quantum states under translations}
+
+        We assume that two observers S and S ’observe the same quantum state. Let us assume that S is a stationary observer and S’ is a motion observer. Generally speaking, the reference frame transformation between S and S 'can decompose the translation and rotation parts. The characterization of translational transformation is simple. We only need to know the movement of the origin of the motion reference system S ', that is, we can know the relationship of the reference system transformation of all points. The rule of reference frame transformation can be completely determined. The rotation transformation is more difficult to portray. The difficulty includes at least two aspects:
+
+        • There is a fixed point in the rotation reference frame transformation, then around this fixed point, the rotation transformation becomes an internal degree of freedom to some extent. For example, a spin at the origin, under the rotation of the reference frame, only the spin changes, and spin is the internal degree of freedom of this system.
+        
+        • When using Euler angles to describe rotation, the same three-dimensional rotation transformation can have multiple expressions. This means that we have to classify all Euler rotations, and only take one expression in each classification as the true rotation transformation. The equivalence caused by this classification is likely to induce a new gauge field.
+        
+        Because of the complexity of the rotation problem, this article will mainly focus on the translation reference frame transformation. In this section, we analyze the transformation of quantum states. In the next section, we will analyze the transformation of Schrodinger's equations, and lead to the adiabatic gauge potential and quantum D'Alembert's principle.
+
+
+        
+    \subsection{The unitary operator of a translation}
+
+
+\end{document}
